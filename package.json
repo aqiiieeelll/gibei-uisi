@@ -4,69 +4,28 @@
   "private": true,
   "type": "module",
   "packageManager": "pnpm@10.24.0",
-  "engines": {
-    "node": "24.22.1"
-  },
+  "engines": { "node": "24.22.1" },
   "scripts": {
-    "dev": "next dev --hostname 127.0.0.1",
-    "build": "next build",
+    "dev": "next dev --webpack --hostname 127.0.0.1",
+    "build": "next build --webpack",
     "start": "next start --hostname 127.0.0.1",
     "lint": "eslint . --max-warnings 0",
-    "typecheck": "next typegen && tsc --noEmit",
-    "db:check": "node --env-file=.env.local scripts/database/check.mjs",
-    "db:provision": "node --env-file=.env.local scripts/database/provision.mjs",
-    "db:verify": "node --env-file=.env.local scripts/database/verify.mjs",
-    "test:db-config": "node --test scripts/database/config.test.mjs",
-    "test:auth-policy": "node --test src/auth/policy.test.mjs src/auth/account-policy.test.mjs",
-    "payload": "node scripts/payload.mjs",
-    "bootstrap:admin": "node scripts/payload.mjs run scripts/bootstrap-admin.ts",
-    "test:cms": "node --env-file=.env.local scripts/verify-cms.mjs",
-    "test:accounts": "node --env-file=.env.local scripts/verify-accounts.mjs",
-    "demo:export": "node scripts/export-demo-source.mjs",
-    "demo:check": "node scripts/demo-check.mjs",
-    "benchmark:demo": "node scripts/benchmark.mjs",
-    "demo": "node scripts/run-tests.mjs demo",
-    "seed:demo": "node scripts/seed-demo.mjs",
-    "test:unit": "node --test src/auth/*.test.mjs scripts/database/config.test.mjs tests/unit/*.test.mjs",
-    "test:integration": "node scripts/run-tests.mjs integration",
-    "test:e2e": "node scripts/run-tests.mjs e2e",
-    "test:all": "pnpm test:unit && node scripts/run-tests.mjs all"
+    "typecheck": "next typegen && tsc --noEmit"
   },
   "dependencies": {
-    "@fontsource-variable/manrope": "5.3.0",
-    "@payloadcms/db-postgres": "3.92.0",
-    "@payloadcms/next": "3.92.0",
-    "@payloadcms/richtext-lexical": "3.92.0",
-    "@payloadcms/ui": "3.92.0",
-    "graphql": "16.14.2",
     "next": "16.4.2",
-    "payload": "3.92.0",
-    "pdf-lib": "1.17.1",
-    "pg": "8.23.1",
     "react": "19.3.1",
-    "react-dom": "19.3.1",
-    "sharp": "0.35.5"
-  },
-  "pnpm": {
-    "overrides": {
-      "dompurify": "3.4.17",
-      "happy-dom": "21.0.4"
-    }
+    "react-dom": "19.3.1"
   },
   "devDependencies": {
-    "@axe-core/playwright": "4.14.0",
-    "@playwright/test": "1.64.1",
     "@tailwindcss/postcss": "4.3.3",
     "@types/node": "24.10.1",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
     "eslint": "9.39.5",
     "eslint-config-next": "16.4.2",
-    "lighthouse": "13.6.0",
     "postcss": "8.5.28",
-    "supabase": "2.122.0",
     "tailwindcss": "4.3.3",
-    "tsx": "4.23.15",
     "typescript": "5.9.3"
   }
 }

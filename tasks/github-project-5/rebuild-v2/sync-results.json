@@ -1,0 +1,454 @@
+{
+  "projectUrl": "https://github.com/users/silkiy/projects/5/views/6",
+  "recordedOn": "2026-11-16",
+  "timezone": "Asia/Jakarta",
+  "complete": true,
+  "verifiedCount": 61,
+  "pausedByUser": false,
+  "blocker": null,
+  "itemType": "Project draft item",
+  "boardCounts": {
+    "Backlog": 60,
+    "Ready": 1,
+    "In progress": 0,
+    "In review": 0,
+    "Done": 0
+  },
+  "items": [
+    {
+      "id": "RB-000",
+      "itemId": "305867582",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305867582",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-001",
+      "itemId": "305867715",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305867715",
+      "status": "Ready",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-002",
+      "itemId": "305867822",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305867822",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-003",
+      "itemId": "305867952",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305867952",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-004",
+      "itemId": "305869901",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305869901",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-005",
+      "itemId": "305869978",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305869978",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-006",
+      "itemId": "305870098",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305870098",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-007",
+      "itemId": "305870872",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305870872",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-008",
+      "itemId": "305871001",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305871001",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-009",
+      "itemId": "305871122",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305871122",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-010",
+      "itemId": "305871238",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305871238",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-011",
+      "itemId": "305871371",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305871371",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-012",
+      "itemId": "305871499",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305871499",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-013",
+      "itemId": "305871962",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305871962",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-014",
+      "itemId": "305872097",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305872097",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-015",
+      "itemId": "305872223",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305872223",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-016",
+      "itemId": "305872325",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305872325",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-017",
+      "itemId": "305872867",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305872867",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-018",
+      "itemId": "305872967",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305872967",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-019",
+      "itemId": "306043663",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306043663",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-020",
+      "itemId": "306044874",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306044874",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-021",
+      "itemId": "306044953",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306044953",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-022",
+      "itemId": "306045035",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306045035",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-023",
+      "itemId": "306045180",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306045180",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-024",
+      "itemId": "306045281",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306045281",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-025",
+      "itemId": "306045513",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306045513",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-026",
+      "itemId": "306045607",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306045607",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-027",
+      "itemId": "306045874",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306045874",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-028",
+      "itemId": "306047101",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306047101",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-029",
+      "itemId": "306047174",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306047174",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-030",
+      "itemId": "306047263",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306047263",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-031",
+      "itemId": "306047344",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306047344",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-032",
+      "itemId": "306047524",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306047524",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-033",
+      "itemId": "306047610",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306047610",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-034",
+      "itemId": "306047716",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306047716",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-035",
+      "itemId": "306047797",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306047797",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-036",
+      "itemId": "306047873",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306047873",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-037",
+      "itemId": "306048200",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306048200",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-038",
+      "itemId": "306048283",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306048283",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-039",
+      "itemId": "306048374",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306048374",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-040",
+      "itemId": "306048463",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306048463",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-041",
+      "itemId": "306048554",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306048554",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-042",
+      "itemId": "306048912",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306048912",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-043",
+      "itemId": "306049002",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306049002",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-044",
+      "itemId": "306049105",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306049105",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-045",
+      "itemId": "306049178",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306049178",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-046",
+      "itemId": "306049275",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306049275",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-047",
+      "itemId": "306049473",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306049473",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-048",
+      "itemId": "306049571",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306049571",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-049",
+      "itemId": "306049666",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306049666",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-050",
+      "itemId": "306049755",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306049755",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-051",
+      "itemId": "306049832",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306049832",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-052",
+      "itemId": "306050045",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306050045",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-053",
+      "itemId": "306050138",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306050138",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-054",
+      "itemId": "306050199",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306050199",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-055",
+      "itemId": "306050305",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306050305",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-056",
+      "itemId": "306050426",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306050426",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-057",
+      "itemId": "306050601",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306050601",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-058",
+      "itemId": "306050683",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306050683",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-059",
+      "itemId": "306050772",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306050772",
+      "status": "Backlog",
+      "bodyVerified": true
+    },
+    {
+      "id": "RB-060",
+      "itemId": "306050894",
+      "url": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306050894",
+      "status": "Backlog",
+      "bodyVerified": true
+    }
+  ],
+  "archivedDuplicates": [
+    {
+      "id": "RB-056",
+      "itemId": "306050395",
+      "reason": "Duplikat kosong tanpa deskripsi; diarsipkan melalui UI, bukan dihapus permanen."
+    }
+  ],
+  "verification": "Seluruh ID unik RB-000–RB-060 terpetakan. Body RB000–018 diperiksa pada sesi sebelumnya; RB019–060 diperiksa saat dilanjutkan. Refresh view setelah arsip duplikat menunjukkan61 matching items, Backlog60, Ready1, Done0. Filter RB- tersimpan. Kartu merupakan rencana, bukan implementasi yang telah dikerjakan."
+}

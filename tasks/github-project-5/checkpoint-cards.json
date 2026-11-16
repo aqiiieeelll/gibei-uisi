@@ -1,0 +1,156 @@
+[
+  {
+    "id": "GATE-01",
+    "title": "Checkpoint persetujuan desain",
+    "description": "Tinjau hasil kelompok tugas sebelum melanjutkan pemeriksaan berikutnya.",
+    "workstream": "Checkpoint lanjutan",
+    "phase": "Arah desain",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "S",
+    "dependencies": [
+      "UI-005"
+    ],
+    "prd": "§10; §14–16",
+    "acceptanceCriteria": [
+      "Mockup, inventaris aset dan keputusan arah visual dapat ditelusuri.",
+      "Bukti pemeriksaan dan temuan tercatat; task yang gagal tetap terbuka.",
+      "Checkpoint tidak otomatis memberi penerimaan pemilik atau izin deployment."
+    ],
+    "verification": "Telusuri bukti seluruh dependensi, jalankan demo terarah yang relevan dan catat keputusan checkpoint.",
+    "files": [
+      "docs/qa",
+      "docs/design.md"
+    ]
+  },
+  {
+    "id": "GATE-02",
+    "title": "Checkpoint fondasi dan navigasi UI",
+    "description": "Tinjau hasil kelompok tugas sebelum melanjutkan pemeriksaan berikutnya.",
+    "workstream": "Checkpoint lanjutan",
+    "phase": "Fondasi UI",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "S",
+    "dependencies": [
+      "UI-008",
+      "UI-009"
+    ],
+    "prd": "§10; §14–16",
+    "acceptanceCriteria": [
+      "Token, header, menu mobile dan footer bekerja konsisten; CSS Payload tetap terpisah.",
+      "Bukti pemeriksaan dan temuan tercatat; task yang gagal tetap terbuka.",
+      "Checkpoint tidak otomatis memberi penerimaan pemilik atau izin deployment."
+    ],
+    "verification": "Telusuri bukti seluruh dependensi, jalankan demo terarah yang relevan dan catat keputusan checkpoint.",
+    "files": [
+      "docs/qa",
+      "docs/design.md"
+    ]
+  },
+  {
+    "id": "GATE-03",
+    "title": "Checkpoint beranda dan organisasi",
+    "description": "Tinjau hasil kelompok tugas sebelum melanjutkan pemeriksaan berikutnya.",
+    "workstream": "Checkpoint lanjutan",
+    "phase": "UI modul",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "S",
+    "dependencies": [
+      "UI-011",
+      "UI-012",
+      "UI-014"
+    ],
+    "prd": "§10; §14–16",
+    "acceptanceCriteria": [
+      "Beranda, Tentang, divisi dan struktur/arsip mempertahankan snapshot dan periode yang benar.",
+      "Bukti pemeriksaan dan temuan tercatat; task yang gagal tetap terbuka.",
+      "Checkpoint tidak otomatis memberi penerimaan pemilik atau izin deployment."
+    ],
+    "verification": "Telusuri bukti seluruh dependensi, jalankan demo terarah yang relevan dan catat keputusan checkpoint.",
+    "files": [
+      "docs/qa",
+      "docs/design.md"
+    ]
+  },
+  {
+    "id": "GATE-04",
+    "title": "Checkpoint artikel dan riset",
+    "description": "Tinjau hasil kelompok tugas sebelum melanjutkan pemeriksaan berikutnya.",
+    "workstream": "Checkpoint lanjutan",
+    "phase": "UI modul",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "S",
+    "dependencies": [
+      "UI-019"
+    ],
+    "prd": "§10; §14–16",
+    "acceptanceCriteria": [
+      "Search/filter/pagination, renderer aman, disclaimer dan PDF approved dapat didemonstrasikan.",
+      "Bukti pemeriksaan dan temuan tercatat; task yang gagal tetap terbuka.",
+      "Checkpoint tidak otomatis memberi penerimaan pemilik atau izin deployment."
+    ],
+    "verification": "Telusuri bukti seluruh dependensi, jalankan demo terarah yang relevan dan catat keputusan checkpoint.",
+    "files": [
+      "docs/qa",
+      "docs/design.md"
+    ]
+  },
+  {
+    "id": "GATE-05",
+    "title": "Checkpoint kegiatan dan rekrutmen",
+    "description": "Tinjau hasil kelompok tugas sebelum melanjutkan pemeriksaan berikutnya.",
+    "workstream": "Checkpoint lanjutan",
+    "phase": "UI modul",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "S",
+    "dependencies": [
+      "UI-022"
+    ],
+    "prd": "§10; §14–16",
+    "acceptanceCriteria": [
+      "Status WIB, pembatalan, deadline dan revalidasi CTA bekerja pada batas waktu.",
+      "Bukti pemeriksaan dan temuan tercatat; task yang gagal tetap terbuka.",
+      "Checkpoint tidak otomatis memberi penerimaan pemilik atau izin deployment."
+    ],
+    "verification": "Telusuri bukti seluruh dependensi, jalankan demo terarah yang relevan dan catat keputusan checkpoint.",
+    "files": [
+      "docs/qa",
+      "docs/design.md"
+    ]
+  },
+  {
+    "id": "GATE-06",
+    "title": "Checkpoint seluruh halaman publik",
+    "description": "Tinjau hasil kelompok tugas sebelum melanjutkan pemeriksaan berikutnya.",
+    "workstream": "Checkpoint lanjutan",
+    "phase": "UI modul",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "S",
+    "dependencies": [
+      "UI-023",
+      "UI-024",
+      "UI-025",
+      "UI-026",
+      "UI-027",
+      "GATE-03",
+      "GATE-04",
+      "GATE-05"
+    ],
+    "prd": "§10; §14–16",
+    "acceptanceCriteria": [
+      "Seluruh 11 modul dan state pemulihan siap memasuki audit lintas halaman.",
+      "Bukti pemeriksaan dan temuan tercatat; task yang gagal tetap terbuka.",
+      "Checkpoint tidak otomatis memberi penerimaan pemilik atau izin deployment."
+    ],
+    "verification": "Telusuri bukti seluruh dependensi, jalankan demo terarah yang relevan dan catat keputusan checkpoint.",
+    "files": [
+      "docs/qa",
+      "docs/design.md"
+    ]
+  }
+]
