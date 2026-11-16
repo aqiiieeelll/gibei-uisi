@@ -1,0 +1,18 @@
+{
+  "agent": "audit_existing_ui",
+  "assignment": {
+    "source": "legacy-cards.json",
+    "sliceStartInclusive": 11,
+    "sliceEndExclusive": 41,
+    "expectedCards": 30
+  },
+  "projectUrl": "https://github.com/users/silkiy/projects/5/views/1",
+  "status": "not_started_browser_unavailable",
+  "remoteWritesPerformed": false,
+  "observedBrowserErrors": [
+    "Browser is not available: iab",
+    "Browser inventory returned an empty browsers array",
+    "Browser is not available: 2"
+  ],
+  "items": []
+}

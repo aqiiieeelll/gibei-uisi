@@ -1,0 +1,1896 @@
+{
+  "schemaVersion": 1,
+  "preparedOn": "2026-11-15",
+  "timezone": "Asia/Jakarta",
+  "project": {
+    "owner": "silkiy",
+    "number": 5,
+    "view": 6,
+    "url": "https://github.com/users/silkiy/projects/5/views/6",
+    "filter": "RB-",
+    "repository": "silkiy/gibei-uisi"
+  },
+  "scope": {
+    "version": "Rebuild v2",
+    "source": [
+      "docs/rebuild-v2.md",
+      "docs/PRD-v1.1.md"
+    ],
+    "decisions": [
+      "Mulai dari awal pada branch baru.",
+      "Next.js tetap; Payload diganti dashboard admin custom.",
+      "Admin/Media dan draft → review → publish dibangun ulang."
+    ],
+    "previousPlan": "../manifest.json",
+    "previousPlanRole": "Histori v1/redesign; bukan antrean eksekusi utama atau bukti selesai v2."
+  },
+  "synchronization": {
+    "status": "complete",
+    "complete": true,
+    "publishedCount": 61,
+    "verifiedCount": 61,
+    "remainingUnverified": 0,
+    "remoteWritesRecorded": true,
+    "resultsFile": "sync-results.json",
+    "blocker": null,
+    "pausedByUser": false,
+    "stopReason": null,
+    "attemptedUnverified": [],
+    "note": "Generator hanya membaca catatan sinkronisasi lokal; tidak menghubungi atau mengubah GitHub."
+  },
+  "summary": {
+    "total": 61,
+    "epics": 1,
+    "tasks": 60,
+    "inheritedDone": 0,
+    "byStatus": {
+      "Backlog": 60,
+      "Ready": 1
+    }
+  },
+  "cards": [
+    {
+      "id": "RB-000",
+      "title": "Rebuild v2 dari nol — Next.js dan dashboard admin custom",
+      "kind": "epic",
+      "phase": "Rebuild v2",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": null,
+      "dependencies": [],
+      "acceptanceCriteria": [
+        "Implementasi baru dilakukan di branch baru dengan UI publik dan dashboard admin buatan sendiri, tanpa Payload.",
+        "Dua role Admin/Media serta workflow draft → review → publish dibangun dan diuji ulang; seluruh 11 modul PRD tercakup.",
+        "Seluruh task RB-001–RB-060 memiliki bukti selesai dan penerimaan baru; status Done v1 tidak dihitung sebagai progres rebuild."
+      ],
+      "verification": "Telusuri seluruh kartu RB dan bukti QA/UAT. Kartu ini merupakan epic, bukan satu sesi implementasi.",
+      "executionOrder": 1,
+      "body": "**Task ID:** RB-000\n**Jenis:** epic\n**Fase:** Rebuild v2\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** Epic; beberapa sesi, dipecah pada kartu anak\n**Dependensi:** Tidak ada\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Implementasi baru dilakukan di branch baru dengan UI publik dan dashboard admin buatan sendiri, tanpa Payload.\n- [ ] Dua role Admin/Media serta workflow draft → review → publish dibangun dan diuji ulang; seluruh 11 modul PRD tercakup.\n- [ ] Seluruh task RB-001–RB-060 memiliki bukti selesai dan penerimaan baru; status Done v1 tidak dihitung sebagai progres rebuild.\n\n### Verifikasi\n\nTelusuri seluruh kartu RB dan bukti QA/UAT. Kartu ini merupakan epic, bukan satu sesi implementasi.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** Keputusan pemilik 15 November 2026; docs/rebuild-v2.md.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "305867582",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305867582",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-001",
+      "title": "Siapkan branch rebuild dan titik pemulihan",
+      "kind": "task",
+      "phase": "Fondasi",
+      "status": "Ready",
+      "priority": "P0",
+      "size": "S",
+      "dependencies": [],
+      "acceptanceCriteria": [
+        "Branch baru dan commit acuan v1 tercatat; perubahan kerja yang belum dikomit diamankan tanpa dibuang.",
+        "Target database dan direktori media rebuild terpisah; penghapusan kode hanya berlaku pada branch baru, tanpa reset data lama."
+      ],
+      "verification": "Periksa branch/base commit, status kerja dan target DB/media sebelum perubahan destruktif.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 2,
+      "body": "**Task ID:** RB-001\n**Jenis:** task\n**Fase:** Fondasi\n**Status awal:** Ready\n**Prioritas:** P0\n**Ukuran:** S\n**Dependensi:** Tidak ada\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Branch baru dan commit acuan v1 tercatat; perubahan kerja yang belum dikomit diamankan tanpa dibuang.\n- [ ] Target database dan direktori media rebuild terpisah; penghapusan kode hanya berlaku pada branch baru, tanpa reset data lama.\n\n### Verifikasi\n\nPeriksa branch/base commit, status kerja dan target DB/media sebelum perubahan destruktif.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "305867715",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305867715",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-002",
+      "title": "Tetapkan arsitektur Next.js dan admin custom",
+      "kind": "task",
+      "phase": "Fondasi",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "S",
+      "dependencies": [
+        "RB-001"
+      ],
+      "acceptanceCriteria": [
+        "Next.js dipertahankan; dashboard, API, validasi dan domain admin dibuat sendiri tanpa Payload.",
+        "Pilihan library auth/session, editor rich text, akses database/migrasi, storage serta kebijakan migrasi data vs mulai kosong dicatat dan diverifikasi kompatibilitasnya."
+      ],
+      "verification": "Tinjau keputusan terhadap PRD dan dokumentasi resmi; jangan mengarang versi/library yang belum dipilih.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 3,
+      "body": "**Task ID:** RB-002\n**Jenis:** task\n**Fase:** Fondasi\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** S\n**Dependensi:** RB-001\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Next.js dipertahankan; dashboard, API, validasi dan domain admin dibuat sendiri tanpa Payload.\n- [ ] Pilihan library auth/session, editor rich text, akses database/migrasi, storage serta kebijakan migrasi data vs mulai kosong dicatat dan diverifikasi kompatibilitasnya.\n\n### Verifikasi\n\nTinjau keputusan terhadap PRD dan dokumentasi resmi; jangan mengarang versi/library yang belum dipilih.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "305867822",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305867822",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-003",
+      "title": "Bangun kerangka Next.js baru tanpa Payload",
+      "kind": "task",
+      "phase": "Fondasi",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-002"
+      ],
+      "acceptanceCriteria": [
+        "Source rebuild dan dependensi aktif tidak bergantung pada Payload atau @payloadcms; struktur publik/admin/server/tests tersedia.",
+        "Environment example tanpa secret, lockfile serta scripts dev/build/lint/typecheck/test tersedia; startup dan build bersih lulus."
+      ],
+      "verification": "Instalasi bersih, lint/typecheck/build dan smoke rute publik/admin pada target rebuild.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 4,
+      "body": "**Task ID:** RB-003\n**Jenis:** task\n**Fase:** Fondasi\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-002\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Source rebuild dan dependensi aktif tidak bergantung pada Payload atau @payloadcms; struktur publik/admin/server/tests tersedia.\n- [ ] Environment example tanpa secret, lockfile serta scripts dev/build/lint/typecheck/test tersedia; startup dan build bersih lulus.\n\n### Verifikasi\n\nInstalasi bersih, lint/typecheck/build dan smoke rute publik/admin pada target rebuild.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "305867952",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305867952",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-004",
+      "title": "Rancang UI publik dan dashboard admin baru",
+      "kind": "task",
+      "phase": "Desain",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "S",
+      "dependencies": [
+        "RB-002"
+      ],
+      "acceptanceCriteria": [
+        "Wireframe/mockup mobile dan desktop mencakup navigasi publik, halaman baca, login, dashboard, form editor dan antrean review.",
+        "Arah warna/font/aset, empty/error/loading states, keyboard dan keputusan desain pemilik tercatat."
+      ],
+      "verification": "Review mockup konkret bersama pemilik; aset sementara tetap berlabel.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 5,
+      "body": "**Task ID:** RB-004\n**Jenis:** task\n**Fase:** Desain\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** S\n**Dependensi:** RB-002\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Wireframe/mockup mobile dan desktop mencakup navigasi publik, halaman baca, login, dashboard, form editor dan antrean review.\n- [ ] Arah warna/font/aset, empty/error/loading states, keyboard dan keputusan desain pemilik tercatat.\n\n### Verifikasi\n\nReview mockup konkret bersama pemilik; aset sementara tetap berlabel.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "305869901",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305869901",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-005",
+      "title": "Bangun token dan komponen dasar UI baru",
+      "kind": "task",
+      "phase": "Desain",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-003",
+        "RB-004"
+      ],
+      "acceptanceCriteria": [
+        "Token warna/font/jarak serta tombol, field, tabel, pagination dan status mengikuti desain disetujui.",
+        "Komponen responsif, memiliki label/fokus yang jelas dan menghormati reduced motion."
+      ],
+      "verification": "Inspeksi komponen mobile/desktop dan keyboard; lint/typecheck/build.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 6,
+      "body": "**Task ID:** RB-005\n**Jenis:** task\n**Fase:** Desain\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-003, RB-004\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Token warna/font/jarak serta tombol, field, tabel, pagination dan status mengikuti desain disetujui.\n- [ ] Komponen responsif, memiliki label/fokus yang jelas dan menghormati reduced motion.\n\n### Verifikasi\n\nInspeksi komponen mobile/desktop dan keyboard; lint/typecheck/build.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "305869978",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305869978",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-006",
+      "title": "Rancang schema baru dan kontrak versi artikel",
+      "kind": "task",
+      "phase": "Data dan autentikasi",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-003"
+      ],
+      "acceptanceCriteria": [
+        "Schema akun, artikel, revisi, pengajuan, manifest aset dan audit memiliki constraint satu revisi kerja serta versi publik.",
+        "Migrasi hanya ke database/schema rebuild terisolasi; setup DB kosong dan rollback dibuktikan."
+      ],
+      "verification": "Terapkan migrasi pada target baru; periksa constraint, transaksi dan rollback.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 7,
+      "body": "**Task ID:** RB-006\n**Jenis:** task\n**Fase:** Data dan autentikasi\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-003\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Schema akun, artikel, revisi, pengajuan, manifest aset dan audit memiliki constraint satu revisi kerja serta versi publik.\n- [ ] Migrasi hanya ke database/schema rebuild terisolasi; setup DB kosong dan rollback dibuktikan.\n\n### Verifikasi\n\nTerapkan migrasi pada target baru; periksa constraint, transaksi dan rollback.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "305870098",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305870098",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-007",
+      "title": "Buat bootstrap Admin awal yang aman",
+      "kind": "task",
+      "phase": "Data dan autentikasi",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "S",
+      "dependencies": [
+        "RB-006"
+      ],
+      "acceptanceCriteria": [
+        "Admin awal dibuat melalui prosedur lokal tanpa password tetap di source atau pendaftaran publik bebas.",
+        "Bootstrap ulang tidak menggandakan akun; secret dan hasil setup tidak masuk log publik."
+      ],
+      "verification": "Jalankan setup pertama/ulang dan probe endpoint anonim.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 8,
+      "body": "**Task ID:** RB-007\n**Jenis:** task\n**Fase:** Data dan autentikasi\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** S\n**Dependensi:** RB-006\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Admin awal dibuat melalui prosedur lokal tanpa password tetap di source atau pendaftaran publik bebas.\n- [ ] Bootstrap ulang tidak menggandakan akun; secret dan hasil setup tidak masuk log publik.\n\n### Verifikasi\n\nJalankan setup pertama/ulang dan probe endpoint anonim.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "305870872",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305870872",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-008",
+      "title": "Bangun login, logout dan sesi admin",
+      "kind": "task",
+      "phase": "Data dan autentikasi",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-007"
+      ],
+      "acceptanceCriteria": [
+        "Login/logout memakai library auth terawat, cookie aman, validasi server dan perlindungan request lintas origin.",
+        "Request memeriksa akun/role terbaru; logout dan perubahan akses mencabut sesi yang tidak lagi sah."
+      ],
+      "verification": "API/browser: login salah/berulang, logout, origin berbeda, sesi nonaktif dan expiry.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 9,
+      "body": "**Task ID:** RB-008\n**Jenis:** task\n**Fase:** Data dan autentikasi\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-007\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Login/logout memakai library auth terawat, cookie aman, validasi server dan perlindungan request lintas origin.\n- [ ] Request memeriksa akun/role terbaru; logout dan perubahan akses mencabut sesi yang tidak lagi sah.\n\n### Verifikasi\n\nAPI/browser: login salah/berulang, logout, origin berbeda, sesi nonaktif dan expiry.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "305871001",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305871001",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-009",
+      "title": "Kelola akun, role dan assignment secara custom",
+      "kind": "task",
+      "phase": "Data dan autentikasi",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-008"
+      ],
+      "acceptanceCriteria": [
+        "Hanya Admin membuat akun/mengubah role/status/reset akses dan owner/assignee; Media tidak dapat memalsukan hak melalui API.",
+        "Admin aktif terakhir terlindungi termasuk request paralel; perubahan tercatat dalam audit tanpa secret."
+      ],
+      "verification": "Dua role, akun nonaktif, spoofing owner/role, transfer assignment dan race Admin terakhir.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 10,
+      "body": "**Task ID:** RB-009\n**Jenis:** task\n**Fase:** Data dan autentikasi\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-008\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Hanya Admin membuat akun/mengubah role/status/reset akses dan owner/assignee; Media tidak dapat memalsukan hak melalui API.\n- [ ] Admin aktif terakhir terlindungi termasuk request paralel; perubahan tercatat dalam audit tanpa secret.\n\n### Verifikasi\n\nDua role, akun nonaktif, spoofing owner/role, transfer assignment dan race Admin terakhir.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "305871122",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305871122",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-010",
+      "title": "Bangun shell dashboard admin custom",
+      "kind": "task",
+      "phase": "Dashboard admin",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-005",
+        "RB-008"
+      ],
+      "acceptanceCriteria": [
+        "Sidebar/header/rute dashboard dibuat sendiri dan memerlukan sesi valid; navigasi sesuai izin server.",
+        "Dashboard berfungsi pada mobile dan keyboard, dengan ringkasan tugas editorial yang sesuai akses pengguna."
+      ],
+      "verification": "Anonim/Admin/Media, menu mobile, fokus keyboard dan direct URL privat.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 11,
+      "body": "**Task ID:** RB-010\n**Jenis:** task\n**Fase:** Dashboard admin\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-005, RB-008\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Sidebar/header/rute dashboard dibuat sendiri dan memerlukan sesi valid; navigasi sesuai izin server.\n- [ ] Dashboard berfungsi pada mobile dan keyboard, dengan ringkasan tugas editorial yang sesuai akses pengguna.\n\n### Verifikasi\n\nAnonim/Admin/Media, menu mobile, fokus keyboard dan direct URL privat.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "305871238",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305871238",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-011",
+      "title": "Buat editor draft artikel custom",
+      "kind": "task",
+      "phase": "Editorial dan media",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-006",
+        "RB-009",
+        "RB-010"
+      ],
+      "acceptanceCriteria": [
+        "Form/API menyimpan judul, slug, excerpt, kategori, penulis publik, rich text dan sumber tanpa menerbitkan.",
+        "createdBy/owner ditetapkan server; akses owner/assignee, kategori Admin dan slug unik ditegakkan.",
+        "Hanya Admin dapat menghapus draft yang belum pernah terbit dan tidak dirujuk; Media ditolak dan audit tetap dipertahankan."
+      ],
+      "verification": "Dua Media, draft milik orang lain, ID ditebak, spoofing field, rich text berbahaya dan slug duplikat.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 12,
+      "body": "**Task ID:** RB-011\n**Jenis:** task\n**Fase:** Editorial dan media\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-006, RB-009, RB-010\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Form/API menyimpan judul, slug, excerpt, kategori, penulis publik, rich text dan sumber tanpa menerbitkan.\n- [ ] createdBy/owner ditetapkan server; akses owner/assignee, kategori Admin dan slug unik ditegakkan.\n- [ ] Hanya Admin dapat menghapus draft yang belum pernah terbit dan tidak dirujuk; Media ditolak dan audit tetap dipertahankan.\n\n### Verifikasi\n\nDua Media, draft milik orang lain, ID ditebak, spoofing field, rich text berbahaya dan slug duplikat.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "305871371",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305871371",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-012",
+      "title": "Terima upload gambar dan PDF privat",
+      "kind": "task",
+      "phase": "Editorial dan media",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-008",
+        "RB-011"
+      ],
+      "acceptanceCriteria": [
+        "Validasi JPEG/PNG/WebP maksimum 5 MiB/25 MP dan PDF 15 MiB dengan MIME/signature/decode serta nama internal aman.",
+        "File awal privat; file palsu, oversized, PDF aktif dan kegagalan upload tidak meninggalkan file publik/yatim."
+      ],
+      "verification": "Upload valid/palsu/oversized, nama path berbahaya, PDF aktif dan cleanup kegagalan.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 13,
+      "body": "**Task ID:** RB-012\n**Jenis:** task\n**Fase:** Editorial dan media\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-008, RB-011\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Validasi JPEG/PNG/WebP maksimum 5 MiB/25 MP dan PDF 15 MiB dengan MIME/signature/decode serta nama internal aman.\n- [ ] File awal privat; file palsu, oversized, PDF aktif dan kegagalan upload tidak meninggalkan file publik/yatim.\n\n### Verifikasi\n\nUpload valid/palsu/oversized, nama path berbahaya, PDF aktif dan cleanup kegagalan.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "305871499",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305871499",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-013",
+      "title": "Lindungi akses file asli dan turunan",
+      "kind": "task",
+      "phase": "Editorial dan media",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-012"
+      ],
+      "acceptanceCriteria": [
+        "Original/thumbnail/transformasi/PDF melewati pemeriksaan izin yang sama, termasuk HEAD/range/cache.",
+        "Hanya owner/assignee/Admin berizin membaca media privat; direktori statis dan optimizer tidak menjadi bypass."
+      ],
+      "verification": "Probe byte/header sebagai anonim, dua Media dan Admin; periksa original/derivative/PDF.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 14,
+      "body": "**Task ID:** RB-013\n**Jenis:** task\n**Fase:** Editorial dan media\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-012\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Original/thumbnail/transformasi/PDF melewati pemeriksaan izin yang sama, termasuk HEAD/range/cache.\n- [ ] Hanya owner/assignee/Admin berizin membaca media privat; direktori statis dan optimizer tidak menjadi bypass.\n\n### Verifikasi\n\nProbe byte/header sebagai anonim, dua Media dan Admin; periksa original/derivative/PDF.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "305871962",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305871962",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-014",
+      "title": "Bangun media library dan pemilih aset",
+      "kind": "task",
+      "phase": "Editorial dan media",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-010",
+        "RB-012",
+        "RB-013"
+      ],
+      "acceptanceCriteria": [
+        "Daftar/search/picker hanya memuat aset yang boleh diakses pengguna, dengan alt/caption sesuai izin.",
+        "Referensi ID aset privat milik pengguna lain ditolak server tanpa membocorkan metadata."
+      ],
+      "verification": "Alur picker dan request ID palsu; alt informatif, filter dan pagination media.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 15,
+      "body": "**Task ID:** RB-014\n**Jenis:** task\n**Fase:** Editorial dan media\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-010, RB-012, RB-013\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Daftar/search/picker hanya memuat aset yang boleh diakses pengguna, dengan alt/caption sesuai izin.\n- [ ] Referensi ID aset privat milik pengguna lain ditolak server tanpa membocorkan metadata.\n\n### Verifikasi\n\nAlur picker dan request ID palsu; alt informatif, filter dan pagination media.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "305872097",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305872097",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-015",
+      "title": "Ajukan dan tarik pengajuan konten",
+      "kind": "task",
+      "phase": "Editorial dan media",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-011",
+        "RB-014"
+      ],
+      "acceptanceCriteria": [
+        "Submit mengikat revisi dan manifest aset tertentu serta mengunci isi in_review.",
+        "Owner/assignee dapat submit/withdraw; versi dibatalkan/kedaluwarsa dan aset tanpa izin ditolak."
+      ],
+      "verification": "Submit, edit terkunci, withdraw, submit ulang dan perubahan aset sebelum keputusan.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 16,
+      "body": "**Task ID:** RB-015\n**Jenis:** task\n**Fase:** Editorial dan media\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-011, RB-014\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Submit mengikat revisi dan manifest aset tertentu serta mengunci isi in_review.\n- [ ] Owner/assignee dapat submit/withdraw; versi dibatalkan/kedaluwarsa dan aset tanpa izin ditolak.\n\n### Verifikasi\n\nSubmit, edit terkunci, withdraw, submit ulang dan perubahan aset sebelum keputusan.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "305872223",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305872223",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-016",
+      "title": "Minta revisi dengan catatan Admin",
+      "kind": "task",
+      "phase": "Editorial dan media",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-015"
+      ],
+      "acceptanceCriteria": [
+        "Hanya Admin mengembalikan konten dengan catatan revisi wajib; editor berizin dapat memperbaiki dan submit ulang.",
+        "Reviewer/decision tidak dapat dipalsukan dan catatan privat tidak dapat diakses publik/Media lain."
+      ],
+      "verification": "Admin tanpa catatan, forged decision, akses audit silang dan siklus revisi.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 17,
+      "body": "**Task ID:** RB-016\n**Jenis:** task\n**Fase:** Editorial dan media\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-015\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Hanya Admin mengembalikan konten dengan catatan revisi wajib; editor berizin dapat memperbaiki dan submit ulang.\n- [ ] Reviewer/decision tidak dapat dipalsukan dan catatan privat tidak dapat diakses publik/Media lain.\n\n### Verifikasi\n\nAdmin tanpa catatan, forged decision, akses audit silang dan siklus revisi.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "305872325",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305872325",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-017",
+      "title": "Terbitkan snapshot yang disetujui secara atomik",
+      "kind": "task",
+      "phase": "Editorial dan media",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-015",
+        "RB-016",
+        "RB-013"
+      ],
+      "acceptanceCriteria": [
+        "Admin hanya menyetujui versi pengajuan yang masih cocok; snapshot, izin aset dan audit konsisten dalam satu operasi.",
+        "Konflik keputusan dan kegagalan DB/storage/audit tidak menghasilkan publikasi parsial."
+      ],
+      "verification": "Publish sukses, stale version, dua keputusan paralel dan fault injection rollback.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 18,
+      "body": "**Task ID:** RB-017\n**Jenis:** task\n**Fase:** Editorial dan media\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-015, RB-016, RB-013\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Admin hanya menyetujui versi pengajuan yang masih cocok; snapshot, izin aset dan audit konsisten dalam satu operasi.\n- [ ] Konflik keputusan dan kegagalan DB/storage/audit tidak menghasilkan publikasi parsial.\n\n### Verifikasi\n\nPublish sukses, stale version, dua keputusan paralel dan fault injection rollback.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "305872867",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305872867",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-018",
+      "title": "Bangun pembacaan publik approved-only",
+      "kind": "task",
+      "phase": "Editorial dan media",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-017"
+      ],
+      "acceptanceCriteria": [
+        "DTO/list/detail/count/relasi/metadata hanya memuat snapshot terbit melalui field allowlist.",
+        "Draft, audit, identitas akun dan data privat tidak bocor; detail tanpa publikasi memberi HTTP 404."
+      ],
+      "verification": "Request anonim, nested relation, count/search, ID ditebak dan metadata draft.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 19,
+      "body": "**Task ID:** RB-018\n**Jenis:** task\n**Fase:** Editorial dan media\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-017\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] DTO/list/detail/count/relasi/metadata hanya memuat snapshot terbit melalui field allowlist.\n- [ ] Draft, audit, identitas akun dan data privat tidak bocor; detail tanpa publikasi memberi HTTP 404.\n\n### Verifikasi\n\nRequest anonim, nested relation, count/search, ID ditebak dan metadata draft.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "305872967",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=305872967",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-019",
+      "title": "Revisi konten terbit tanpa mengubah publik",
+      "kind": "task",
+      "phase": "Editorial dan media",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-017",
+        "RB-018"
+      ],
+      "acceptanceCriteria": [
+        "Maksimum satu revisi kerja aktif; judul/isi/slug/aset/metadata publik tetap sampai approval revisi.",
+        "Slug terkunci setelah publikasi pertama; konflik edit/publish menghasilkan penolakan yang jelas."
+      ],
+      "verification": "Bandingkan sebelum/saat/setelah revisi dan dua editor bersamaan.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 20,
+      "body": "**Task ID:** RB-019\n**Jenis:** task\n**Fase:** Editorial dan media\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-017, RB-018\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Maksimum satu revisi kerja aktif; judul/isi/slug/aset/metadata publik tetap sampai approval revisi.\n- [ ] Slug terkunci setelah publikasi pertama; konflik edit/publish menghasilkan penolakan yang jelas.\n\n### Verifikasi\n\nBandingkan sebelum/saat/setelah revisi dan dua editor bersamaan.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306043663",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306043663",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-020",
+      "title": "Tarik publikasi dan bersihkan representasinya",
+      "kind": "task",
+      "phase": "Editorial dan media",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-019"
+      ],
+      "acceptanceCriteria": [
+        "Admin menarik dengan alasan; daftar/detail/search/count/metadata/cache tidak lagi menyajikan konten.",
+        "Review tertunda dibatalkan; relasi wajib menghalangi penarikan dan relasi opsional memiliki fallback."
+      ],
+      "verification": "Cache hangat, URL langsung, relasi wajib/opsional dan penerbitan ulang lewat pengajuan baru.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 21,
+      "body": "**Task ID:** RB-020\n**Jenis:** task\n**Fase:** Editorial dan media\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-019\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Admin menarik dengan alasan; daftar/detail/search/count/metadata/cache tidak lagi menyajikan konten.\n- [ ] Review tertunda dibatalkan; relasi wajib menghalangi penarikan dan relasi opsional memiliki fallback.\n\n### Verifikasi\n\nCache hangat, URL langsung, relasi wajib/opsional dan penerbitan ulang lewat pengajuan baru.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306044874",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306044874",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-021",
+      "title": "Kelola media yang digunakan bersama",
+      "kind": "task",
+      "phase": "Editorial dan media",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-017",
+        "RB-020"
+      ],
+      "acceptanceCriteria": [
+        "Aset tetap publik selama ada referensi publik sah; referensi terakhir hilang menutup asli dan turunan.",
+        "Byte approved immutable; mengganti file membuat aset baru dan mengikuti review."
+      ],
+      "verification": "Dua konten berbagi gambar/PDF, last-reference removal dan pergantian file.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 22,
+      "body": "**Task ID:** RB-021\n**Jenis:** task\n**Fase:** Editorial dan media\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-017, RB-020\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Aset tetap publik selama ada referensi publik sah; referensi terakhir hilang menutup asli dan turunan.\n- [ ] Byte approved immutable; mengganti file membuat aset baru dan mengikuti review.\n\n### Verifikasi\n\nDua konten berbagi gambar/PDF, last-reference removal dan pergantian file.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306044953",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306044953",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-022",
+      "title": "Sediakan revoke dan hapus media aman",
+      "kind": "task",
+      "phase": "Editorial dan media",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-021"
+      ],
+      "acceptanceCriteria": [
+        "Admin dapat mencabut aset darurat dengan fallback serta daftar konten terdampak.",
+        "Hapus ditolak selama ada referensi konten/revisi/config; tindakan sah diaudit."
+      ],
+      "verification": "Revoke shared asset, URL langsung sesudah revoke, hapus saat dirujuk/tidak dirujuk.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 23,
+      "body": "**Task ID:** RB-022\n**Jenis:** task\n**Fase:** Editorial dan media\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-021\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Admin dapat mencabut aset darurat dengan fallback serta daftar konten terdampak.\n- [ ] Hapus ditolak selama ada referensi konten/revisi/config; tindakan sah diaudit.\n\n### Verifikasi\n\nRevoke shared asset, URL langsung sesudah revoke, hapus saat dirujuk/tidak dirujuk.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306045035",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306045035",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-023",
+      "title": "Bangun antrean review dan preview privat",
+      "kind": "task",
+      "phase": "Dashboard admin",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-010",
+        "RB-016",
+        "RB-019",
+        "RB-022"
+      ],
+      "acceptanceCriteria": [
+        "Admin/Media melihat antrean dan riwayat yang sesuai izin dengan revisi/aset/catatan tepat.",
+        "Preview memerlukan sesi dan tidak masuk sitemap, metadata publik atau indeks pencarian."
+      ],
+      "verification": "Admin/owner/assignee/Media lain/anonim dari antrean sampai keputusan.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 24,
+      "body": "**Task ID:** RB-023\n**Jenis:** task\n**Fase:** Dashboard admin\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-010, RB-016, RB-019, RB-022\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Admin/Media melihat antrean dan riwayat yang sesuai izin dengan revisi/aset/catatan tepat.\n- [ ] Preview memerlukan sesi dan tidak masuk sitemap, metadata publik atau indeks pencarian.\n\n### Verifikasi\n\nAdmin/owner/assignee/Media lain/anonim dari antrean sampai keputusan.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306045180",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306045180",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-024",
+      "title": "Kelola Site Settings melalui dashboard custom",
+      "kind": "task",
+      "phase": "Dashboard admin",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-009",
+        "RB-010",
+        "RB-014"
+      ],
+      "acceptanceCriteria": [
+        "Admin mengelola identitas, logo/favicon, navigasi, footer, kontak dan SEO default dengan validasi serta audit.",
+        "Kontak dan aset sah berasal dari satu sumber; isi halaman editorial tidak diduplikasi di konfigurasi global."
+      ],
+      "verification": "Simpan konfigurasi, spoofing Media, URL invalid dan konsistensi sumber publik.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 25,
+      "body": "**Task ID:** RB-024\n**Jenis:** task\n**Fase:** Dashboard admin\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-009, RB-010, RB-014\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Admin mengelola identitas, logo/favicon, navigasi, footer, kontak dan SEO default dengan validasi serta audit.\n- [ ] Kontak dan aset sah berasal dari satu sumber; isi halaman editorial tidak diduplikasi di konfigurasi global.\n\n### Verifikasi\n\nSimpan konfigurasi, spoofing Media, URL invalid dan konsistensi sumber publik.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306045281",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306045281",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-060",
+      "title": "Bangun header, navigasi dan footer publik baru",
+      "kind": "task",
+      "phase": "Modul publik dan admin",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-005",
+        "RB-024"
+      ],
+      "acceptanceCriteria": [
+        "Header/navigasi desktop/mobile, skip link dan footer mengikuti desain baru serta satu sumber Site Settings.",
+        "Semua tujuan navigasi valid; menu mendukung keyboard/Escape/fokus kembali dan bekerja pada 320 px serta zoom 200%."
+      ],
+      "verification": "Inspeksi shell publik desktop/mobile, skip link, seluruh tautan, fokus dan konfigurasi kontak.",
+      "source": "PRD §6/§10; FR-10; AC-19/21; keputusan rebuild 15 November 2026.",
+      "executionOrder": 26,
+      "body": "**Task ID:** RB-060\n**Jenis:** task\n**Fase:** Modul publik dan admin\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-005, RB-024\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Header/navigasi desktop/mobile, skip link dan footer mengikuti desain baru serta satu sumber Site Settings.\n- [ ] Semua tujuan navigasi valid; menu mendukung keyboard/Escape/fokus kembali dan bekerja pada 320 px serta zoom 200%.\n\n### Verifikasi\n\nInspeksi shell publik desktop/mobile, skip link, seluruh tautan, fokus dan konfigurasi kontak.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD §6/§10; FR-10; AC-19/21; keputusan rebuild 15 November 2026.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306050894",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306050894",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-025",
+      "title": "Bangun daftar dan detail artikel dengan UI baru",
+      "kind": "task",
+      "phase": "Modul publik dan admin",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-005",
+        "RB-018",
+        "RB-060"
+      ],
+      "acceptanceCriteria": [
+        "Search judul/excerpt, kategori dan pagination dapat digabung serta menangani parameter/hasil kosong sesuai PRD.",
+        "Detail menampilkan penulis publik, tanggal, sumber, rich text aman dan media snapshot disetujui."
+      ],
+      "verification": "Search/filter/pagination GET, detail mobile, XSS, revisi draft dan file dicabut.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 27,
+      "body": "**Task ID:** RB-025\n**Jenis:** task\n**Fase:** Modul publik dan admin\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-005, RB-018, RB-060\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Search judul/excerpt, kategori dan pagination dapat digabung serta menangani parameter/hasil kosong sesuai PRD.\n- [ ] Detail menampilkan penulis publik, tanggal, sumber, rich text aman dan media snapshot disetujui.\n\n### Verifikasi\n\nSearch/filter/pagination GET, detail mobile, XSS, revisi draft dan file dicabut.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306045513",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306045513",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-026",
+      "title": "Checkpoint alur artikel lengkap tanpa Payload",
+      "kind": "task",
+      "phase": "Checkpoint",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-019",
+        "RB-020",
+        "RB-021",
+        "RB-022",
+        "RB-023",
+        "RB-024",
+        "RB-025"
+      ],
+      "acceptanceCriteria": [
+        "Dashboard/API/publik membuktikan draft → review → revisi → publish → revisi terbit → withdraw dengan dua role.",
+        "Privasi media, audit append-only, konflik dan rollback teruji sebelum pola diperluas ke modul lain."
+      ],
+      "verification": "Suite unit/integration/browser terarah dan demo lengkap; simpan bukti aktual.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 28,
+      "body": "**Task ID:** RB-026\n**Jenis:** task\n**Fase:** Checkpoint\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-019, RB-020, RB-021, RB-022, RB-023, RB-024, RB-025\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Dashboard/API/publik membuktikan draft → review → revisi → publish → revisi terbit → withdraw dengan dua role.\n- [ ] Privasi media, audit append-only, konflik dan rollback teruji sebelum pola diperluas ke modul lain.\n\n### Verifikasi\n\nSuite unit/integration/browser terarah dan demo lengkap; simpan bukti aktual.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306045607",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306045607",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-027",
+      "title": "Bangun Pages untuk beranda dan Tentang",
+      "kind": "task",
+      "phase": "Modul publik dan admin",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-026"
+      ],
+      "acceptanceCriteria": [
+        "Form admin Pages mengikuti assignment, review dan snapshot untuk identitas halaman tetap.",
+        "Beranda/Tentang menampilkan profil, sejarah, visi/misi/program dari versi disetujui dengan UI baru."
+      ],
+      "verification": "Create/edit/review Pages, revisi terbit, mobile dan kondisi tanpa konten.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "implementationNote": "Slice mencakup model/migrasi baru untuk modul terkait, validasi/API, form dashboard dan publik; tidak memakai schema/model Payload lama. Pecah ID turunan bila lingkup >5 file/satu sesi.",
+      "executionOrder": 29,
+      "body": "**Task ID:** RB-027\n**Jenis:** task\n**Fase:** Modul publik dan admin\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-026\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n**Catatan implementasi:** Slice mencakup model/migrasi baru untuk modul terkait, validasi/API, form dashboard dan publik; tidak memakai schema/model Payload lama. Pecah ID turunan bila lingkup >5 file/satu sesi.\n\n### Kriteria selesai\n\n- [ ] Form admin Pages mengikuti assignment, review dan snapshot untuk identitas halaman tetap.\n- [ ] Beranda/Tentang menampilkan profil, sejarah, visi/misi/program dari versi disetujui dengan UI baru.\n\n### Verifikasi\n\nCreate/edit/review Pages, revisi terbit, mobile dan kondisi tanpa konten.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306045874",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306045874",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-028",
+      "title": "Kelola periode organisasi dan arsip",
+      "kind": "task",
+      "phase": "Modul publik dan admin",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-026"
+      ],
+      "acceptanceCriteria": [
+        "Form/API periode memvalidasi kalender dan mengikuti workflow editorial baru.",
+        "Periode selesai tetap tersedia sebagai arsip tanpa menghapus pengurus atau menyamakan past dengan withdrawal."
+      ],
+      "verification": "Dua periode, kalender invalid, review dan arsip publik.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "implementationNote": "Slice mencakup model/migrasi baru untuk modul terkait, validasi/API, form dashboard dan publik; tidak memakai schema/model Payload lama. Pecah ID turunan bila lingkup >5 file/satu sesi.",
+      "executionOrder": 30,
+      "body": "**Task ID:** RB-028\n**Jenis:** task\n**Fase:** Modul publik dan admin\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-026\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n**Catatan implementasi:** Slice mencakup model/migrasi baru untuk modul terkait, validasi/API, form dashboard dan publik; tidak memakai schema/model Payload lama. Pecah ID turunan bila lingkup >5 file/satu sesi.\n\n### Kriteria selesai\n\n- [ ] Form/API periode memvalidasi kalender dan mengikuti workflow editorial baru.\n- [ ] Periode selesai tetap tersedia sebagai arsip tanpa menghapus pengurus atau menyamakan past dengan withdrawal.\n\n### Verifikasi\n\nDua periode, kalender invalid, review dan arsip publik.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306047101",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306047101",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-029",
+      "title": "Bangun pengelolaan delapan divisi",
+      "kind": "task",
+      "phase": "Modul publik dan admin",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-028"
+      ],
+      "acceptanceCriteria": [
+        "Admin/editor berizin mengelola nama, deskripsi, urutan dan program delapan divisi melalui review.",
+        "Daftar/detail divisi ber-UI baru hanya membaca versi terbit serta relasi publik sah."
+      ],
+      "verification": "Dua role, delapan divisi, draft/private relation, urutan dan program kerja.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "implementationNote": "Slice mencakup model/migrasi baru untuk modul terkait, validasi/API, form dashboard dan publik; tidak memakai schema/model Payload lama. Pecah ID turunan bila lingkup >5 file/satu sesi.",
+      "executionOrder": 31,
+      "body": "**Task ID:** RB-029\n**Jenis:** task\n**Fase:** Modul publik dan admin\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-028\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n**Catatan implementasi:** Slice mencakup model/migrasi baru untuk modul terkait, validasi/API, form dashboard dan publik; tidak memakai schema/model Payload lama. Pecah ID turunan bila lingkup >5 file/satu sesi.\n\n### Kriteria selesai\n\n- [ ] Admin/editor berizin mengelola nama, deskripsi, urutan dan program delapan divisi melalui review.\n- [ ] Daftar/detail divisi ber-UI baru hanya membaca versi terbit serta relasi publik sah.\n\n### Verifikasi\n\nDua role, delapan divisi, draft/private relation, urutan dan program kerja.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306047174",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306047174",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-030",
+      "title": "Bangun pengelolaan dan struktur pengurus",
+      "kind": "task",
+      "phase": "Modul publik dan admin",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-028",
+        "RB-029"
+      ],
+      "acceptanceCriteria": [
+        "Form/API pengurus memvalidasi jabatan, periode wajib, divisi opsional, foto dan urutan sesuai izin.",
+        "Struktur publik menyediakan pemilih periode/arsip serta jabatan lintas divisi tanpa menimpa sejarah."
+      ],
+      "verification": "Dua periode, jabatan tanpa divisi, foto privat/fallback dan revisi relasi.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "implementationNote": "Slice mencakup model/migrasi baru untuk modul terkait, validasi/API, form dashboard dan publik; tidak memakai schema/model Payload lama. Pecah ID turunan bila lingkup >5 file/satu sesi.",
+      "executionOrder": 32,
+      "body": "**Task ID:** RB-030\n**Jenis:** task\n**Fase:** Modul publik dan admin\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-028, RB-029\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n**Catatan implementasi:** Slice mencakup model/migrasi baru untuk modul terkait, validasi/API, form dashboard dan publik; tidak memakai schema/model Payload lama. Pecah ID turunan bila lingkup >5 file/satu sesi.\n\n### Kriteria selesai\n\n- [ ] Form/API pengurus memvalidasi jabatan, periode wajib, divisi opsional, foto dan urutan sesuai izin.\n- [ ] Struktur publik menyediakan pemilih periode/arsip serta jabatan lintas divisi tanpa menimpa sejarah.\n\n### Verifikasi\n\nDua periode, jabatan tanpa divisi, foto privat/fallback dan revisi relasi.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306047263",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306047263",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-031",
+      "title": "Batasi satu periode organisasi aktif",
+      "kind": "task",
+      "phase": "Modul publik dan admin",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-030"
+      ],
+      "acceptanceCriteria": [
+        "Aktivasi operasional Admin hanya menunjuk periode terbit dan terpisah dari review isi.",
+        "Maksimum satu periode aktif tahan request paralel; penarikan sah mengosongkan pilihan tanpa menghapus riwayat."
+      ],
+      "verification": "Aktivasi draft/paralel, switch periode dan withdrawal dengan/tanpa dependensi.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "implementationNote": "Slice mencakup model/migrasi baru untuk modul terkait, validasi/API, form dashboard dan publik; tidak memakai schema/model Payload lama. Pecah ID turunan bila lingkup >5 file/satu sesi.",
+      "executionOrder": 33,
+      "body": "**Task ID:** RB-031\n**Jenis:** task\n**Fase:** Modul publik dan admin\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-030\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n**Catatan implementasi:** Slice mencakup model/migrasi baru untuk modul terkait, validasi/API, form dashboard dan publik; tidak memakai schema/model Payload lama. Pecah ID turunan bila lingkup >5 file/satu sesi.\n\n### Kriteria selesai\n\n- [ ] Aktivasi operasional Admin hanya menunjuk periode terbit dan terpisah dari review isi.\n- [ ] Maksimum satu periode aktif tahan request paralel; penarikan sah mengosongkan pilihan tanpa menghapus riwayat.\n\n### Verifikasi\n\nAktivasi draft/paralel, switch periode dan withdrawal dengan/tanpa dependensi.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306047344",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306047344",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-032",
+      "title": "Bangun editor dan workflow riset custom",
+      "kind": "task",
+      "phase": "Modul publik dan admin",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-026"
+      ],
+      "acceptanceCriteria": [
+        "Form/API riset mencakup kategori, tim publik, tanggal analisis date-only, sumber, sampul/PDF dan review.",
+        "Disclaimer dasar wajib, tidak dapat dihapus editor; PDF terikat versi approved."
+      ],
+      "verification": "Riset tanpa tanggal/sumber, perubahan PDF, review dan date-only lintas zona waktu.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "implementationNote": "Slice mencakup model/migrasi baru untuk modul terkait, validasi/API, form dashboard dan publik; tidak memakai schema/model Payload lama. Pecah ID turunan bila lingkup >5 file/satu sesi.",
+      "executionOrder": 34,
+      "body": "**Task ID:** RB-032\n**Jenis:** task\n**Fase:** Modul publik dan admin\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-026\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n**Catatan implementasi:** Slice mencakup model/migrasi baru untuk modul terkait, validasi/API, form dashboard dan publik; tidak memakai schema/model Payload lama. Pecah ID turunan bila lingkup >5 file/satu sesi.\n\n### Kriteria selesai\n\n- [ ] Form/API riset mencakup kategori, tim publik, tanggal analisis date-only, sumber, sampul/PDF dan review.\n- [ ] Disclaimer dasar wajib, tidak dapat dihapus editor; PDF terikat versi approved.\n\n### Verifikasi\n\nRiset tanpa tanggal/sumber, perubahan PDF, review dan date-only lintas zona waktu.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306047524",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306047524",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-033",
+      "title": "Bangun katalog dan detail riset baru",
+      "kind": "task",
+      "phase": "Modul publik dan admin",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-032",
+        "RB-025"
+      ],
+      "acceptanceCriteria": [
+        "Katalog mendukung search/kategori/pagination; detail membedakan tanggal analisis dari publikasi.",
+        "Sumber/disclaimer selalu tampil; unduhan hanya PDF approved dengan fallback jika dicabut."
+      ],
+      "verification": "Kombinasi query, mobile, revisi draft, disclaimer, tanggal dan direct PDF.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "implementationNote": "Slice mencakup model/migrasi baru untuk modul terkait, validasi/API, form dashboard dan publik; tidak memakai schema/model Payload lama. Pecah ID turunan bila lingkup >5 file/satu sesi.",
+      "executionOrder": 35,
+      "body": "**Task ID:** RB-033\n**Jenis:** task\n**Fase:** Modul publik dan admin\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-032, RB-025\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n**Catatan implementasi:** Slice mencakup model/migrasi baru untuk modul terkait, validasi/API, form dashboard dan publik; tidak memakai schema/model Payload lama. Pecah ID turunan bila lingkup >5 file/satu sesi.\n\n### Kriteria selesai\n\n- [ ] Katalog mendukung search/kategori/pagination; detail membedakan tanggal analisis dari publikasi.\n- [ ] Sumber/disclaimer selalu tampil; unduhan hanya PDF approved dengan fallback jika dicabut.\n\n### Verifikasi\n\nKombinasi query, mobile, revisi draft, disclaimer, tanggal dan direct PDF.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306047610",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306047610",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-034",
+      "title": "Bangun editor kegiatan dan kebijakan waktu",
+      "kind": "task",
+      "phase": "Modul publik dan admin",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-026"
+      ],
+      "acceptanceCriteria": [
+        "Form/API event memvalidasi mulai/selesai WIB/UTC, lokasi/kanal, pembatalan dan jendela pendaftaran.",
+        "CTA memerlukan URL terkonfirmasi; perubahan isi/status editorial mengikuti review."
+      ],
+      "verification": "Batas waktu, end<=start, cancelled, URL berbahaya dan spoofing konfirmasi.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "implementationNote": "Slice mencakup model/migrasi baru untuk modul terkait, validasi/API, form dashboard dan publik; tidak memakai schema/model Payload lama. Pecah ID turunan bila lingkup >5 file/satu sesi.",
+      "executionOrder": 36,
+      "body": "**Task ID:** RB-034\n**Jenis:** task\n**Fase:** Modul publik dan admin\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-026\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n**Catatan implementasi:** Slice mencakup model/migrasi baru untuk modul terkait, validasi/API, form dashboard dan publik; tidak memakai schema/model Payload lama. Pecah ID turunan bila lingkup >5 file/satu sesi.\n\n### Kriteria selesai\n\n- [ ] Form/API event memvalidasi mulai/selesai WIB/UTC, lokasi/kanal, pembatalan dan jendela pendaftaran.\n- [ ] CTA memerlukan URL terkonfirmasi; perubahan isi/status editorial mengikuti review.\n\n### Verifikasi\n\nBatas waktu, end<=start, cancelled, URL berbahaya dan spoofing konfirmasi.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306047716",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306047716",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-035",
+      "title": "Bangun agenda dan detail kegiatan baru",
+      "kind": "task",
+      "phase": "Modul publik dan admin",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-034",
+        "RB-005"
+      ],
+      "acceptanceCriteria": [
+        "Daftar/detail membedakan upcoming/ongoing/completed/cancelled dan menjaga arsip terbit.",
+        "CTA direvalidasi terhadap waktu server; deadline, cache hangat dan kegagalan refresh tidak menyisakan tautan aktif."
+      ],
+      "verification": "Browser sebelum/saat/sesudah deadline, halaman terbuka/background, cache dan mobile.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "implementationNote": "Slice mencakup model/migrasi baru untuk modul terkait, validasi/API, form dashboard dan publik; tidak memakai schema/model Payload lama. Pecah ID turunan bila lingkup >5 file/satu sesi.",
+      "executionOrder": 37,
+      "body": "**Task ID:** RB-035\n**Jenis:** task\n**Fase:** Modul publik dan admin\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-034, RB-005\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n**Catatan implementasi:** Slice mencakup model/migrasi baru untuk modul terkait, validasi/API, form dashboard dan publik; tidak memakai schema/model Payload lama. Pecah ID turunan bila lingkup >5 file/satu sesi.\n\n### Kriteria selesai\n\n- [ ] Daftar/detail membedakan upcoming/ongoing/completed/cancelled dan menjaga arsip terbit.\n- [ ] CTA direvalidasi terhadap waktu server; deadline, cache hangat dan kegagalan refresh tidak menyisakan tautan aktif.\n\n### Verifikasi\n\nBrowser sebelum/saat/sesudah deadline, halaman terbuka/background, cache dan mobile.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306047797",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306047797",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-036",
+      "title": "Bangun pengelolaan kampanye rekrutmen",
+      "kind": "task",
+      "phase": "Modul publik dan admin",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-026",
+        "RB-028",
+        "RB-029"
+      ],
+      "acceptanceCriteria": [
+        "Form/API kampanye mencakup periode, posisi/divisi, syarat, tahapan, jadwal dan URL melalui review.",
+        "Publikasi isi tidak otomatis mengaktifkan kampanye; relasi wajib harus terbit."
+      ],
+      "verification": "Nested posisi, jadwal WIB, relasi privat dan dua role submit/revisi.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "implementationNote": "Slice mencakup model/migrasi baru untuk modul terkait, validasi/API, form dashboard dan publik; tidak memakai schema/model Payload lama. Pecah ID turunan bila lingkup >5 file/satu sesi.",
+      "executionOrder": 38,
+      "body": "**Task ID:** RB-036\n**Jenis:** task\n**Fase:** Modul publik dan admin\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-026, RB-028, RB-029\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n**Catatan implementasi:** Slice mencakup model/migrasi baru untuk modul terkait, validasi/API, form dashboard dan publik; tidak memakai schema/model Payload lama. Pecah ID turunan bila lingkup >5 file/satu sesi.\n\n### Kriteria selesai\n\n- [ ] Form/API kampanye mencakup periode, posisi/divisi, syarat, tahapan, jadwal dan URL melalui review.\n- [ ] Publikasi isi tidak otomatis mengaktifkan kampanye; relasi wajib harus terbit.\n\n### Verifikasi\n\nNested posisi, jadwal WIB, relasi privat dan dua role submit/revisi.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306047873",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306047873",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-037",
+      "title": "Batasi satu kampanye rekrutmen enabled",
+      "kind": "task",
+      "phase": "Modul publik dan admin",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-036"
+      ],
+      "acceptanceCriteria": [
+        "Hanya Admin mengaktifkan kampanye terbit dan maksimum satu enabled termasuk mendatang/berakhir.",
+        "Aktivasi paralel ditolak secara konsisten; withdrawal menonaktifkan tanpa menghapus riwayat."
+      ],
+      "verification": "Draft, dua Admin paralel, rentang tumpang tindih dan penarikan aktif.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "implementationNote": "Slice mencakup model/migrasi baru untuk modul terkait, validasi/API, form dashboard dan publik; tidak memakai schema/model Payload lama. Pecah ID turunan bila lingkup >5 file/satu sesi.",
+      "executionOrder": 39,
+      "body": "**Task ID:** RB-037\n**Jenis:** task\n**Fase:** Modul publik dan admin\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-036\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n**Catatan implementasi:** Slice mencakup model/migrasi baru untuk modul terkait, validasi/API, form dashboard dan publik; tidak memakai schema/model Payload lama. Pecah ID turunan bila lingkup >5 file/satu sesi.\n\n### Kriteria selesai\n\n- [ ] Hanya Admin mengaktifkan kampanye terbit dan maksimum satu enabled termasuk mendatang/berakhir.\n- [ ] Aktivasi paralel ditolak secara konsisten; withdrawal menonaktifkan tanpa menghapus riwayat.\n\n### Verifikasi\n\nDraft, dua Admin paralel, rentang tumpang tindih dan penarikan aktif.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306048200",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306048200",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-038",
+      "title": "Bangun halaman rekrutmen dan riwayat baru",
+      "kind": "task",
+      "phase": "Modul publik dan admin",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-037",
+        "RB-035"
+      ],
+      "acceptanceCriteria": [
+        "Posisi, syarat, tahapan, periode dan riwayat terbaca dengan status belum buka/terbuka/tutup.",
+        "CTA hanya untuk snapshot terbit, enabled, rentang waktu sah dan URL terkonfirmasi; waktu tutup menghilangkan tombol."
+      ],
+      "verification": "Batas buka inklusif/tutup eksklusif, nonaktif, cache hangat, revisi draft dan mobile.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "implementationNote": "Slice mencakup model/migrasi baru untuk modul terkait, validasi/API, form dashboard dan publik; tidak memakai schema/model Payload lama. Pecah ID turunan bila lingkup >5 file/satu sesi.",
+      "executionOrder": 40,
+      "body": "**Task ID:** RB-038\n**Jenis:** task\n**Fase:** Modul publik dan admin\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-037, RB-035\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n**Catatan implementasi:** Slice mencakup model/migrasi baru untuk modul terkait, validasi/API, form dashboard dan publik; tidak memakai schema/model Payload lama. Pecah ID turunan bila lingkup >5 file/satu sesi.\n\n### Kriteria selesai\n\n- [ ] Posisi, syarat, tahapan, periode dan riwayat terbaca dengan status belum buka/terbuka/tutup.\n- [ ] CTA hanya untuk snapshot terbit, enabled, rentang waktu sah dan URL terkonfirmasi; waktu tutup menghilangkan tombol.\n\n### Verifikasi\n\nBatas buka inklusif/tutup eksklusif, nonaktif, cache hangat, revisi draft dan mobile.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306048283",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306048283",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-039",
+      "title": "Bangun galeri dari dashboard sampai publik",
+      "kind": "task",
+      "phase": "Modul publik dan admin",
+      "status": "Backlog",
+      "priority": "P1",
+      "size": "M",
+      "dependencies": [
+        "RB-026",
+        "RB-034"
+      ],
+      "acceptanceCriteria": [
+        "Form/API album mengelola urutan foto, alt/caption, tanggal, event opsional dan tautan video melalui review.",
+        "Daftar/detail ber-UI baru hanya memuat aset approved dengan fallback revoke; video berupa tautan aman."
+      ],
+      "verification": "Album kosong/multi-foto, aset lintas owner, event ditarik, revisi caption dan keyboard.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "implementationNote": "Slice mencakup model/migrasi baru untuk modul terkait, validasi/API, form dashboard dan publik; tidak memakai schema/model Payload lama. Pecah ID turunan bila lingkup >5 file/satu sesi.",
+      "executionOrder": 41,
+      "body": "**Task ID:** RB-039\n**Jenis:** task\n**Fase:** Modul publik dan admin\n**Status awal:** Backlog\n**Prioritas:** P1\n**Ukuran:** M\n**Dependensi:** RB-026, RB-034\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n**Catatan implementasi:** Slice mencakup model/migrasi baru untuk modul terkait, validasi/API, form dashboard dan publik; tidak memakai schema/model Payload lama. Pecah ID turunan bila lingkup >5 file/satu sesi.\n\n### Kriteria selesai\n\n- [ ] Form/API album mengelola urutan foto, alt/caption, tanggal, event opsional dan tautan video melalui review.\n- [ ] Daftar/detail ber-UI baru hanya memuat aset approved dengan fallback revoke; video berupa tautan aman.\n\n### Verifikasi\n\nAlbum kosong/multi-foto, aset lintas owner, event ditarik, revisi caption dan keyboard.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306048374",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306048374",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-040",
+      "title": "Bangun partnership dengan izin logo Admin",
+      "kind": "task",
+      "phase": "Modul publik dan admin",
+      "status": "Backlog",
+      "priority": "P1",
+      "size": "M",
+      "dependencies": [
+        "RB-026",
+        "RB-024"
+      ],
+      "acceptanceCriteria": [
+        "Form/API mitra mengikuti review; izin penggunaan logo hanya Admin dan bukti izin tetap privat.",
+        "Publik/homepage hanya memuat mitra terbit; logo tanpa izin tidak tampil walau file publik di konteks lain."
+      ],
+      "verification": "Forge flag izin, mitra dengan/tanpa logo, bukti privat dan penarikan izin.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "implementationNote": "Slice mencakup model/migrasi baru untuk modul terkait, validasi/API, form dashboard dan publik; tidak memakai schema/model Payload lama. Pecah ID turunan bila lingkup >5 file/satu sesi.",
+      "executionOrder": 42,
+      "body": "**Task ID:** RB-040\n**Jenis:** task\n**Fase:** Modul publik dan admin\n**Status awal:** Backlog\n**Prioritas:** P1\n**Ukuran:** M\n**Dependensi:** RB-026, RB-024\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n**Catatan implementasi:** Slice mencakup model/migrasi baru untuk modul terkait, validasi/API, form dashboard dan publik; tidak memakai schema/model Payload lama. Pecah ID turunan bila lingkup >5 file/satu sesi.\n\n### Kriteria selesai\n\n- [ ] Form/API mitra mengikuti review; izin penggunaan logo hanya Admin dan bukti izin tetap privat.\n- [ ] Publik/homepage hanya memuat mitra terbit; logo tanpa izin tidak tampil walau file publik di konteks lain.\n\n### Verifikasi\n\nForge flag izin, mitra dengan/tanpa logo, bukti privat dan penarikan izin.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306048463",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306048463",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-041",
+      "title": "Bangun prestasi dan filter tahun",
+      "kind": "task",
+      "phase": "Modul publik dan admin",
+      "status": "Backlog",
+      "priority": "P1",
+      "size": "M",
+      "dependencies": [
+        "RB-026"
+      ],
+      "acceptanceCriteria": [
+        "Form/API prestasi mencakup judul, kategori, tanggal, penerima dan dokumentasi melalui review.",
+        "Halaman baru membaca versi terbit dengan filter tahun/date-only dan label contoh yang jelas."
+      ],
+      "verification": "Dua tahun, batas tahun, hasil kosong, revisi/withdrawal dan media.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "implementationNote": "Slice mencakup model/migrasi baru untuk modul terkait, validasi/API, form dashboard dan publik; tidak memakai schema/model Payload lama. Pecah ID turunan bila lingkup >5 file/satu sesi.",
+      "executionOrder": 43,
+      "body": "**Task ID:** RB-041\n**Jenis:** task\n**Fase:** Modul publik dan admin\n**Status awal:** Backlog\n**Prioritas:** P1\n**Ukuran:** M\n**Dependensi:** RB-026\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n**Catatan implementasi:** Slice mencakup model/migrasi baru untuk modul terkait, validasi/API, form dashboard dan publik; tidak memakai schema/model Payload lama. Pecah ID turunan bila lingkup >5 file/satu sesi.\n\n### Kriteria selesai\n\n- [ ] Form/API prestasi mencakup judul, kategori, tanggal, penerima dan dokumentasi melalui review.\n- [ ] Halaman baru membaca versi terbit dengan filter tahun/date-only dan label contoh yang jelas.\n\n### Verifikasi\n\nDua tahun, batas tahun, hasil kosong, revisi/withdrawal dan media.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306048554",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306048554",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-042",
+      "title": "Bangun portal publikasi baru",
+      "kind": "task",
+      "phase": "Modul publik dan admin",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "S",
+      "dependencies": [
+        "RB-025",
+        "RB-033"
+      ],
+      "acceptanceCriteria": [
+        "Portal mengarahkan pembaca ke artikel/riset dengan tautan valid dan ringkasan snapshot terbit.",
+        "Empty state dan navigasi mobile/keyboard jelas tanpa duplikasi isi manual."
+      ],
+      "verification": "Kedua jenis publikasi kosong/terisi, link tujuan dan keyboard.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 44,
+      "body": "**Task ID:** RB-042\n**Jenis:** task\n**Fase:** Modul publik dan admin\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** S\n**Dependensi:** RB-025, RB-033\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Portal mengarahkan pembaca ke artikel/riset dengan tautan valid dan ringkasan snapshot terbit.\n- [ ] Empty state dan navigasi mobile/keyboard jelas tanpa duplikasi isi manual.\n\n### Verifikasi\n\nKedua jenis publikasi kosong/terisi, link tujuan dan keyboard.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306048912",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306048912",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-043",
+      "title": "Bangun halaman kontak terkonfirmasi",
+      "kind": "task",
+      "phase": "Modul publik dan admin",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "S",
+      "dependencies": [
+        "RB-024",
+        "RB-005"
+      ],
+      "acceptanceCriteria": [
+        "Kontak/sosial/lokasi hanya dari Site Settings terkonfirmasi dan konsisten dengan header/footer.",
+        "Kolom kosong memiliki penanganan jelas; tidak menambah formulir kontak di luar scope."
+      ],
+      "verification": "Ubah satu kontak melalui admin, periksa semua lokasi, mailto/HTTPS dan kosong.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 45,
+      "body": "**Task ID:** RB-043\n**Jenis:** task\n**Fase:** Modul publik dan admin\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** S\n**Dependensi:** RB-024, RB-005\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Kontak/sosial/lokasi hanya dari Site Settings terkonfirmasi dan konsisten dengan header/footer.\n- [ ] Kolom kosong memiliki penanganan jelas; tidak menambah formulir kontak di luar scope.\n\n### Verifikasi\n\nUbah satu kontak melalui admin, periksa semua lokasi, mailto/HTTPS dan kosong.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306049002",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306049002",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-044",
+      "title": "Lengkapi beranda dengan seluruh modul",
+      "kind": "task",
+      "phase": "Modul publik dan admin",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-027",
+        "RB-031",
+        "RB-033",
+        "RB-035",
+        "RB-038",
+        "RB-039",
+        "RB-040",
+        "RB-041",
+        "RB-042",
+        "RB-043"
+      ],
+      "acceptanceCriteria": [
+        "Beranda baru mengagregasi program, publikasi, agenda, rekrutmen, prestasi dan mitra dari data terbit dengan urutan benar.",
+        "Izin logo, CTA waktu, label contoh dan kondisi tanpa data tetap benar setelah publish/withdraw/revoke."
+      ],
+      "verification": "Dataset kosong/lengkap, perubahan snapshot, penarikan/izin dan batas jadwal.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 46,
+      "body": "**Task ID:** RB-044\n**Jenis:** task\n**Fase:** Modul publik dan admin\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-027, RB-031, RB-033, RB-035, RB-038, RB-039, RB-040, RB-041, RB-042, RB-043\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Beranda baru mengagregasi program, publikasi, agenda, rekrutmen, prestasi dan mitra dari data terbit dengan urutan benar.\n- [ ] Izin logo, CTA waktu, label contoh dan kondisi tanpa data tetap benar setelah publish/withdraw/revoke.\n\n### Verifikasi\n\nDataset kosong/lengkap, perubahan snapshot, penarikan/izin dan batas jadwal.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306049105",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306049105",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-045",
+      "title": "Lengkapi loading, error, 404 dan log aman",
+      "kind": "task",
+      "phase": "QA dan kualitas",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-044",
+        "RB-023"
+      ],
+      "acceptanceCriteria": [
+        "Website dan dashboard menyediakan state kosong/loading/error/404 dengan jalur pemulihan yang valid.",
+        "Error tidak mengungkap secret/stack/SQL; private/withdrawn mempertahankan HTTP 404 dan request dapat dikorelasikan."
+      ],
+      "verification": "Fault injection DB/storage, recovery UI, direct private URLs dan inspeksi log.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 47,
+      "body": "**Task ID:** RB-045\n**Jenis:** task\n**Fase:** QA dan kualitas\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-044, RB-023\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Website dan dashboard menyediakan state kosong/loading/error/404 dengan jalur pemulihan yang valid.\n- [ ] Error tidak mengungkap secret/stack/SQL; private/withdrawn mempertahankan HTTP 404 dan request dapat dikorelasikan.\n\n### Verifikasi\n\nFault injection DB/storage, recovery UI, direct private URLs dan inspeksi log.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306049178",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306049178",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-046",
+      "title": "Bangun metadata, sitemap dan aturan indeks",
+      "kind": "task",
+      "phase": "QA dan kualitas",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-044"
+      ],
+      "acceptanceCriteria": [
+        "Canonical/SEO/Open Graph/structured data mengikuti domain serta snapshot terbit dan label contoh.",
+        "Draft/admin/preview tidak masuk sitemap/indeks; withdrawal menghapus representasi termasuk cache."
+      ],
+      "verification": "HTML/XML/robots/JSON-LD untuk publish/revisi/withdraw; staging noindex.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 48,
+      "body": "**Task ID:** RB-046\n**Jenis:** task\n**Fase:** QA dan kualitas\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-044\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Canonical/SEO/Open Graph/structured data mengikuti domain serta snapshot terbit dan label contoh.\n- [ ] Draft/admin/preview tidak masuk sitemap/indeks; withdrawal menghapus representasi termasuk cache.\n\n### Verifikasi\n\nHTML/XML/robots/JSON-LD untuk publish/revisi/withdraw; staging noindex.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306049275",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306049275",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-047",
+      "title": "Siapkan seed demo rebuild yang terisolasi",
+      "kind": "task",
+      "phase": "QA dan kualitas",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-044"
+      ],
+      "acceptanceCriteria": [
+        "Seed mencakup 11 modul, delapan divisi, dua periode serta dua role dengan data contoh berlabel dan secret input aman.",
+        "Seed ulang tidak menduplikasi atau menimpa edit; reset eksplisit hanya pada target rebuild uji."
+      ],
+      "verification": "Seed dua kali, edit satu konten, seed ulang dan restart DB/media.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 49,
+      "body": "**Task ID:** RB-047\n**Jenis:** task\n**Fase:** QA dan kualitas\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-044\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Seed mencakup 11 modul, delapan divisi, dua periode serta dua role dengan data contoh berlabel dan secret input aman.\n- [ ] Seed ulang tidak menduplikasi atau menimpa edit; reset eksplisit hanya pada target rebuild uji.\n\n### Verifikasi\n\nSeed dua kali, edit satu konten, seed ulang dan restart DB/media.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306049473",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306049473",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-048",
+      "title": "Validasi konten resmi dan izin aset rilis",
+      "kind": "task",
+      "phase": "Konten resmi",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "S",
+      "dependencies": [
+        "RB-004",
+        "RB-044"
+      ],
+      "acceptanceCriteria": [
+        "Inventaris 11 modul mencatat sumber, pemilik validasi, status resmi/contoh, kontak/tautan dan izin foto/logo.",
+        "Materi rilis disetujui melalui dashboard baru; kekosongan yang diterima dicatat tanpa mengklaim data contoh sebagai fakta."
+      ],
+      "verification": "Cocokkan inventaris dan snapshot rilis, date-only/disclaimer serta bukti izin privat.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 50,
+      "body": "**Task ID:** RB-048\n**Jenis:** task\n**Fase:** Konten resmi\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** S\n**Dependensi:** RB-004, RB-044\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Inventaris 11 modul mencatat sumber, pemilik validasi, status resmi/contoh, kontak/tautan dan izin foto/logo.\n- [ ] Materi rilis disetujui melalui dashboard baru; kekosongan yang diterima dicatat tanpa mengklaim data contoh sebagai fakta.\n\n### Verifikasi\n\nCocokkan inventaris dan snapshot rilis, date-only/disclaimer serta bukti izin privat.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306049571",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306049571",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-049",
+      "title": "Audit keamanan dan matriks izin sistem baru",
+      "kind": "task",
+      "phase": "QA dan kualitas",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-045",
+        "RB-046",
+        "RB-047"
+      ],
+      "acceptanceCriteria": [
+        "Matriks Admin/owner/assignee/Media lain/anonim mencakup seluruh modul, API, versi, file, audit, settings dan activation.",
+        "AC terkait XSS/CSRF/sesi/upload/race/rollback lulus dan dependency aktual ditinjau; temuan memiliki tindak lanjut."
+      ],
+      "verification": "Suite unit/integration/browser baru, request langsung, fault/race dan audit dependency.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 51,
+      "body": "**Task ID:** RB-049\n**Jenis:** task\n**Fase:** QA dan kualitas\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-045, RB-046, RB-047\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Matriks Admin/owner/assignee/Media lain/anonim mencakup seluruh modul, API, versi, file, audit, settings dan activation.\n- [ ] AC terkait XSS/CSRF/sesi/upload/race/rollback lulus dan dependency aktual ditinjau; temuan memiliki tindak lanjut.\n\n### Verifikasi\n\nSuite unit/integration/browser baru, request langsung, fault/race dan audit dependency.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306049666",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306049666",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-050",
+      "title": "Audit responsif dan aksesibilitas publik/admin",
+      "kind": "task",
+      "phase": "QA dan kualitas",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-045",
+        "RB-047"
+      ],
+      "acceptanceCriteria": [
+        "Halaman diperiksa pada 320/375/768/1024/1440 px tanpa horizontal scroll halaman di 320 px.",
+        "Keyboard/fokus/heading/landmark/kontras/label/error/alt/zoom 200%/reduced motion dicatat menuju WCAG 2.2 AA."
+      ],
+      "verification": "Audit otomatis ditambah inspeksi manual dan screenshot seluruh keluarga halaman.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 52,
+      "body": "**Task ID:** RB-050\n**Jenis:** task\n**Fase:** QA dan kualitas\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-045, RB-047\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Halaman diperiksa pada 320/375/768/1024/1440 px tanpa horizontal scroll halaman di 320 px.\n- [ ] Keyboard/fokus/heading/landmark/kontras/label/error/alt/zoom 200%/reduced motion dicatat menuju WCAG 2.2 AA.\n\n### Verifikasi\n\nAudit otomatis ditambah inspeksi manual dan screenshot seluruh keluarga halaman.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306049755",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306049755",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-051",
+      "title": "Ukur performa UI baru sesuai PRD",
+      "kind": "task",
+      "phase": "QA dan kualitas",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-046",
+        "RB-049",
+        "RB-050"
+      ],
+      "acceptanceCriteria": [
+        "Production build dan dataset tetap dipakai; browser/Lighthouse/kondisi mesin tercatat.",
+        "Warm-up lalu tiga pengukuran mobile memberi median Performance >=85 pada /, daftar artikel, satu detail artikel dan /kegiatan."
+      ],
+      "verification": "Benchmark ulang dan perbaiki hanya hambatan terukur tanpa menurunkan isi/privasi/aksesibilitas.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 53,
+      "body": "**Task ID:** RB-051\n**Jenis:** task\n**Fase:** QA dan kualitas\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-046, RB-049, RB-050\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Production build dan dataset tetap dipakai; browser/Lighthouse/kondisi mesin tercatat.\n- [ ] Warm-up lalu tiga pengukuran mobile memberi median Performance >=85 pada /, daftar artikel, satu detail artikel dan /kegiatan.\n\n### Verifikasi\n\nBenchmark ulang dan perbaiki hanya hambatan terukur tanpa menurunkan isi/privasi/aksesibilitas.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306049832",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306049832",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-052",
+      "title": "Buktikan clean start, restart dan restore lokal",
+      "kind": "task",
+      "phase": "QA dan kualitas",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-047",
+        "RB-049"
+      ],
+      "acceptanceCriteria": [
+        "Source/lockfile/env/migrasi/setup akun dapat dijalankan dari lingkungan bersih; DB/media bertahan setelah restart.",
+        "Backup DB/media konsisten dipulihkan ke target terpisah dengan checksum, ACL audit dan privasi tetap benar."
+      ],
+      "verification": "Rehearsal instalasi/start/migrasi/seed/restart dan restore nyata tanpa menimpa data sumber.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 54,
+      "body": "**Task ID:** RB-052\n**Jenis:** task\n**Fase:** QA dan kualitas\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-047, RB-049\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Source/lockfile/env/migrasi/setup akun dapat dijalankan dari lingkungan bersih; DB/media bertahan setelah restart.\n- [ ] Backup DB/media konsisten dipulihkan ke target terpisah dengan checksum, ACL audit dan privasi tetap benar.\n\n### Verifikasi\n\nRehearsal instalasi/start/migrasi/seed/restart dan restore nyata tanpa menimpa data sumber.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306050045",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306050045",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-053",
+      "title": "UAT dan serah terima demo rebuild",
+      "kind": "task",
+      "phase": "Penerimaan",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "S",
+      "dependencies": [
+        "RB-048",
+        "RB-049",
+        "RB-050",
+        "RB-051",
+        "RB-052"
+      ],
+      "acceptanceCriteria": [
+        "Pemilik meninjau 11 modul dan dashboard Admin/Media dengan bukti FR-01–11, AC-01–29 serta DoD baru.",
+        "Penerimaan/revisi dicatat terhadap commit yang ditinjau; panduan admin/setup dan keterbatasan aktual tersedia."
+      ],
+      "verification": "Naskah dua role/pengunjung, audit traceability, catatan keputusan dan temuan UAT.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 55,
+      "body": "**Task ID:** RB-053\n**Jenis:** task\n**Fase:** Penerimaan\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** S\n**Dependensi:** RB-048, RB-049, RB-050, RB-051, RB-052\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Pemilik meninjau 11 modul dan dashboard Admin/Media dengan bukti FR-01–11, AC-01–29 serta DoD baru.\n- [ ] Penerimaan/revisi dicatat terhadap commit yang ditinjau; panduan admin/setup dan keterbatasan aktual tersedia.\n\n### Verifikasi\n\nNaskah dua role/pengunjung, audit traceability, catatan keputusan dan temuan UAT.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306050138",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306050138",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-054",
+      "title": "Tetapkan hosting, domain dan staging rebuild",
+      "kind": "task",
+      "phase": "Produksi",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-053"
+      ],
+      "acceptanceCriteria": [
+        "Target runtime/DB/media persisten, domain, biaya dan operator disepakati; staging memakai data/secret terpisah dan noindex.",
+        "Prosedur build/start/healthcheck dan strategi pindah data atau mulai kosong direhearsal sesuai keputusan RB-002."
+      ],
+      "verification": "Review infrastruktur dan deployment uji pada target yang diizinkan.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 56,
+      "body": "**Task ID:** RB-054\n**Jenis:** task\n**Fase:** Produksi\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-053\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Target runtime/DB/media persisten, domain, biaya dan operator disepakati; staging memakai data/secret terpisah dan noindex.\n- [ ] Prosedur build/start/healthcheck dan strategi pindah data atau mulai kosong direhearsal sesuai keputusan RB-002.\n\n### Verifikasi\n\nReview infrastruktur dan deployment uji pada target yang diizinkan.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306050199",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306050199",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-055",
+      "title": "Siapkan keamanan dan recovery akun target",
+      "kind": "task",
+      "phase": "Produksi",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-054"
+      ],
+      "acceptanceCriteria": [
+        "HTTPS/origin/cookie/secret/storage dan akses operator sesuai target; secret tetap privat.",
+        "Prosedur pemulihan akun serta akun bernama diverifikasi; hardening/dependency rilis mempunyai hasil terbaru."
+      ],
+      "verification": "Probe TLS/auth/origin/upload, revoke sesi dan simulasi recovery pada staging.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 57,
+      "body": "**Task ID:** RB-055\n**Jenis:** task\n**Fase:** Produksi\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-054\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] HTTPS/origin/cookie/secret/storage dan akses operator sesuai target; secret tetap privat.\n- [ ] Prosedur pemulihan akun serta akun bernama diverifikasi; hardening/dependency rilis mempunyai hasil terbaru.\n\n### Verifikasi\n\nProbe TLS/auth/origin/upload, revoke sesi dan simulasi recovery pada staging.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306050305",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306050305",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-056",
+      "title": "Buktikan backup, restore dan rollback target",
+      "kind": "task",
+      "phase": "Produksi",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-054",
+        "RB-055"
+      ],
+      "acceptanceCriteria": [
+        "Frekuensi/retensi/off-site/RPO/RTO disepakati; database/media dibackup secara konsisten.",
+        "Restore pada target baru dan rollback rilis mempertahankan versi, audit, ACL dan checksum dalam hasil terukur."
+      ],
+      "verification": "Latihan nyata restore/rollback di target terpisah; catat durasi dan hasil.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 58,
+      "body": "**Task ID:** RB-056\n**Jenis:** task\n**Fase:** Produksi\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-054, RB-055\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Frekuensi/retensi/off-site/RPO/RTO disepakati; database/media dibackup secara konsisten.\n- [ ] Restore pada target baru dan rollback rilis mempertahankan versi, audit, ACL dan checksum dalam hasil terukur.\n\n### Verifikasi\n\nLatihan nyata restore/rollback di target terpisah; catat durasi dan hasil.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306050426",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306050426",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-057",
+      "title": "Siapkan monitoring dan panduan operasi",
+      "kind": "task",
+      "phase": "Produksi",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-054",
+        "RB-056"
+      ],
+      "acceptanceCriteria": [
+        "Operator dapat memantau aplikasi/DB/storage/backup/TLS dengan log aman dan jalur notifikasi yang disepakati.",
+        "Runbook gangguan, pemeliharaan dan penanggung jawab akun/domain/infrastruktur siap diserahkan."
+      ],
+      "verification": "Simulasi kegagalan aman dan walkthrough operasi bersama pengelola.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 59,
+      "body": "**Task ID:** RB-057\n**Jenis:** task\n**Fase:** Produksi\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-054, RB-056\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Operator dapat memantau aplikasi/DB/storage/backup/TLS dengan log aman dan jalur notifikasi yang disepakati.\n- [ ] Runbook gangguan, pemeliharaan dan penanggung jawab akun/domain/infrastruktur siap diserahkan.\n\n### Verifikasi\n\nSimulasi kegagalan aman dan walkthrough operasi bersama pengelola.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306050601",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306050601",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-058",
+      "title": "Tinjau kesiapan dan otorisasi rilis rebuild",
+      "kind": "task",
+      "phase": "Penerimaan",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "S",
+      "dependencies": [
+        "RB-053",
+        "RB-055",
+        "RB-056",
+        "RB-057"
+      ],
+      "acceptanceCriteria": [
+        "QA, konten/izin, keamanan, backup/restore, recovery dan operator mempunyai bukti untuk commit/domain rilis.",
+        "Pihak berwenang memberi/menolak otorisasi deployment eksplisit dengan jendela rilis serta kriteria rollback."
+      ],
+      "verification": "Review readiness konkret; pembuatan kartu bukan otorisasi deployment.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 60,
+      "body": "**Task ID:** RB-058\n**Jenis:** task\n**Fase:** Penerimaan\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** S\n**Dependensi:** RB-053, RB-055, RB-056, RB-057\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] QA, konten/izin, keamanan, backup/restore, recovery dan operator mempunyai bukti untuk commit/domain rilis.\n- [ ] Pihak berwenang memberi/menolak otorisasi deployment eksplisit dengan jendela rilis serta kriteria rollback.\n\n### Verifikasi\n\nReview readiness konkret; pembuatan kartu bukan otorisasi deployment.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306050683",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306050683",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    },
+    {
+      "id": "RB-059",
+      "title": "Deploy rebuild dan verifikasi pascarilis",
+      "kind": "task",
+      "phase": "Produksi",
+      "status": "Backlog",
+      "priority": "P0",
+      "size": "M",
+      "dependencies": [
+        "RB-058"
+      ],
+      "acceptanceCriteria": [
+        "Eksekusi hanya setelah otorisasi rilis; backup/migrasi/konfigurasi/traffic mengikuti runbook dan rollback bila gagal.",
+        "Smoke publik/admin/media/CTA/SEO/privasi dan monitoring di domain final lulus; versi serta serah terima operasi dicatat."
+      ],
+      "verification": "Deployment yang diizinkan, smoke domain final dan walkthrough pengelola.",
+      "source": "PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.",
+      "executionOrder": 61,
+      "body": "**Task ID:** RB-059\n**Jenis:** task\n**Fase:** Produksi\n**Status awal:** Backlog\n**Prioritas:** P0\n**Ukuran:** M\n**Dependensi:** RB-058\n\nRebuild v2 merupakan implementasi baru pada branch baru: Next.js tetap; Payload diganti dashboard admin custom. Dua role Admin/Media dan workflow draft → review → publish dibangun ulang. Status Done sistem lama tidak meluluskan task ini.\n\n### Kriteria selesai\n\n- [ ] Eksekusi hanya setelah otorisasi rilis; backup/migrasi/konfigurasi/traffic mengikuti runbook dan rollback bila gagal.\n- [ ] Smoke publik/admin/media/CTA/SEO/privasi dan monitoring di domain final lulus; versi serta serah terima operasi dicatat.\n\n### Verifikasi\n\nDeployment yang diizinkan, smoke domain final dan walkthrough pengelola.\n\n### Bukti dan hasil\n\nBelum dikerjakan. Tautkan bukti implementasi, pemeriksaan dan keputusan aktual sebelum memindahkan ke Done.\n\n**Batas pelaksanaan:** kartu ini tidak menjalankan penghapusan kode/data atau deployment. Branch Git tidak memisahkan database/media; gunakan target rebuild terisolasi sesuai task fondasi.\n\n**Sumber keputusan:** PRD v1.1; keputusan pemilik 15 November 2026: rebuild dari awal, Next.js tetap, dashboard custom tanpa Payload, dua role dan workflow tetap.\n[Kebutuhan fungsional dan penerimaan PRD](https://github.com/silkiy/gibei-uisi/blob/main/docs/PRD-v1.1.md)",
+      "github": {
+        "itemType": "Project draft item",
+        "projectItemId": "306050772",
+        "projectItemUrl": "https://github.com/users/silkiy/projects/5/views/6?pane=issue&itemId=306050772",
+        "bodyVerified": true,
+        "published": true,
+        "issueNumber": null,
+        "issueUrl": null
+      }
+    }
+  ]
+}

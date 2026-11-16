@@ -1,0 +1,790 @@
+[
+  {
+    "id": "UI-001",
+    "title": "Audit UI dan inventaris seluruh rute",
+    "description": "Petakan tampilan yang ada dan kebutuhan penggantian UI pada seluruh modul publik.",
+    "workstream": "Redesign UI",
+    "phase": "G — Arah desain",
+    "status": "Ready",
+    "priority": "P0",
+    "size": "S",
+    "dependencies": [
+      "T063"
+    ],
+    "prd": "§6–7; §10; AC-19",
+    "acceptanceCriteria": [
+      "Daftar seluruh rute memuat kondisi berisi data, kosong, error dan media tidak tersedia.",
+      "Cakupan redesign publik, komponen bersama, serta kontrak CMS yang digunakan kembali tercatat."
+    ],
+    "verification": "Tinjau matriks terhadap 18 keluarga URL PRD dan kode saat ini.",
+    "files": [
+      "src/app/(public)",
+      "src/components/public",
+      "docs/design.md"
+    ]
+  },
+  {
+    "id": "UI-002",
+    "title": "Eksplorasi arah visual website",
+    "description": "Susun pilihan arah visual untuk situs organisasi dan publikasi investasi.",
+    "workstream": "Redesign UI",
+    "phase": "G — Arah desain",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "S",
+    "dependencies": [
+      "UI-001"
+    ],
+    "prd": "§10; §18.2",
+    "acceptanceCriteria": [
+      "Referensi layout, warna, tipografi dan gaya foto memiliki alasan yang sesuai kebutuhan pembaca.",
+      "Pilihan desain mencakup keterbacaan publikasi dan penggunaan pada ponsel."
+    ],
+    "verification": "Tinjau referensi dan rekomendasi arah visual bersama pemilik.",
+    "files": [
+      "docs/design.md"
+    ]
+  },
+  {
+    "id": "UI-003",
+    "title": "Inventaris identitas dan aset desain",
+    "description": "Catat logo, font, foto dan hak penggunaan yang tersedia untuk desain baru.",
+    "workstream": "Redesign UI",
+    "phase": "G — Arah desain",
+    "status": "Ready",
+    "priority": "P0",
+    "size": "S",
+    "dependencies": [],
+    "prd": "§10; §17; §18.2",
+    "acceptanceCriteria": [
+      "Setiap aset memiliki sumber, status resmi/contoh, pemilik validasi dan status izin.",
+      "Aset yang belum tersedia mempunyai fallback berlabel contoh yang jelas."
+    ],
+    "verification": "Periksa daftar aset terhadap berkas yang benar-benar tersedia dan bukti izin.",
+    "files": [
+      "docs/design.md",
+      "public"
+    ]
+  },
+  {
+    "id": "UI-004",
+    "title": "Buat mockup beranda mobile dan desktop",
+    "description": "Wujudkan arah visual ke desain beranda yang dapat ditinjau sebelum implementasi.",
+    "workstream": "Redesign UI",
+    "phase": "G — Arah desain",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "M",
+    "dependencies": [
+      "UI-002",
+      "UI-003"
+    ],
+    "prd": "FR-01; §10",
+    "acceptanceCriteria": [
+      "Mockup mobile dan desktop memperlihatkan hierarki navigasi, hero, profil, publikasi, agenda dan footer.",
+      "Keadaan tanpa data serta label contoh diperlihatkan tanpa membuat klaim organisasi baru."
+    ],
+    "verification": "Tinjau mockup menggunakan konten representatif dan kebutuhan FR-01.",
+    "files": [
+      "docs/design.md"
+    ]
+  },
+  {
+    "id": "UI-005",
+    "title": "Catat persetujuan arah desain",
+    "description": "Pastikan arah desain dipilih sebelum penerapan menyeluruh ke halaman.",
+    "workstream": "Redesign UI",
+    "phase": "G — Arah desain",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "S",
+    "dependencies": [
+      "UI-004"
+    ],
+    "prd": "§10; §18",
+    "acceptanceCriteria": [
+      "Pemilik meninjau desain konkret dan keputusan aktual tercatat.",
+      "Revisi yang wajib diselesaikan dan batas scope publik/CMS dicatat."
+    ],
+    "verification": "Cocokkan catatan keputusan dengan tanggapan pemilik; permintaan Kanban bukan persetujuan desain.",
+    "files": [
+      "docs/decisions.md",
+      "docs/design.md"
+    ]
+  },
+  {
+    "id": "UI-006",
+    "title": "Terapkan token dan komponen dasar",
+    "description": "Bangun fondasi warna, tipografi, jarak, container, tombol, label dan field.",
+    "workstream": "Redesign UI",
+    "phase": "H — Fondasi UI",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "M",
+    "dependencies": [
+      "UI-005",
+      "GATE-01"
+    ],
+    "prd": "§10; AC-19",
+    "acceptanceCriteria": [
+      "Token dan komponen mengikuti desain yang disetujui serta memiliki focus state yang terlihat.",
+      "CSS publik tetap terisolasi dari Payload dan memperhatikan reduced motion."
+    ],
+    "verification": "Jalankan lint/typecheck/build serta inspeksi komponen pada mobile dan desktop.",
+    "files": [
+      "src/app/(public)/globals.css",
+      "src/app/(public)/layout.tsx",
+      "src/components/public"
+    ]
+  },
+  {
+    "id": "UI-007",
+    "title": "Ganti header dan navigasi desktop",
+    "description": "Terapkan identitas dan navigasi desktop menggunakan konfigurasi situs.",
+    "workstream": "Redesign UI",
+    "phase": "H — Fondasi UI",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "S",
+    "dependencies": [
+      "UI-006"
+    ],
+    "prd": "FR-10; §8.7; AC-21",
+    "acceptanceCriteria": [
+      "Seluruh tautan dan target navigasi valid, dengan label yang sesuai halaman tujuan.",
+      "Identitas dan navigasi tetap menggunakan Site Settings yang berwenang."
+    ],
+    "verification": "Periksa semua tautan, keyboard, focus dan suite public-shell.",
+    "files": [
+      "src/components/public/SiteHeader.tsx",
+      "tests/e2e/public-shell.spec.ts"
+    ]
+  },
+  {
+    "id": "UI-008",
+    "title": "Ganti navigasi mobile",
+    "description": "Terapkan menu mobile yang nyaman digunakan dan dapat diakses dengan keyboard.",
+    "workstream": "Redesign UI",
+    "phase": "H — Fondasi UI",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "S",
+    "dependencies": [
+      "UI-007"
+    ],
+    "prd": "§10; AC-19",
+    "acceptanceCriteria": [
+      "Buka/tutup menu, Escape, fokus kembali dan urutan Tab bekerja konsisten.",
+      "Menu tetap dapat digunakan pada 320 px dan zoom 200% tanpa scroll horizontal halaman."
+    ],
+    "verification": "Periksa interaksi sentuh/keyboard pada 320/375/768 px dan reduced motion.",
+    "files": [
+      "src/components/public/SiteHeader.tsx",
+      "tests/e2e/public-shell.spec.ts"
+    ]
+  },
+  {
+    "id": "UI-009",
+    "title": "Ganti footer dan kontak bersama",
+    "description": "Terapkan footer yang konsisten dengan identitas dan sumber kontak tunggal.",
+    "workstream": "Redesign UI",
+    "phase": "H — Fondasi UI",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "S",
+    "dependencies": [
+      "UI-006"
+    ],
+    "prd": "FR-10; AC-21",
+    "acceptanceCriteria": [
+      "Footer menggunakan Site Settings dan hanya menampilkan kontak terkonfirmasi.",
+      "Tautan, label contoh dan tata letak berfungsi saat sebagian kontak kosong."
+    ],
+    "verification": "Bandingkan footer/header/halaman kontak dan jalankan suite settings terkait.",
+    "files": [
+      "src/components/public/SiteFooter.tsx",
+      "src/components/public/ContactLinks.tsx"
+    ]
+  },
+  {
+    "id": "UI-010",
+    "title": "Ganti hero dan pengantar beranda",
+    "description": "Terapkan pembuka, profil dan program unggulan sesuai desain terpilih.",
+    "workstream": "Redesign UI",
+    "phase": "I — UI seluruh modul",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "M",
+    "dependencies": [
+      "UI-006",
+      "UI-008",
+      "UI-009",
+      "GATE-02"
+    ],
+    "prd": "FR-01; §8.7",
+    "acceptanceCriteria": [
+      "Isi editorial tetap berasal dari snapshot yang disetujui dan dapat dikelola CMS.",
+      "Hero/program mengikuti mockup dan tetap jelas pada layar kecil serta tanpa data."
+    ],
+    "verification": "Inspeksi beranda mobile/desktop dan jalankan zz-p0-home.",
+    "files": [
+      "src/app/(public)/page.tsx",
+      "src/components/public/PageSections.tsx",
+      "tests/e2e/zz-p0-home.spec.ts"
+    ]
+  },
+  {
+    "id": "UI-011",
+    "title": "Ganti agregasi konten beranda",
+    "description": "Terapkan bagian publikasi, agenda, rekrutmen, prestasi dan mitra pada beranda.",
+    "workstream": "Redesign UI",
+    "phase": "I — UI seluruh modul",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "M",
+    "dependencies": [
+      "UI-010"
+    ],
+    "prd": "FR-01; FR-05–09; FR-11",
+    "acceptanceCriteria": [
+      "Hanya konten terbit tampil dengan urutan publikasi dan waktu agenda yang benar.",
+      "CTA rekrutmen, izin logo mitra dan label contoh tetap mengikuti aturan domain."
+    ],
+    "verification": "Jalankan zz-p0-home/p1-seo dan periksa kondisi terisi serta kosong.",
+    "files": [
+      "src/app/(public)/page.tsx",
+      "src/components/public/P1Content.tsx",
+      "tests/e2e/zz-p0-home.spec.ts"
+    ]
+  },
+  {
+    "id": "UI-012",
+    "title": "Ganti halaman Tentang",
+    "description": "Terapkan profil, sejarah, visi dan misi dalam layout baru.",
+    "workstream": "Redesign UI",
+    "phase": "I — UI seluruh modul",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "S",
+    "dependencies": [
+      "UI-006",
+      "UI-009",
+      "GATE-02"
+    ],
+    "prd": "FR-02; AC-08; AC-21",
+    "acceptanceCriteria": [
+      "Isi dan metadata tetap berasal dari versi terbit yang disetujui.",
+      "Profil panjang, gambar opsional dan kondisi kosong tetap terbaca pada mobile."
+    ],
+    "verification": "Jalankan about-settings dan inspeksi mobile/desktop.",
+    "files": [
+      "src/app/(public)/tentang/page.tsx",
+      "src/components/public/PageSections.tsx"
+    ]
+  },
+  {
+    "id": "UI-013",
+    "title": "Ganti daftar dan detail divisi",
+    "description": "Terapkan katalog delapan divisi serta halaman profil/program kerjanya.",
+    "workstream": "Redesign UI",
+    "phase": "I — UI seluruh modul",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "M",
+    "dependencies": [
+      "UI-006",
+      "UI-009",
+      "GATE-02"
+    ],
+    "prd": "FR-03; AC-16",
+    "acceptanceCriteria": [
+      "Daftar dan detail menampilkan delapan divisi serta program/pengurus yang tepat.",
+      "Snapshot terbit, periode dan fallback gambar tetap benar tanpa menampilkan data privat."
+    ],
+    "verification": "Jalankan divisions dan inspeksi daftar/detail dengan konten panjang.",
+    "files": [
+      "src/app/(public)/tentang/divisi/page.tsx",
+      "src/app/(public)/tentang/divisi/[slug]/page.tsx",
+      "tests/e2e/divisions.spec.ts"
+    ]
+  },
+  {
+    "id": "UI-014",
+    "title": "Ganti struktur organisasi dan arsip",
+    "description": "Terapkan struktur pengurus dengan pilihan periode dan akses riwayat.",
+    "workstream": "Redesign UI",
+    "phase": "I — UI seluruh modul",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "M",
+    "dependencies": [
+      "UI-013"
+    ],
+    "prd": "FR-03; AC-16; AC-28",
+    "acceptanceCriteria": [
+      "Pemilih periode menampilkan pengurus, jabatan lintas divisi dan arsip yang benar.",
+      "Nama panjang, foto tidak tersedia dan periode tanpa pengurus memiliki tampilan jelas."
+    ],
+    "verification": "Jalankan structure dan cek periode aktif/past serta keyboard selector.",
+    "files": [
+      "src/app/(public)/tentang/struktur/page.tsx",
+      "tests/e2e/structure.spec.ts"
+    ]
+  },
+  {
+    "id": "UI-015",
+    "title": "Ganti portal Publikasi",
+    "description": "Terapkan pintu masuk artikel dan riset yang mudah dipahami.",
+    "workstream": "Redesign UI",
+    "phase": "I — UI seluruh modul",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "S",
+    "dependencies": [
+      "UI-006",
+      "UI-009",
+      "GATE-02"
+    ],
+    "prd": "FR-04–05; §6.1",
+    "acceptanceCriteria": [
+      "Jalur menuju artikel dan riset jelas dan semua tautan valid.",
+      "Ringkasan yang ditampilkan hanya mengambil konten terbit dan menangani kondisi kosong."
+    ],
+    "verification": "Periksa navigasi portal ke daftar artikel/riset pada mobile/desktop.",
+    "files": [
+      "src/app/(public)/publikasi/page.tsx",
+      "src/components/public/PublicationLinks.tsx"
+    ]
+  },
+  {
+    "id": "UI-016",
+    "title": "Ganti daftar artikel",
+    "description": "Terapkan katalog artikel dengan pencarian, kategori dan pagination.",
+    "workstream": "Redesign UI",
+    "phase": "I — UI seluruh modul",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "M",
+    "dependencies": [
+      "UI-015"
+    ],
+    "prd": "FR-04; AC-18",
+    "acceptanceCriteria": [
+      "Search/filter/pagination tetap menggunakan URL yang dapat dibagikan dan mempertahankan parameter.",
+      "Hasil kosong, parameter tidak valid dan halaman di luar rentang ditangani konsisten."
+    ],
+    "verification": "Jalankan article-list/article-search dan periksa keyboard form serta pagination.",
+    "files": [
+      "src/app/(public)/publikasi/artikel/page.tsx",
+      "tests/e2e/article-list.spec.ts"
+    ]
+  },
+  {
+    "id": "UI-017",
+    "title": "Ganti detail artikel",
+    "description": "Terapkan tipografi dan layout detail tanpa melemahkan renderer aman.",
+    "workstream": "Redesign UI",
+    "phase": "I — UI seluruh modul",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "M",
+    "dependencies": [
+      "UI-016"
+    ],
+    "prd": "FR-04; AC-07–08; AC-23",
+    "acceptanceCriteria": [
+      "Judul, penulis publik, tanggal, isi, sumber, caption dan label contoh tetap terbaca.",
+      "Renderer tetap memakai sanitasi/allowlist dan media hanya melalui gateway yang sah."
+    ],
+    "verification": "Jalankan article-detail dan uji rich text, link, gambar serta revisi publik.",
+    "files": [
+      "src/app/(public)/publikasi/artikel/[slug]/page.tsx",
+      "src/components/public/RichText.tsx",
+      "tests/e2e/article-detail.spec.ts"
+    ]
+  },
+  {
+    "id": "UI-018",
+    "title": "Ganti daftar riset",
+    "description": "Terapkan katalog riset yang konsisten dengan pengalaman publikasi.",
+    "workstream": "Redesign UI",
+    "phase": "I — UI seluruh modul",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "S",
+    "dependencies": [
+      "UI-016"
+    ],
+    "prd": "FR-05; AC-18",
+    "acceptanceCriteria": [
+      "Pencarian, kategori dan pagination bekerja bersama tanpa menampilkan draft.",
+      "Tanggal dan ringkasan riset serta empty state jelas pada mobile."
+    ],
+    "verification": "Jalankan research dan cek kombinasi filter/search/pagination.",
+    "files": [
+      "src/app/(public)/publikasi/riset/page.tsx",
+      "tests/e2e/research.spec.ts"
+    ]
+  },
+  {
+    "id": "UI-019",
+    "title": "Ganti detail riset",
+    "description": "Terapkan layout detail riset dengan informasi analisis yang lengkap.",
+    "workstream": "Redesign UI",
+    "phase": "I — UI seluruh modul",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "M",
+    "dependencies": [
+      "UI-017",
+      "UI-018"
+    ],
+    "prd": "FR-05; AC-07; AC-20",
+    "acceptanceCriteria": [
+      "Tanggal analisis dan tanggal publikasi dibedakan; sumber dan disclaimer dasar selalu tampil.",
+      "PDF hanya dari versi disetujui; fallback file dicabut tidak memunculkan URL privat."
+    ],
+    "verification": "Jalankan research, publications dan cek disclaimer/PDF pada mobile/desktop.",
+    "files": [
+      "src/app/(public)/publikasi/riset/[slug]/page.tsx",
+      "tests/e2e/research.spec.ts"
+    ]
+  },
+  {
+    "id": "UI-020",
+    "title": "Ganti daftar kegiatan",
+    "description": "Terapkan daftar agenda dan arsip dengan status waktu yang jelas.",
+    "workstream": "Redesign UI",
+    "phase": "I — UI seluruh modul",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "S",
+    "dependencies": [
+      "UI-006",
+      "UI-009",
+      "GATE-02"
+    ],
+    "prd": "FR-06; AC-15",
+    "acceptanceCriteria": [
+      "Filter upcoming/ongoing/completed serta status batal tetap benar.",
+      "Waktu WIB, poster opsional, hasil kosong dan navigasi detail terbaca pada mobile."
+    ],
+    "verification": "Jalankan events-public dan periksa filter/status sekitar batas waktu.",
+    "files": [
+      "src/app/(public)/kegiatan/page.tsx",
+      "tests/e2e/events-public.spec.ts"
+    ]
+  },
+  {
+    "id": "UI-021",
+    "title": "Ganti detail kegiatan",
+    "description": "Terapkan detail kegiatan dan pendaftaran sesuai kondisi waktu aktual.",
+    "workstream": "Redesign UI",
+    "phase": "I — UI seluruh modul",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "M",
+    "dependencies": [
+      "UI-020"
+    ],
+    "prd": "FR-06; §8.8; AC-15",
+    "acceptanceCriteria": [
+      "Jadwal WIB, lokasi/kanal, penyelenggara dan pembatalan jelas.",
+      "CTA tetap memakai revalidasi LiveRegistration dan hilang ketika syarat waktu/URL tidak terpenuhi."
+    ],
+    "verification": "Jalankan events-public/events-policy, termasuk deadline dan kegagalan refresh CTA.",
+    "files": [
+      "src/app/(public)/kegiatan/[slug]/page.tsx",
+      "src/components/public/LiveRegistration.tsx",
+      "tests/e2e/events-policy.spec.ts"
+    ]
+  },
+  {
+    "id": "UI-022",
+    "title": "Ganti halaman rekrutmen",
+    "description": "Terapkan kampanye, posisi, tahapan dan riwayat rekrutmen.",
+    "workstream": "Redesign UI",
+    "phase": "I — UI seluruh modul",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "M",
+    "dependencies": [
+      "UI-021"
+    ],
+    "prd": "FR-08; AC-14; AC-29",
+    "acceptanceCriteria": [
+      "Posisi, persyaratan, periode, tahapan dan status belum dibuka/ditutup dapat dibaca.",
+      "CTA hanya tampil untuk kampanye terbit/aktif dalam jendela waktu dengan URL terkonfirmasi."
+    ],
+    "verification": "Jalankan recruitment dan cek sebelum buka, saat buka, saat tutup serta riwayat.",
+    "files": [
+      "src/app/(public)/rekrutmen/page.tsx",
+      "tests/e2e/recruitment.spec.ts"
+    ]
+  },
+  {
+    "id": "UI-023",
+    "title": "Ganti daftar dan detail galeri",
+    "description": "Terapkan album dan dokumentasi dengan media yang dapat diakses.",
+    "workstream": "Redesign UI",
+    "phase": "I — UI seluruh modul",
+    "status": "Backlog",
+    "priority": "P1",
+    "size": "M",
+    "dependencies": [
+      "UI-006",
+      "UI-009",
+      "GATE-02"
+    ],
+    "prd": "FR-07; AC-07; AC-24",
+    "acceptanceCriteria": [
+      "Urutan album/foto, alt dan caption sesuai snapshot disetujui.",
+      "Media dicabut memiliki fallback; video tetap tautan eksternal valid."
+    ],
+    "verification": "Jalankan p1-seo/p1 dan periksa album panjang pada mobile/desktop.",
+    "files": [
+      "src/app/(public)/galeri/page.tsx",
+      "src/app/(public)/galeri/[slug]/page.tsx",
+      "src/components/public/P1Content.tsx"
+    ]
+  },
+  {
+    "id": "UI-024",
+    "title": "Ganti halaman Partnership",
+    "description": "Terapkan tampilan mitra dan kolaborasi sesuai izin publikasi.",
+    "workstream": "Redesign UI",
+    "phase": "I — UI seluruh modul",
+    "status": "Backlog",
+    "priority": "P1",
+    "size": "S",
+    "dependencies": [
+      "UI-006",
+      "UI-009",
+      "GATE-02"
+    ],
+    "prd": "FR-09; AC-24",
+    "acceptanceCriteria": [
+      "Nama/deskripsi hanya dari konten terbit dan logo tampil hanya dengan izin Admin.",
+      "Website opsional dan kondisi tanpa mitra tidak menyiratkan kerja sama fiktif."
+    ],
+    "verification": "Jalankan p1-seo dan cek mitra dengan/tanpa izin logo serta data kosong.",
+    "files": [
+      "src/app/(public)/partnership/page.tsx",
+      "src/components/public/P1Content.tsx"
+    ]
+  },
+  {
+    "id": "UI-025",
+    "title": "Ganti halaman Prestasi",
+    "description": "Terapkan pencapaian dengan filter tahun dan dokumentasi.",
+    "workstream": "Redesign UI",
+    "phase": "I — UI seluruh modul",
+    "status": "Backlog",
+    "priority": "P1",
+    "size": "S",
+    "dependencies": [
+      "UI-006",
+      "UI-009",
+      "GATE-02"
+    ],
+    "prd": "FR-11; AC-24",
+    "acceptanceCriteria": [
+      "Filter tahun, tanggal, penerima dan deskripsi berasal dari konten terbit.",
+      "Dokumentasi opsional, empty state dan label contoh tetap jelas."
+    ],
+    "verification": "Jalankan p1-seo dan periksa filter tahun serta media opsional.",
+    "files": [
+      "src/app/(public)/prestasi/page.tsx",
+      "src/components/public/P1Content.tsx"
+    ]
+  },
+  {
+    "id": "UI-026",
+    "title": "Ganti halaman Kontak",
+    "description": "Terapkan kontak organisasi dan media sosial yang terkonfirmasi.",
+    "workstream": "Redesign UI",
+    "phase": "I — UI seluruh modul",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "S",
+    "dependencies": [
+      "UI-009"
+    ],
+    "prd": "FR-10; AC-21",
+    "acceptanceCriteria": [
+      "Kontak menggunakan sumber Site Settings yang sama dengan header/footer.",
+      "Kolom belum dikonfirmasi disembunyikan; tidak menambahkan formulir kontak di luar MVP."
+    ],
+    "verification": "Jalankan about-settings/zz-p0-home dan cek tautan serta kondisi tanpa kontak.",
+    "files": [
+      "src/app/(public)/kontak/page.tsx",
+      "src/components/public/ContactLinks.tsx"
+    ]
+  },
+  {
+    "id": "UI-027",
+    "title": "Seragamkan empty, loading, error dan 404",
+    "description": "Lengkapi tampilan status serta navigasi pemulihan lintas modul.",
+    "workstream": "Redesign UI",
+    "phase": "I — UI seluruh modul",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "M",
+    "dependencies": [
+      "UI-006",
+      "UI-017",
+      "UI-021",
+      "UI-023"
+    ],
+    "prd": "§10; §13 Reliability; AC-10; AC-25",
+    "acceptanceCriteria": [
+      "Pesan kosong/loading/error/404 konsisten dan memberikan tindakan pemulihan yang valid.",
+      "Status HTTP privat/withdrawn tetap 404; error tidak memuat secret atau detail database."
+    ],
+    "verification": "Periksa fault injection/recovery, draft/withdrawn dan empty state; hindari streaming yang merusak status 404.",
+    "files": [
+      "src/components/public/EmptyState.tsx",
+      "src/app/(public)/error.tsx",
+      "src/app/(public)/not-found.tsx",
+      "src/app/global-error.tsx"
+    ]
+  },
+  {
+    "id": "UI-028",
+    "title": "Audit responsif dan aksesibilitas UI baru",
+    "description": "Periksa seluruh keluarga halaman dan interaksi terhadap target PRD.",
+    "workstream": "Redesign UI",
+    "phase": "J — QA dan penerimaan UI",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "M",
+    "dependencies": [
+      "UI-010",
+      "UI-011",
+      "UI-012",
+      "UI-013",
+      "UI-014",
+      "UI-015",
+      "UI-016",
+      "UI-017",
+      "UI-018",
+      "UI-019",
+      "UI-020",
+      "UI-021",
+      "UI-022",
+      "UI-023",
+      "UI-024",
+      "UI-025",
+      "UI-026",
+      "UI-027",
+      "GATE-06"
+    ],
+    "prd": "§10; AC-19",
+    "acceptanceCriteria": [
+      "Seluruh rute diperiksa pada 320/375/768/1024/1440 px tanpa scroll horizontal halaman pada 320 px.",
+      "Keyboard, fokus, heading/landmark, alt, label/error form, kontras, zoom 200% dan reduced motion diperiksa menuju WCAG 2.2 AA.",
+      "Temuan dan bukti screenshot/manual/otomatis dicatat; hasil axe saja tidak dianggap membuktikan kepatuhan penuh."
+    ],
+    "verification": "Jalankan public-shell/zzz-final-a11y dan pemeriksaan manual lima viewport serta zoom/keyboard.",
+    "files": [
+      "tests/e2e/zzz-final-a11y.spec.ts",
+      "tests/e2e/public-shell.spec.ts",
+      "docs/qa/accessibility.md"
+    ]
+  },
+  {
+    "id": "UI-029",
+    "title": "Verifikasi regresi seluruh fitur setelah redesign",
+    "description": "Buktikan penggantian UI tetap memenuhi kontrak publik dan editorial.",
+    "workstream": "Redesign UI",
+    "phase": "J — QA dan penerimaan UI",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "M",
+    "dependencies": [
+      "UI-028"
+    ],
+    "prd": "FR-01–FR-11; AC-01–AC-29",
+    "acceptanceCriteria": [
+      "Matriks FR/AC mengacu hasil baru; workflow Admin/Media, snapshot, media, SEO dan CTA tetap benar.",
+      "Lint/typecheck/build serta unit/integration/e2e relevan lulus tanpa melonggarkan skenario untuk desain baru.",
+      "Perubahan selector/heading tes mengikuti desain dengan tetap mempertahankan pemeriksaan perilaku."
+    ],
+    "verification": "Jalankan pnpm lint, pnpm typecheck, pnpm build dan pnpm test:all pada target uji terisolasi; catat hasil aktual.",
+    "files": [
+      "tests",
+      "docs/qa/mvp-acceptance.md",
+      "docs/testing.md"
+    ]
+  },
+  {
+    "id": "UI-030",
+    "title": "Ukur ulang performa UI baru",
+    "description": "Ukur dampak redesign pada halaman yang ditetapkan PRD dan perbaiki hambatan terukur.",
+    "workstream": "Redesign UI",
+    "phase": "J — QA dan penerimaan UI",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "M",
+    "dependencies": [
+      "UI-029"
+    ],
+    "prd": "§13 Performance; D-09",
+    "acceptanceCriteria": [
+      "Build production lokal dengan dataset tetap, browser/versi Lighthouse dan kondisi mesin dicatat.",
+      "Sesudah warm-up, tiga pengukuran mobile per halaman menghasilkan median Performance ≥85 untuk /, daftar artikel, satu detail artikel dan /kegiatan.",
+      "Perbaikan didasarkan hasil profil; perubahan lanjutan memicu pengukuran ulang yang terdampak."
+    ],
+    "verification": "Gunakan pnpm benchmark:demo mengikuti docs/qa/performance.md dan simpan laporan aktual.",
+    "files": [
+      "scripts/benchmark.mjs",
+      "docs/qa/performance.md"
+    ]
+  },
+  {
+    "id": "UI-031",
+    "title": "Tinjau dan terima hasil redesign UI",
+    "description": "Serahkan desain yang sudah diimplementasikan beserta bukti QA untuk peninjauan pemilik.",
+    "workstream": "Redesign UI",
+    "phase": "J — QA dan penerimaan UI",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "S",
+    "dependencies": [
+      "UI-030"
+    ],
+    "prd": "§10; §16; §18",
+    "acceptanceCriteria": [
+      "Pemilik dapat meninjau halaman dan bukti QA nyata pada demo yang dapat dibuka.",
+      "Penerimaan, revisi atau penolakan dicatat; keberhasilan tes bukan penerimaan otomatis."
+    ],
+    "verification": "Jalankan demo UI dan catat tanggapan pemilik serta penyelesaian temuan.",
+    "files": [
+      "docs/handover.md",
+      "docs/decisions.md"
+    ]
+  },
+  {
+    "id": "UI-032",
+    "title": "Perbarui panduan desain dan hasil redesign",
+    "description": "Dokumentasikan sistem visual baru dan batas verifikasi.",
+    "workstream": "Redesign UI",
+    "phase": "J — QA dan penerimaan UI",
+    "status": "Backlog",
+    "priority": "P1",
+    "size": "S",
+    "dependencies": [
+      "UI-031"
+    ],
+    "prd": "§13 Maintainability; §16",
+    "acceptanceCriteria": [
+      "Panduan menjelaskan token, komponen, pola halaman dan aset yang benar-benar digunakan.",
+      "Screenshot, hasil QA terkini, perubahan dan keterbatasan tersedia untuk pengelola berikutnya."
+    ],
+    "verification": "Tinjau dokumen terhadap implementasi dan hasil QA yang disetujui.",
+    "files": [
+      "docs/design.md",
+      "docs/handover.md"
+    ]
+  }
+]

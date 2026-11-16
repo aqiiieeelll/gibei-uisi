@@ -1,0 +1,784 @@
+[
+  {
+    "id": "CT-001",
+    "title": "Inventaris konten resmi untuk seluruh modul",
+    "description": "Tetapkan materi awal rilis, sumber terkonfirmasi dan penanggung jawab setiap modul. Kartu ini mencakup isi editorial; inventaris identitas visual mengikuti UI-003.",
+    "workstream": "Konten resmi",
+    "phase": "Konten resmi — inventaris",
+    "status": "Ready",
+    "priority": "P0",
+    "size": "S",
+    "dependencies": [
+      "T063"
+    ],
+    "prd": "§9, §18.2; FR-01–FR-11",
+    "acceptanceCriteria": [
+      "Matriks sebelas modul mencatat materi tersedia, sumber, pemilik materi dan status persetujuan.",
+      "Materi contoh dibedakan dari materi resmi; jumlah materi awal serta empty state yang diterima ditetapkan pemilik."
+    ],
+    "verification": "Tinjau matriks terhadap FR-01–FR-11 dan simpan keputusan tanpa data privat.",
+    "files": [
+      "docs/PRD-v1.1.md",
+      "docs/handover.md"
+    ]
+  },
+  {
+    "id": "CT-002",
+    "title": "Siapkan profil organisasi dan isi editorial beranda",
+    "description": "Konfirmasi profil, sejarah, visi, misi dan program unggulan lalu siapkan melalui workflow Pages yang sudah tersedia.",
+    "workstream": "Konten resmi",
+    "phase": "Konten resmi — editorial",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "M",
+    "dependencies": [
+      "CT-001"
+    ],
+    "prd": "FR-01, FR-02; §8.7",
+    "acceptanceCriteria": [
+      "Profil, sejarah, visi, misi dan program unggulan diperiksa pemilik materi.",
+      "Isi Pages melalui review Admin dan versi publik sesuai materi yang disetujui.",
+      "Statistik atau klaim organisasi hanya tampil jika memiliki sumber terkonfirmasi."
+    ],
+    "verification": "Bandingkan preview beranda/Tentang dan snapshot approved dengan materi yang disetujui.",
+    "files": [
+      "docs/cms-guide.md",
+      "src/app/(public)/page.tsx",
+      "src/app/(public)/tentang/page.tsx"
+    ]
+  },
+  {
+    "id": "CT-003",
+    "title": "Validasi periode, delapan divisi dan data pengurus",
+    "description": "Konfirmasi struktur organisasi aktual, profil/program delapan divisi, nama/jabatan dan izin foto pengurus tanpa menimpa riwayat periode.",
+    "workstream": "Konten resmi",
+    "phase": "Konten resmi — organisasi",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "M",
+    "dependencies": [
+      "CT-001"
+    ],
+    "prd": "FR-03; AC-16, AC-28; §18.2.2",
+    "acceptanceCriteria": [
+      "Delapan divisi memiliki profil/program terkonfirmasi; nama, jabatan dan foto pengurus yang ditampilkan memiliki izin publik.",
+      "Periode serta relasi pengurus sesuai data organisasi dan riwayat tetap tersedia.",
+      "Pemilihan periode aktif disetujui Admin dengan maksimum satu periode aktif."
+    ],
+    "verification": "Periksa preview struktur, arsip periode serta daftar/detail delapan divisi.",
+    "files": [
+      "docs/cms-guide.md",
+      "docs/qa/mvp-acceptance.md"
+    ]
+  },
+  {
+    "id": "CT-004",
+    "title": "Siapkan artikel dan edukasi awal yang disetujui",
+    "description": "Siapkan kumpulan artikel awal sesuai inventaris rilis, dengan sumber dan penulis publik yang diverifikasi.",
+    "workstream": "Konten resmi",
+    "phase": "Konten resmi — publikasi",
+    "status": "Backlog",
+    "priority": "P1",
+    "size": "M",
+    "dependencies": [
+      "CT-001"
+    ],
+    "prd": "FR-04; §8.3",
+    "acceptanceCriteria": [
+      "Kumpulan artikel awal sesuai inventaris rilis yang disepakati, termasuk keputusan empty state bila belum tersedia.",
+      "Judul, excerpt, kategori, penulis publik, sumber dan aset diperiksa.",
+      "Materi melalui review Admin; identitas akun CMS tidak otomatis dipublikasikan sebagai penulis."
+    ],
+    "verification": "Periksa daftar/detail, pencarian dan metadata terhadap materi approved.",
+    "files": [
+      "docs/cms-guide.md",
+      "docs/technical/seo.md"
+    ]
+  },
+  {
+    "id": "CT-005",
+    "title": "Validasi riset awal, sumber dan disclaimer",
+    "description": "Konfirmasi materi riset awal dan rumusan disclaimer organisasi, sambil mempertahankan disclaimer wajib serta keterikatan PDF pada versi approved.",
+    "workstream": "Konten resmi",
+    "phase": "Konten resmi — publikasi",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "M",
+    "dependencies": [
+      "CT-001"
+    ],
+    "prd": "FR-05; AC-20; §18.2.3",
+    "acceptanceCriteria": [
+      "Riset yang dipilih mencatat tanggal analisis, sumber dan penulis/tim publik terkonfirmasi; materi lama tidak disajikan seolah analisis terkini.",
+      "Rumusan disclaimer final dikonfirmasi tanpa menghilangkan disclaimer wajib template.",
+      "PDF dan sampul yang disajikan merupakan aset yang disetujui bersama versi riset."
+    ],
+    "verification": "Periksa detail/PDF approved, tanggal analisis, sumber dan disclaimer; cocokkan keputusan inventaris jika belum ada riset awal.",
+    "files": [
+      "docs/cms-guide.md",
+      "docs/qa/mvp-acceptance.md"
+    ]
+  },
+  {
+    "id": "CT-006",
+    "title": "Validasi agenda dan tautan pendaftaran kegiatan",
+    "description": "Periksa materi kegiatan resmi beserta waktu WIB, lokasi, poster dan konfirmasi tujuan pendaftaran sebelum dipublikasikan.",
+    "workstream": "Konten resmi",
+    "phase": "Konten resmi — kegiatan",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "M",
+    "dependencies": [
+      "CT-001"
+    ],
+    "prd": "FR-06; §8.8; AC-15",
+    "acceptanceCriteria": [
+      "Tanggal/waktu WIB, lokasi, penyelenggara dan poster diperiksa pemilik kegiatan.",
+      "URL dan jendela pendaftaran dikonfirmasi Admin sebelum CTA aktif.",
+      "Agenda batal/selesai/belum tersedia memiliki status atau empty state yang sesuai tanpa tautan contoh aktif."
+    ],
+    "verification": "Preview daftar/detail kegiatan dan CTA pada kondisi waktu yang relevan.",
+    "files": [
+      "docs/cms-guide.md",
+      "docs/qa/time.md"
+    ]
+  },
+  {
+    "id": "CT-007",
+    "title": "Validasi informasi rekrutmen dan status kampanye",
+    "description": "Konfirmasi kebutuhan rekrutmen aktual dan pilih kampanye resmi atau status belum dibuka tanpa menciptakan informasi pendaftaran fiktif.",
+    "workstream": "Konten resmi",
+    "phase": "Konten resmi — kegiatan",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "M",
+    "dependencies": [
+      "CT-001",
+      "CT-003"
+    ],
+    "prd": "FR-08; AC-14, AC-29",
+    "acceptanceCriteria": [
+      "Posisi, divisi, syarat, tahapan dan rentang pendaftaran dikonfirmasi bila kampanye tersedia.",
+      "URL hanya diaktifkan setelah konfirmasi Admin dan maksimum satu kampanye enabled.",
+      "Jika belum ada rekrutmen resmi, halaman menunjukkan status belum dibuka tanpa CTA contoh."
+    ],
+    "verification": "Periksa kampanye/riwayat dan status sebelum buka, aktif serta tutup.",
+    "files": [
+      "docs/cms-guide.md",
+      "docs/qa/time.md"
+    ]
+  },
+  {
+    "id": "CT-008",
+    "title": "Siapkan album dokumentasi dengan izin publik",
+    "description": "Pilih album rilis awal dan periksa izin foto, tanggal, alt text, caption serta tautan video melalui workflow galeri yang sudah tersedia.",
+    "workstream": "Konten resmi",
+    "phase": "Konten resmi — dokumentasi",
+    "status": "Backlog",
+    "priority": "P1",
+    "size": "M",
+    "dependencies": [
+      "CT-001"
+    ],
+    "prd": "FR-07; §8.6; AC-24",
+    "acceptanceCriteria": [
+      "Album awal sesuai inventaris rilis dan foto yang ditampilkan memiliki izin publik.",
+      "Urutan, tanggal kegiatan, alt text, caption dan tautan video diperiksa.",
+      "Album/aset melalui review; file belum disetujui tetap privat atau memakai empty state yang disepakati."
+    ],
+    "verification": "Periksa daftar/detail album dan akses anonim terhadap foto approved versus draft.",
+    "files": [
+      "docs/cms-guide.md",
+      "docs/technical/media-access.md"
+    ]
+  },
+  {
+    "id": "CT-009",
+    "title": "Konfirmasi mitra dan izin penggunaan logo",
+    "description": "Verifikasi kerja sama resmi dan catat izin nama/logo secara privat sebelum identitas mitra ditampilkan.",
+    "workstream": "Konten resmi",
+    "phase": "Konten resmi — kredibilitas",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "S",
+    "dependencies": [
+      "CT-001"
+    ],
+    "prd": "FR-09; AC-24; §18.2.6",
+    "acceptanceCriteria": [
+      "Nama, deskripsi, jenis kolaborasi dan website mitra yang ditampilkan memiliki konfirmasi.",
+      "Izin logo dicatat Admin dan mengikat file yang tepat; bukti izin tetap privat.",
+      "Mitra tanpa izin logo tampil tanpa logo; informasi belum terkonfirmasi mengikuti empty state yang disepakati."
+    ],
+    "verification": "Bandingkan halaman partnership dan agregasi homepage dengan catatan konfirmasi/izin.",
+    "files": [
+      "docs/cms-guide.md",
+      "docs/handover.md"
+    ]
+  },
+  {
+    "id": "CT-010",
+    "title": "Verifikasi prestasi dan dokumentasi pencapaian",
+    "description": "Konfirmasi prestasi organisasi berdasarkan sumber yang dapat ditelusuri dan periksa dokumentasi sebelum review publikasi.",
+    "workstream": "Konten resmi",
+    "phase": "Konten resmi — kredibilitas",
+    "status": "Backlog",
+    "priority": "P1",
+    "size": "S",
+    "dependencies": [
+      "CT-001"
+    ],
+    "prd": "FR-11; AC-24",
+    "acceptanceCriteria": [
+      "Judul, tanggal, penerima/tim dan sumber pencapaian dikonfirmasi.",
+      "Dokumentasi memakai aset berizin serta approved.",
+      "Filter tahun sesuai tanggal materi dan tidak ada prestasi contoh yang diklaim resmi."
+    ],
+    "verification": "Bandingkan daftar prestasi/filter tahun dengan inventaris approved atau keputusan empty state.",
+    "files": [
+      "docs/cms-guide.md",
+      "docs/qa/mvp-acceptance.md"
+    ]
+  },
+  {
+    "id": "CT-011",
+    "title": "Konfirmasi kontak, sosial dan konfigurasi publik",
+    "description": "Konfirmasi kontak organisasi lalu terapkan identitas/navigasi yang disepakati melalui Site Settings tanpa membuat formulir kontak baru.",
+    "workstream": "Konten resmi",
+    "phase": "Konten resmi — konfigurasi",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "S",
+    "dependencies": [
+      "CT-001",
+      "UI-003",
+      "CT-012"
+    ],
+    "prd": "FR-10; AC-21; §18.2.5",
+    "acceptanceCriteria": [
+      "Email, lokasi dan sosial yang ditampilkan memiliki konfirmasi; data belum pasti tetap kosong.",
+      "Header, footer dan halaman kontak memakai sumber Site Settings yang sama.",
+      "Identitas/logo/favicon dan navigasi disimpan Admin dengan audit serta aset yang sah sesuai inventaris UI-003."
+    ],
+    "verification": "Periksa header/footer/kontak dan audit perubahan konfigurasi.",
+    "files": [
+      "docs/cms-guide.md",
+      "docs/handover.md"
+    ]
+  },
+  {
+    "id": "CT-012",
+    "title": "Validasi identitas resmi dan izin aset rilis",
+    "description": "Dapatkan konfirmasi organisasi atas identitas final dan izin aset rilis. Inventaris UI-003 tetap mencatat ketersediaan; kartu ini memvalidasi persetujuan resmi yang belum tersedia pada baseline.",
+    "workstream": "Konten resmi",
+    "phase": "Konten resmi — identitas final",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "S",
+    "dependencies": [
+      "CT-001",
+      "UI-003",
+      "UI-005"
+    ],
+    "prd": "§10; §17; §18.2.1",
+    "acceptanceCriteria": [
+      "Logo, warna dan font final dikonfirmasi pihak yang berwenang serta sesuai desain yang dipilih.",
+      "Sumber/lisensi dan izin publikasi aset rilis dapat ditelusuri; bukti privat tetap disimpan privat.",
+      "Aset tanpa izin tidak digunakan sebagai identitas resmi dan mempunyai fallback yang jelas."
+    ],
+    "verification": "Bandingkan inventaris UI-003, desain terpilih dan media rilis dengan bukti konfirmasi organisasi.",
+    "files": [
+      "docs/design.md",
+      "docs/handover.md"
+    ]
+  },
+  {
+    "id": "OPS-001",
+    "title": "Tetapkan target hosting, domain dan operator",
+    "description": "Tentukan target infrastruktur serta kepemilikan operasi. Kartu perencanaan ini tidak mengizinkan pembelian domain atau pengadaan layanan.",
+    "workstream": "Produksi",
+    "phase": "Produksi — keputusan infrastruktur",
+    "status": "Ready",
+    "priority": "P0",
+    "size": "S",
+    "dependencies": [
+      "T063"
+    ],
+    "prd": "§11.4, §18.2.7",
+    "acceptanceCriteria": [
+      "Pilihan hosting memuat dukungan runtime, PostgreSQL, kapasitas dan media persisten.",
+      "Pemilik domain, operator dan kewenangan akses dicatat.",
+      "Biaya, izin UISI dan keputusan target dicatat; pengadaan memerlukan otorisasi pemilik."
+    ],
+    "verification": "Review keputusan infrastruktur terhadap kebutuhan aplikasi dan akses pengelola.",
+    "files": [
+      "docs/handover.md",
+      "docs/setup.md"
+    ]
+  },
+  {
+    "id": "OPS-002",
+    "title": "Perbarui audit dependency dan konfigurasi keamanan",
+    "description": "Tinjau dependency aktual serta temuan nonkritis historis terhadap versi rilis setelah perubahan UI; hasil audit lama tidak dianggap bukti keamanan terkini.",
+    "workstream": "Produksi",
+    "phase": "Produksi — keamanan",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "M",
+    "dependencies": [
+      "UI-030"
+    ],
+    "prd": "§13 Security; §16",
+    "acceptanceCriteria": [
+      "Audit baru mencatat versi, advisori, jangkauan dan tindakan untuk temuan relevan.",
+      "Temuan moderate/low historis ditinjau ulang memakai kondisi terbaru.",
+      "Patch yang diperlukan lulus regresi dan pengukuran ulang yang terdampak; risiko tersisa mempunyai keputusan dan penanggung jawab."
+    ],
+    "verification": "Audit package aktual; jalankan lint/typecheck/build dan tes terarah setelah perubahan.",
+    "files": [
+      "docs/qa/security.md",
+      "package.json",
+      "pnpm-lock.yaml"
+    ]
+  },
+  {
+    "id": "OPS-003",
+    "title": "Siapkan environment produksi dan konfigurasi autentikasi",
+    "description": "Rencanakan lalu siapkan konfigurasi server pada target yang diizinkan, dengan secret privat dan batas origin/cookie yang sesuai HTTPS.",
+    "workstream": "Produksi",
+    "phase": "Produksi — environment",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "M",
+    "dependencies": [
+      "OPS-001"
+    ],
+    "prd": "§11.3; §13 Security",
+    "acceptanceCriteria": [
+      "Secret produksi terpisah, disimpan privat dan tidak masuk Git, log atau klien.",
+      "SERVER_URL, origin, secure cookies dan akses database sesuai environment final.",
+      "Login, penolakan lintas origin serta pencabutan sesi diverifikasi pada target persiapan yang diizinkan."
+    ],
+    "verification": "Periksa konfigurasi tanpa mencetak secret dan jalankan probe auth/origin/cookie.",
+    "files": [
+      "docs/setup.md",
+      "docs/qa/security.md"
+    ]
+  },
+  {
+    "id": "OPS-004",
+    "title": "Siapkan media persisten dengan gateway izin",
+    "description": "Siapkan penyimpanan media target tanpa mengubah aturan akses approved/draft yang telah dibuktikan pada localhost.",
+    "workstream": "Produksi",
+    "phase": "Produksi — environment",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "M",
+    "dependencies": [
+      "OPS-001"
+    ],
+    "prd": "§8.6, §11.4; AC-06, AC-11, AC-12",
+    "acceptanceCriteria": [
+      "Penyimpanan final mempertahankan file setelah restart/redeploy.",
+      "Original, thumbnail, optimizer dan PDF mengikuti izin approved tanpa akses publik langsung ke area privat.",
+      "Upload, download, revoke dan fallback diuji pada target persiapan yang diizinkan."
+    ],
+    "verification": "Tes byte/file anonim serta berizin dan restart media pada environment target.",
+    "files": [
+      "docs/technical/media-access.md",
+      "docs/setup.md"
+    ]
+  },
+  {
+    "id": "OPS-005",
+    "title": "Siapkan domain, HTTPS dan reverse proxy",
+    "description": "Rencanakan konfigurasi domain/TLS/proxy dan terapkan hanya setelah perubahan DNS atau infrastruktur terkait diotorisasi.",
+    "workstream": "Produksi",
+    "phase": "Produksi — konektivitas",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "M",
+    "dependencies": [
+      "OPS-001",
+      "OPS-003"
+    ],
+    "prd": "§11.4; §13 Security",
+    "acceptanceCriteria": [
+      "Domain/DNS dan sertifikat sesuai keputusan pemilik serta otorisasi perubahan.",
+      "HTTPS, redirect HTTP, proxy headers dan batas upload sesuai kebutuhan aplikasi.",
+      "Origin publik, CMS dan login bekerja dengan konfigurasi domain target."
+    ],
+    "verification": "Probe TLS, redirect, login, cookie Secure dan upload pada target yang diizinkan.",
+    "files": [
+      "docs/setup.md",
+      "docs/handover.md"
+    ]
+  },
+  {
+    "id": "OPS-006",
+    "title": "Siapkan build rilis dan staging terisolasi",
+    "description": "Buktikan source rilis dapat dijalankan ulang pada staging tanpa memakai database/media/secret produksi atau membuka indeks publik demo.",
+    "workstream": "Produksi",
+    "phase": "Produksi — rehearsal",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "M",
+    "dependencies": [
+      "OPS-001",
+      "OPS-003",
+      "OPS-004"
+    ],
+    "prd": "§11; §13 Maintainability; AC-22",
+    "acceptanceCriteria": [
+      "Build dapat diulang dari commit dan lockfile yang ditetapkan.",
+      "Staging memakai database, media dan secret terpisah dengan akses terbatas serta noindex.",
+      "Prosedur start, health check, restart dan rollback aplikasi terdokumentasi."
+    ],
+    "verification": "Rehearsal instalasi/build/start dari source bersih pada target persiapan yang diizinkan.",
+    "files": [
+      "docs/setup.md",
+      "docs/qa/clean-start.md"
+    ]
+  },
+  {
+    "id": "OPS-007",
+    "title": "Rehearsal migrasi database dan pemindahan data resmi",
+    "description": "Uji pemindahan data serta migrasi rilis ke target terpisah sebelum menyentuh produksi, termasuk konsistensi snapshot approved, audit dan media.",
+    "workstream": "Produksi",
+    "phase": "Produksi — rehearsal",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "M",
+    "dependencies": [
+      "OPS-004",
+      "OPS-006",
+      "CT-001"
+    ],
+    "prd": "§11.3; AC-22; §16",
+    "acceptanceCriteria": [
+      "Sumber, target dan migrasi ditentukan eksplisit tanpa reset database kerja.",
+      "Rehearsal mempertahankan relasi, versi approved, audit, ACL dan checksum media.",
+      "Strategi migrasi gagal serta rollback/restore disepakati sebelum eksekusi produksi."
+    ],
+    "verification": "Jalankan rehearsal ke target terpisah dan bandingkan data, file serta izin.",
+    "files": [
+      "docs/operations/backup-restore.md",
+      "docs/setup.md"
+    ]
+  },
+  {
+    "id": "OPS-008",
+    "title": "Tetapkan backup database dan media",
+    "description": "Tentukan kebijakan pemulihan bersama operator lalu siapkan backup konsisten yang mencakup database dan seluruh media terkait.",
+    "workstream": "Produksi",
+    "phase": "Produksi — pemulihan",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "M",
+    "dependencies": [
+      "OPS-001",
+      "OPS-004"
+    ],
+    "prd": "§13 Reliability; §18.2.8",
+    "acceptanceCriteria": [
+      "Frekuensi, retensi, RPO/RTO, pemilik akses dan lokasi off-site disepakati.",
+      "Backup menyimpan pasangan database/media konsisten dengan manifest dan checksum.",
+      "Backup tersimpan privat dan kegagalannya mempunyai jalur tindak lanjut."
+    ],
+    "verification": "Periksa snapshot uji, kelengkapan manifest dan akses backup.",
+    "files": [
+      "docs/operations/backup-restore.md",
+      "docs/handover.md"
+    ]
+  },
+  {
+    "id": "OPS-009",
+    "title": "Buktikan restore pada infrastruktur target",
+    "description": "Lakukan latihan restore nyata ke target baru yang terpisah; proof lokal historis tidak menggantikan verifikasi target final.",
+    "workstream": "Produksi",
+    "phase": "Produksi — pemulihan",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "M",
+    "dependencies": [
+      "OPS-007",
+      "OPS-008"
+    ],
+    "prd": "§13 Reliability; §16",
+    "acceptanceCriteria": [
+      "Backup dipulihkan ke database/media baru tanpa menimpa sumber.",
+      "Konten publik dan checksum benar; draft/file privat serta ACL audit tetap terlindungi.",
+      "Durasi pemulihan dicatat dan dibandingkan dengan RPO/RTO yang disepakati."
+    ],
+    "verification": "Latihan restore nyata pada target terpisah dengan laporan hasil dan batasnya.",
+    "files": [
+      "docs/operations/backup-restore.md",
+      "docs/qa/recovery-status.md"
+    ]
+  },
+  {
+    "id": "OPS-010",
+    "title": "Tetapkan akun operasional dan pemulihan akses",
+    "description": "Siapkan pengelola bernama, prosedur recovery dan serah terima akses sesuai kewenangan organisasi; password/secret tidak ditaruh pada issue.",
+    "workstream": "Produksi",
+    "phase": "Produksi — operasi",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "S",
+    "dependencies": [
+      "OPS-003"
+    ],
+    "prd": "§8.2; §18.2.4, §18.2.8",
+    "acceptanceCriteria": [
+      "Akun Admin dan Media operasional disahkan organisasi serta memakai identitas pengelola yang jelas.",
+      "Pemulihan akun memiliki operator, prosedur dan sarana produksi yang disepakati.",
+      "Transfer ownership, penonaktifan akun lama dan pencabutan sesi diuji; Admin aktif terakhir tetap terlindungi."
+    ],
+    "verification": "Simulasi recovery/serah terima memakai akun uji tanpa membagikan password di dokumen.",
+    "files": [
+      "docs/handover.md",
+      "docs/cms-guide.md"
+    ]
+  },
+  {
+    "id": "OPS-011",
+    "title": "Siapkan monitoring dan prosedur gangguan",
+    "description": "Tetapkan pemantauan dan respons operator untuk layanan, backup serta TLS dengan log aman yang dapat ditelusuri.",
+    "workstream": "Produksi",
+    "phase": "Produksi — operasi",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "M",
+    "dependencies": [
+      "OPS-006",
+      "OPS-008"
+    ],
+    "prd": "§13 Reliability",
+    "acceptanceCriteria": [
+      "Operator dapat memantau aplikasi, database, storage, backup dan masa berlaku TLS.",
+      "Log/error mempertahankan korelasi tanpa secret atau detail koneksi.",
+      "Jalur notifikasi, penanggung jawab insiden dan runbook pemulihan disepakati."
+    ],
+    "verification": "Simulasi kegagalan aman di staging; periksa log dan jalur pemberitahuan sesuai otorisasi.",
+    "files": [
+      "docs/handover.md",
+      "docs/qa/security.md"
+    ]
+  },
+  {
+    "id": "OPS-012",
+    "title": "Deployment produksi setelah otorisasi eksplisit",
+    "description": "Kartu rencana eksekusi mendatang. Pembuatan Kanban ini bukan izin deployment; pelaksanaan memerlukan persetujuan terpisah atas commit, target dan waktu rilis.",
+    "workstream": "Produksi",
+    "phase": "Produksi — peluncuran bersyarat",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "M",
+    "dependencies": [
+      "REL-004"
+    ],
+    "prd": "§11.4; §16",
+    "acceptanceCriteria": [
+      "Deployment dimulai hanya setelah otorisasi eksplisit yang merujuk commit, target dan waktu rilis.",
+      "Backup, migrasi, konfigurasi, startup dan pemindahan traffic mengikuti runbook terverifikasi.",
+      "Rollback dijalankan bila kriteria gagal terpenuhi; hasil dan versi terpasang dicatat."
+    ],
+    "verification": "Cocokkan log rilis dengan runbook lalu jalankan REL-005.",
+    "files": [
+      "docs/handover.md",
+      "docs/operations/backup-restore.md"
+    ]
+  },
+  {
+    "id": "REL-001",
+    "title": "Tinjauan pemilik atas demo baseline T063",
+    "description": "Catat bahwa demo localhost telah selesai secara teknis tetapi penerimaan pemilik masih menunggu menurut sumber proyek. Kartu ini tidak menyatakan bahwa pemilik sudah menyetujui hasil.",
+    "workstream": "Penerimaan",
+    "phase": "Penerimaan — baseline historis",
+    "status": "In review",
+    "priority": "P0",
+    "size": "S",
+    "dependencies": [
+      "T063"
+    ],
+    "prd": "§16, §20; docs/reports/T063.md",
+    "acceptanceCriteria": [
+      "Pemilik meninjau hasil baseline atau menyatakan bahwa penilaian digabung dengan UAT versi terbaru.",
+      "Keputusan, versi yang dinilai dan tindak lanjut dicatat berdasarkan pernyataan pemilik.",
+      "Kelulusan teknis dan penerimaan pemilik ditampilkan sebagai status yang terpisah."
+    ],
+    "verification": "Cocokkan catatan keputusan dengan tanggapan pemilik; jangan menyimpulkan persetujuan dari tes atau permintaan kerja.",
+    "files": [
+      "docs/reports/T063.md",
+      "docs/handover.md",
+      "docs/qa/mvp-acceptance.md"
+    ]
+  },
+  {
+    "id": "REL-002",
+    "title": "Verifikasi gabungan seluruh proyek setelah perubahan",
+    "description": "Checkpoint regresi lintas sistem setelah UI dan konten resmi berubah. Gunakan bukti UI terarah yang baru; lengkapi bukti fungsional/editorial/privasi tanpa menganggap tes localhost lama otomatis masih berlaku.",
+    "workstream": "Penerimaan",
+    "phase": "Penerimaan — QA gabungan",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "M",
+    "dependencies": [
+      "UI-030",
+      "CT-001",
+      "CT-002",
+      "CT-003",
+      "CT-004",
+      "CT-005",
+      "CT-006",
+      "CT-007",
+      "CT-008",
+      "CT-009",
+      "CT-010",
+      "CT-011",
+      "OPS-006",
+      "CT-012",
+      "OPS-002",
+      "OPS-005",
+      "OPS-007",
+      "OPS-010"
+    ],
+    "prd": "FR-01–FR-11; AC-01–AC-29; §10, §13–16",
+    "acceptanceCriteria": [
+      "FR-01–FR-11, AC-01–AC-29 dan 12 butir DoD memiliki hasil terbaru dengan bukti yang relevan.",
+      "Regresi editorial, draft/media privat, metadata, CTA waktu dan izin logo lulus bersama perubahan UI/konten.",
+      "Bukti responsif/aksesibilitas dan Lighthouse sesuai metode PRD ditelusuri; kegagalan diselesaikan tanpa menurunkan ambang."
+    ],
+    "verification": "pnpm test:all; pnpm lint; pnpm typecheck; pnpm build; review laporan QA serta benchmark terbaru. Periksa juga rute publik, CMS, TLS/origin, media dan konten pada staging terisolasi; suite harness lokal tidak menggantikan pemeriksaan environment target.",
+    "files": [
+      "docs/qa/mvp-acceptance.md",
+      "docs/testing.md",
+      "docs/qa/accessibility.md",
+      "docs/qa/performance.md"
+    ]
+  },
+  {
+    "id": "REL-003",
+    "title": "UAT seluruh proyek bersama pemilik",
+    "description": "Tinjau hasil proyek secara utuh: sebelas modul, konten resmi, operasi CMS dan alur editorial. Penerimaan visual mengikuti UI-031; kartu ini menilai keseluruhan perilaku produk.",
+    "workstream": "Penerimaan",
+    "phase": "Penerimaan — UAT proyek",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "S",
+    "dependencies": [
+      "REL-002",
+      "UI-031",
+      "REL-001"
+    ],
+    "prd": "§14, §16",
+    "acceptanceCriteria": [
+      "Pemilik meninjau sebelas modul dan alur Admin/Media memakai naskah yang disepakati.",
+      "Keputusan penerimaan, revisi atau penolakan dicatat terhadap versi dan cakupan yang ditinjau.",
+      "Temuan memiliki task tindak lanjut; penerimaan visual tidak otomatis dianggap penerimaan seluruh produk."
+    ],
+    "verification": "Catatan UAT dan keputusan pemilik menelusuri skenario serta temuan yang belum selesai.",
+    "files": [
+      "docs/demo-script.md",
+      "docs/handover.md",
+      "docs/qa/mvp-acceptance.md"
+    ]
+  },
+  {
+    "id": "REL-004",
+    "title": "Tinjau kesiapan produksi dan keputusan rilis",
+    "description": "Gate rilis seluruh proyek yang memeriksa UI, konten resmi, pengujian serta kesiapan operasi. Persetujuan deployment harus diberikan secara eksplisit setelah hasil siap ditinjau.",
+    "workstream": "Penerimaan",
+    "phase": "Penerimaan — keputusan rilis",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "S",
+    "dependencies": [
+      "REL-003",
+      "UI-030",
+      "UI-031",
+      "UI-032",
+      "CT-001",
+      "CT-002",
+      "CT-003",
+      "CT-004",
+      "CT-005",
+      "CT-006",
+      "CT-007",
+      "CT-008",
+      "CT-009",
+      "CT-010",
+      "CT-011",
+      "OPS-002",
+      "OPS-005",
+      "OPS-007",
+      "OPS-009",
+      "OPS-010",
+      "OPS-011",
+      "CT-012"
+    ],
+    "prd": "§11.4; §16; §18.2",
+    "acceptanceCriteria": [
+      "Konten/izin, UI, QA, infrastruktur, keamanan, backup/restore, recovery dan operator ditinjau dengan bukti.",
+      "Commit, domain, jendela rilis, kriteria rollback serta risiko tersisa tercatat.",
+      "Pihak berwenang memberi atau menolak otorisasi deployment secara eksplisit; tanpa persetujuan OPS-012 tetap tertahan."
+    ],
+    "verification": "Checklist readiness berbukti beserta keputusan rilis dari pihak berwenang.",
+    "files": [
+      "docs/handover.md",
+      "docs/qa/mvp-acceptance.md",
+      "docs/operations/backup-restore.md"
+    ]
+  },
+  {
+    "id": "REL-005",
+    "title": "Smoke test website dan CMS setelah deployment",
+    "description": "Verifikasi domain produksi serta monitoring segera setelah deployment yang telah diotorisasi, sebelum menyatakan rilis operasional sehat.",
+    "workstream": "Penerimaan",
+    "phase": "Penerimaan — pascarilis",
+    "status": "Backlog",
+    "priority": "P0",
+    "size": "S",
+    "dependencies": [
+      "OPS-012"
+    ],
+    "prd": "§13, §16",
+    "acceptanceCriteria": [
+      "URL publik, CMS login, media, pencarian dan CTA yang sah bekerja pada domain final.",
+      "Draft/preview/file privat tetap ditolak; canonical, sitemap dan robots sesuai status produksi.",
+      "Monitoring sehat dan hasil smoke menentukan lanjut operasi atau rollback."
+    ],
+    "verification": "Smoke test domain final menggunakan data uji yang diizinkan, pemeriksaan log dan monitoring.",
+    "files": [
+      "docs/technical/seo.md",
+      "docs/handover.md"
+    ]
+  },
+  {
+    "id": "REL-006",
+    "title": "Serahkan operasi dan tanggung jawab pemeliharaan",
+    "description": "Serahkan panduan CMS serta runbook infrastruktur aktual kepada pengelola. Dokumentasi redesign UI sendiri mengikuti UI-032.",
+    "workstream": "Penerimaan",
+    "phase": "Penerimaan — serah terima operasi",
+    "status": "Backlog",
+    "priority": "P1",
+    "size": "S",
+    "dependencies": [
+      "REL-005",
+      "OPS-010",
+      "OPS-011"
+    ],
+    "prd": "§16.11; §18.2.4",
+    "acceptanceCriteria": [
+      "Panduan CMS, deployment, backup/restore, recovery dan gangguan sesuai environment aktual.",
+      "Operator dapat menjalankan skenario review/publish dan menemukan prosedur pemulihan.",
+      "Kepemilikan akun/domain/infrastruktur serta tanggung jawab pemeliharaan dicatat tanpa secret."
+    ],
+    "verification": "Walkthrough serah terima dengan pengelola dan catatan tindak lanjut.",
+    "files": [
+      "docs/handover.md",
+      "docs/cms-guide.md",
+      "docs/operations/backup-restore.md"
+    ]
+  }
+]
