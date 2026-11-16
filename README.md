@@ -1,7 +1,24 @@
 # GIBEI UISI — Rebuild v2
 
 Starter Next.js kosong untuk membangun ulang website dan dashboard admin custom.
-Branch: `codex/rebuild-v2-custom-admin`.
+Branch: `rebuild/website-v2`.
+
+## Branch proyek
+
+| Branch | Isi dan kegunaan |
+| --- | --- |
+| `main` | Versi utama; saat setup masih berisi implementasi v1. |
+| `demo/website-v1` | Snapshot seluruh kode demo v1 dari `main` pada commit `ec4f8de`. |
+| `rebuild/website-v2` | Pembangunan ulang seluruh website: UI publik, dashboard admin, dan sistem backend. |
+
+Ketiganya berada dalam repository yang sama. Branch demo mempertahankan source
+v1 saat hasil rebuild nantinya digabung ke `main`; deployment demo merupakan
+konfigurasi terpisah. `demo-project` tetap tersedia sebagai branch historis.
+Branch baru saat setup ini masih lokal dan belum di-push ke GitHub.
+
+Untuk menjalankan demo v1 bersamaan dengan rebuild, gunakan checkout/worktree
+terpisah beserta dependency dan environment v1. Environment v1 telah disimpan
+dalam snapshot lokal yang disebut di bagian pemulihan; jangan salin ke Git.
 
 ## Menjalankan proyek
 

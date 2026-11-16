@@ -9,7 +9,7 @@ Tanggal: 15 November 2026. Target tracker: [GitHub Project #5](https://github.co
 - Dua peran Admin dan Media Communication serta alur draft → review → publish tetap digunakan dan dibangun ulang.
 - Riwayat Done pada v1 hanya menjelaskan sistem lama; bukan bukti bahwa bagian v2 sudah selesai.
 
-Perencanaan dan Kanban telah disiapkan. Pada 16 November 2026, pemilik meminta starter Next.js kosong pada branch `codex/rebuild-v2-custom-admin`; lihat catatan setup di bawah.
+Perencanaan dan Kanban telah disiapkan. Pada 16 November 2026, pemilik meminta starter Next.js kosong pada branch `rebuild/website-v2`; lihat catatan setup di bawah.
 
 ## Batas kebutuhan
 
@@ -46,7 +46,9 @@ Seluruh 61 kartu (epic RB-000 dan 60 task RB-001–RB-060) tersedia di [view Reb
 
 ## Setup starter kosong — 16 November 2026
 
-Branch `codex/rebuild-v2-custom-admin` dimulai dari commit v1 `ec4f8dee1fc6c5754b02b2c56fae5fde502d1494`. Source, konfigurasi, skrip, tes dan migrasi v1 dicadangkan ke `artifacts/rebuild-baseline-20261116/` sebelum diganti dengan Next.js App Router minimal. Payload dan integrasi database lama dikeluarkan dari dependency dan aplikasi aktif. PRD, backlog, histori dokumentasi dan AGENTS.md dipertahankan.
+Nama branch aktif adalah `rebuild/website-v2` agar mencakup rebuild seluruh UI publik dan sistem, termasuk dashboard admin. Branch `demo/website-v1` dibuat dari `main` pada commit `ec4f8de` untuk mempertahankan seluruh kode demo lama. Keduanya berada pada repository yang sama dan belum di-push pada tahap setup ini; `main` tetap pada baseline v1.
+
+Branch `rebuild/website-v2` dimulai dari commit v1 `ec4f8dee1fc6c5754b02b2c56fae5fde502d1494`. Source, konfigurasi, skrip, tes dan migrasi v1 dicadangkan ke `artifacts/rebuild-baseline-20261116/` sebelum diganti dengan Next.js App Router minimal. Payload dan integrasi database lama dikeluarkan dari dependency dan aplikasi aktif. PRD, backlog, histori dokumentasi dan AGENTS.md dipertahankan.
 
 Starter hanya mempunyai halaman placeholder, root layout, TypeScript, Tailwind dan ESLint. Environment privat lama dipindahkan ke snapshot lokal yang diabaikan Git; aplikasi baru belum membutuhkan environment variable atau koneksi database. Database/media lama tidak diubah. Pemilihan dan isolasi backend baru tetap pekerjaan berikutnya; setup ini tidak menandai seluruh RB-001/RB-006 atau deployment selesai.
 

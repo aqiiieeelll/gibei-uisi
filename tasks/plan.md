@@ -1,6 +1,6 @@
 # Rencana Implementasi GIBEI UISI
 
-**Arah aktif — 16 November 2026:** pemilik memilih rebuild dari nol, tetap memakai Next.js, mengganti Payload dengan dashboard admin custom, serta membangun ulang role Admin/Media dan draft → review → publish. Branch `codex/rebuild-v2-custom-admin` kini memakai starter Next.js minimal; implementasi lama dicadangkan secara lokal dan tersimpan pada baseline Git v1. [Rencana rebuild v2](github-project-5/rebuild-v2/README.md) dan [perubahan arah](../docs/rebuild-v2.md) menjadi acuan pekerjaan baru. Bagian implementasi dan paket 154 kartu di bawah dipertahankan sebagai histori v1; status Done lama tidak dihitung sebagai progres rebuild. Database dan media lama tidak dihapus.
+**Arah aktif — 16 November 2026:** pemilik memilih rebuild dari nol, tetap memakai Next.js, mengganti Payload dengan dashboard admin custom, serta membangun ulang role Admin/Media dan draft → review → publish. Branch `rebuild/website-v2` kini memakai starter Next.js minimal; implementasi lama dicadangkan secara lokal dan tersimpan pada baseline Git v1. [Rencana rebuild v2](github-project-5/rebuild-v2/README.md) dan [perubahan arah](../docs/rebuild-v2.md) menjadi acuan pekerjaan baru. Bagian implementasi dan paket 154 kartu di bawah dipertahankan sebagai histori v1; status Done lama tidak dihitung sebagai progres rebuild. Database dan media lama tidak dihapus.
 
 Tanggal: 21 Oktober 2026. Acuan produk: [PRD v1.1](../docs/PRD-v1.1.md), 20 Oktober 2026.
 
