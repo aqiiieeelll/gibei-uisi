@@ -1,5 +1,7 @@
 # Rencana Implementasi GIBEI UISI
 
+**Arah aktif — 16 November 2026:** pemilik memilih rebuild dari nol, tetap memakai Next.js, mengganti Payload dengan dashboard admin custom, serta membangun ulang role Admin/Media dan draft → review → publish. Branch `codex/rebuild-v2-custom-admin` kini memakai starter Next.js minimal; implementasi lama dicadangkan secara lokal dan tersimpan pada baseline Git v1. [Rencana rebuild v2](github-project-5/rebuild-v2/README.md) dan [perubahan arah](../docs/rebuild-v2.md) menjadi acuan pekerjaan baru. Bagian implementasi dan paket 154 kartu di bawah dipertahankan sebagai histori v1; status Done lama tidak dihitung sebagai progres rebuild. Database dan media lama tidak dihapus.
+
 Tanggal: 21 Oktober 2026. Acuan produk: [PRD v1.1](../docs/PRD-v1.1.md), 20 Oktober 2026.
 
 **Status terbaru — 2 November 2026:** T001–T063 / CP-01–CP-23 selesai secara teknis untuk demo localhost. 39 unit, 80 integration dan 42 browser lulus tanpa retry; lint/TypeScript/build, clean start, pemulihan dan naskah demo lulus. Median Lighthouse mobile 88/87/86/89 (target ≥85). [Bukti final T063](../docs/reports/T063.md) dan [matriks FR/AC](../docs/qa/mvp-acceptance.md). Penerimaan pemilik proyek belum diberikan. Produksi dan konten resmi tetap terpisah; persiapan direncanakan minggu mulai 9 November 2026.
@@ -249,3 +251,13 @@ Tidak ada sub-agent, thread baru, issue eksternal, instalasi dependency, atau pe
 
 Persetujuan baseline oleh pemilik proyek dicatat pada T001; validasi konten organisasi dan infrastruktur produksi tetap terbuka. Selesai sampai T063 berarti demo localhost memenuhi PRD dengan bukti, bukan izin menerbitkan website ke internet.
 
+## Kanban seluruh proyek — 15 November 2026
+
+Permintaan pemilik mencakup seluruh proyek, termasuk riwayat implementasi dan pekerjaan lanjutan. [Rencana GitHub Project #5](github-project-5/README.md) memetakan 63 task implementasi serta 23 checkpoint historis, ditambah redesign UI, konten resmi, kesiapan produksi, penerimaan dan checkpoint lanjutan. T001–T063/CP-01–CP-23 tetap berstatus selesai teknis localhost berdasarkan bukti historis; penerimaan pemilik tidak diasumsikan selesai.
+
+Target pelacakan aktif adalah [GitHub Project milik silkiy](https://github.com/users/silkiy/projects/5/views/1). [Manifest 154 kartu](github-project-5/manifest.json) dan [uraian task lanjutan](github-project-5/backlog.md) mencakup seluruh proyek. Setelah pemilik login sebagai silkiy, 34 draft item Project dibuat dan body-nya diverifikasi. Tautan serta ID aktual disimpan pada [hasil sinkronisasi](github-project-5/sync-results.json); tidak ada issue repository yang dibuat. Pengisian dihentikan atas permintaan pemilik setelah gangguan DNS GitHub. Sebanyak 120 kartu belum terverifikasi lengkap, termasuk T024/CP-08/T021 yang sempat dicoba dan harus dicocokkan dengan board sebelum dibuat ulang. Histori plan.md/todo.md dipertahankan; pembuatan Kanban tidak menjalankan task aplikasi atau deployment.
+
+
+## Pengisian Kanban rebuild selesai — 16 November 2026
+
+View [Rebuild v2](https://github.com/users/silkiy/projects/5/views/6) berisi 61 kartu aktif (satu epic dan 60 task),60 Backlog / 1 Ready / 0 Done. [Mapping item dan verifikasi](github-project-5/rebuild-v2/sync-results.json) tersimpan; satu duplikat kosong diarsipkan. Pelaksanaan dimulai dari RB-001 oleh pemilik/pengembang pada branch baru. Status Done v1 tetap histori; tidak ada kode/data yang dihapus saat membuat Kanban.

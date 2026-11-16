@@ -1,51 +1,63 @@
-# GIBEI UISI
+# GIBEI UISI — Rebuild v2
 
-Website localhost dengan Next.js App Router, TypeScript dan Payload. **T001–T063 / CP-01–CP-23 selesai secara teknis untuk demo:** 11 modul PRD, workflow Admin/Media, seed dan SEO tersedia. 39 unit, 80 integration, 42 browser serta lint/typecheck/build lulus. Median Lighthouse 88/87/86/89; clean start dan restore terbukti. [Laporan final](docs/reports/T063.md), [audit FR/AC](docs/qa/mvp-acceptance.md), [backlog](tasks/todo.md). Penerimaan pemilik proyek, konten resmi dan produksi tetap terbuka.
+Starter Next.js kosong untuk membangun ulang website dan dashboard admin custom.
+Branch: `codex/rebuild-v2-custom-admin`.
 
+## Menjalankan proyek
 
-## Menjalankan
+Gunakan Node.js `24.22.1` (lihat `.node-version`) dan pnpm `10.24.0`.
 
-Gunakan Node **24.22.1** dan pnpm **10.24.0**, sesuai `.node-version` dan `packageManager`. Jika memakai binary portable yang disiapkan pada mesin pengembangan ini, aktifkan untuk sesi PowerShell:
-
-```powershell
-$env:Path = "$PWD\.tools\node-v24.22.1;$env:Path"
-node --version
-pnpm --version
-pnpm install --frozen-lockfile --store-dir .pnpm-store
+```sh
+pnpm install --frozen-lockfile
 pnpm dev
 ```
 
-Folder `.tools` tidak masuk Git. Pada checkout baru, pasang Node versi tersebut melalui pengelola runtime pilihan Anda terlebih dahulu. Unduhan portable berasal dari [rilis resmi Node](https://nodejs.org/en/blog/release/v24.22.1); verifikasi terhadap SHASUMS256 sebelum menjalankan binary yang diunduh.
+Buka http://127.0.0.1:3000. Starter belum membutuhkan `.env`, database,
+akun admin, CMS, seed, atau layanan eksternal.
 
-Buka `http://127.0.0.1:3000`. Jika port terpakai, gunakan `pnpm dev --port 3200` tanpa menghentikan proses lain.
+Script development dan build memakai Webpack karena worker PostCSS Turbopack
+gagal dijalankan pada mesin Windows ini. Framework tetap Next.js App Router.
+Cache pnpm lokal disimpan di `.pnpm-store/` melalui `.npmrc` dan diabaikan Git.
 
-```powershell
+```sh
 pnpm lint
 pnpm typecheck
 pnpm build
 pnpm start
 ```
 
-`start` menjalankan hasil build produksi. Jika port 3000 dipakai dev server, set `$env:SERVER_URL = 'http://127.0.0.1:3200'` sebelum `pnpm start --port 3200`; origin CMS harus cocok dengan port. `typecheck` menghasilkan tipe route terlebih dahulu sehingga dapat dijalankan sebelum build.
+## Struktur awal
 
-Pengujian: `pnpm test:unit`, `pnpm test:integration`, `pnpm test:e2e`, atau `pnpm test:all`. Fixture mencakup Admin dan dua Media pada database lokal baru yang dihapus setelah tes. Lihat [panduan pengujian](docs/testing.md) untuk Docker/PostgreSQL portable dan pemasangan Chromium. Harness memakai port acak dan `.next-test`, sehingga server utama dapat tetap berjalan.
+- `src/app/layout.tsx`: root layout dan metadata.
+- `src/app/page.tsx`: halaman placeholder yang dapat diganti saat mulai coding.
+- `src/app/globals.css`: Tailwind CSS dan gaya dasar.
+- `public/`: aset baru.
+- `docs/` dan `tasks/`: PRD, rencana rebuild, dan histori v1.
 
-## Struktur dan environment
+Stack awal: Next.js App Router, React, TypeScript, Tailwind CSS, ESLint.
+Payload, dashboard lama, route API lama, library database, dan skrip seed/migrasi
+lama telah dikeluarkan dari aplikasi aktif. Library backend dan autentikasi baru
+belum dipilih.
 
-- `src/app/(public)/`: root layout publik, CSS dan halaman awal; terpisah dari layout Payload di `(payload)`.
-- `docs/technical/`: stack dan kontrak editorial/media.
-- `.env.example`: placeholder konfigurasi server; aplikasi/CMS memerlukan `.env.local`, secret dan koneksi database.
+## Acuan pekerjaan
 
-Ikuti [panduan setup](docs/setup.md) untuk database, migration Payload, bootstrap Admin dan alur CMS. CMS: `http://127.0.0.1:3000/admin`; gunakan kredensial BOOTSTRAP_ADMIN_EMAIL/BOOTSTRAP_ADMIN_PASSWORD pada `.env.local`. Jangan membagikan nilainya di chat atau Git. `pnpm bootstrap:admin` tidak menimpa akun yang sudah ada; `pnpm test:cms` memeriksa login/logout pada server berjalan. Admin mengelola akun/reset lokal lewat Users; perubahan role/status/email/password memerlukan login ulang target. Articles memuat panel Alur editorial dan antrean review Admin; Pages memuat panel review untuk homepage/about (Admin membuat, Media berizin menyunting dan mengajukan). Preview privat memerlukan login/izin. Upload berada pada Media. Endpoint revoke/delete tetap dijelaskan pada panduan setup. Draft/file tetap privat sampai review yang sesuai disetujui. Audit tidak dapat diubah/dihapus. Data fixture tidak di-seed ke Supabase; daftar pengembangan tetap kosong sampai konten diterbitkan melalui CMS.
+- [PRD v1.1](docs/PRD-v1.1.md)
+- [Keputusan rebuild](docs/rebuild-v2.md)
+- [Kanban rebuild](https://github.com/users/silkiy/projects/5/views/6)
+- [Rincian task RB](tasks/github-project-5/rebuild-v2/README.md)
 
-Jalankan `pnpm db:check`, `pnpm db:verify`, `pnpm test:db-config` dan `pnpm test:auth-policy` untuk pemeriksaan terkait. Jangan menaruh kredensial di `NEXT_PUBLIC_*`; PAYLOAD_SECRET hanya di environment server. File upload, runtime portable, dependency dan output build diabaikan Git. Temuan audit yang tersisa dan batas verifikasi terbaru tercatat pada [audit keamanan](docs/qa/security.md).
+Dokumentasi dan hasil tes v1 merupakan histori, bukan bukti kelulusan v2.
+Dashboard, role Admin/Media, alur editorial, dan UI baru akan dibangun berikutnya.
 
-Fondasi publik memakai Tailwind 4.3.3, font Manrope lokal dan token sementara; lihat [panduan desain](docs/design.md). Menu mobile, keyboard dan reduced motion telah diuji. Logo/foto/kontak resmi serta konten CMS final tetap menunggu konfirmasi pemilik proyek. Robot metadata disetel noindex/nofollow untuk pratinjau. Situs belum diterbitkan ke internet.
+## Pemulihan implementasi lama
 
+Source v1 tersimpan dalam Git pada commit
+`ec4f8dee1fc6c5754b02b2c56fae5fde502d1494` (baseline `main` saat setup).
+Snapshot lokal sebelum reset juga disimpan di
+`artifacts/rebuild-baseline-20261116/`, termasuk konfigurasi privat dan perubahan
+`next-env.d.ts` sebelumnya. Folder ini diabaikan Git dan tidak boleh dipublikasikan.
+Environment lama dipindahkan ke snapshot agar tidak dimuat oleh starter baru.
 
-## Demo berisi data contoh
-
-`pnpm demo` menyiapkan database/media lokal terpisah dan membuka server production pada port bebas. `pnpm demo --benchmark` memakai dataset tetap 24 artikel. URL dan lokasi berkas kredensial privat ditampilkan pada terminal; tidak ada password default. Ctrl+C membersihkan hanya target sementara milik launcher. Jangan jalankan bersamaan dengan harness tes. [Panduan seed dan demo](docs/demo-data.md) menjelaskan pengulangan tanpa menimpa edit pengguna. Supabase utama tetap tidak diisi seed.
-
-
-Pemeriksaan serah terima: `pnpm demo:check PATH_KE_DEMO_ENV`. Benchmark PRD: `pnpm benchmark:demo http://127.0.0.1:PORT` pada fresh seed `--benchmark`, ketika tidak ada tes/build lain berjalan. Panduan: [CMS](docs/cms-guide.md), [naskah demo](docs/demo-script.md), [handover](docs/handover.md), [backup/restore](docs/operations/backup-restore.md), [audit MVP](docs/qa/mvp-acceptance.md). Status final mengikuti bukti pada audit tersebut.
+Database, media, dan backup lama tidak dihapus. Jangan menghubungkan rebuild ke
+database/media produksi sebelum isolasi target baru diputuskan di RB-001/RB-006.
+Belum ada deployment produksi.
