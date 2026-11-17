@@ -197,3 +197,31 @@ diisi section tujuan tanpa potongan section tetangga.
 Bukti lokal: `artifacts/section-viewport-ui-results.txt` dan screenshot dalam
 `artifacts/beranda-ui/section-*.png`. Batas verifikasi perangkat/browser yang
 dijelaskan sebelumnya tetap berlaku.
+
+## Redesign Hero — 17 November 2026
+
+Hero memakai komposisi editorial: judul rata kiri, deskripsi singkat dan dua
+CTA menuju Publikasi/Tentang; ilustrasi meja belajar di kanan mulai 900 px.
+Pada mobile, urutannya teks, aksi, lalu gambar. Statistik contoh dikeluarkan
+dari Hero. Warna merek, font lokal, anchor dan tinggi minimum viewport tetap
+dipakai. Gaya khusus dipisahkan ke `HeroSection.module.css`.
+
+Gambar `public/images/hero-learning-v2.png` dibuat dengan imagegen built-in dan
+dilabeli sebagai ilustrasi. Prompt final tercatat di `docs/assets/hero-learning-v2.md`.
+Next Image menyediakan ukuran responsif; request gambar pada pemeriksaan lokal
+desktop 1440 px berukuran 41.948 bytes. Ini observasi aset lokal, bukan hasil
+audit performa produksi di jaringan pengguna.
+
+Lint, typecheck dan build produksi lulus. Build sempat berhenti karena pengingat
+advisory Next.js yang sudah dicatat sebelumnya; retry berhasil. Tidak ada
+perubahan dependency dalam pekerjaan Hero ini. Screenshot produksi desktop
+diperiksa langsung; pemeriksaan awal 320, 375, 1024 dan 1440 px tidak menemukan
+overflow horizontal. Belum ada pengujian pada perangkat fisik.
+
+Regresi browser pada hasil produksi lulus: 14 viewport (320–2560 px dan
+landscape), menu/keyboard/reflow 200%, navigasi aktif, Kontak serta batas section
+dan offset header. Tes Hero memastikan gambar dimuat dan kedua CTA bisa
+diaktifkan dengan keyboard pada 375/1440 px. Axe menghasilkan 0 violations
+pada kedua lebar tersebut; 0 error JavaScript, request eksternal dan respons
+HTTP gagal. Bukti: `artifacts/hero-ui-results.txt`,
+`artifacts/hero-production-desktop.png` dan `artifacts/beranda-ui/hero-375.png`.
