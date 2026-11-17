@@ -49,7 +49,7 @@ pnpm start
 
 - `src/app/layout.tsx`: root layout dan metadata.
 - `src/app/page.tsx`: susunan bagian Beranda sebagai Server Components.
-- `src/components/home/`: hero, organisasi, publikasi, kegiatan dan rekrutmen.
+- `src/components/home/`: satu file per section; `page.tsx` hanya menyusun urutannya.
 - `src/components/site/`: branding, ikon SVG, header/menu dan footer.
 - `src/app/globals.css`: token visual dan layout mobile-first 320 px–ultrawide.
 - `src/assets/fonts/`: Inter dan Plus Jakarta Sans lokal beserta lisensi OFL.

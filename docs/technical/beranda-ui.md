@@ -46,3 +46,11 @@ organisasi, kegiatan, dan rekrutmen. Aksi utama: menjelajahi bagian publikasi.
 1. Font/logo lokal, token CSS, header/menu, hero dan statistik; verifikasi dahulu.
 2. Bagian konten dan footer, lalu layout responsif lengkap.
 3. Pemeriksaan browser dan aksesibilitas, perbaikan temuan, dokumentasi hasil.
+
+## Kepemilikan file section
+
+Setiap section dimiliki satu komponen di `src/components/home/`: `HeroSection`,
+`AboutSection`, `DivisionsSection`, `PublicationSection`, `EventsSection`,
+`RecruitmentSection`, dan `PartnersSection`. Data pratinjau khusus suatu section
+berada di file komponennya. `src/app/page.tsx` hanya menyusun urutan komponen;
+tidak memuat markup isi section atau wrapper identitas section.
