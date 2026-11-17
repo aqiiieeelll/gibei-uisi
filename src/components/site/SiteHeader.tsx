@@ -39,7 +39,13 @@ export function SiteHeader() {
   }
 
   return (
-    <header className="site-header" ref={headerRef}>
+    <header
+      className="site-header"
+      ref={headerRef}
+      onBlur={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false);
+      }}
+    >
       <div className="container header-inner">
         <Brand />
         <button ref={buttonRef} type="button" className="menu-toggle" aria-label={open ? 'Tutup menu navigasi' : 'Buka menu navigasi'} aria-expanded={open} aria-controls="main-navigation" onClick={() => setOpen(!open)}>

@@ -8,6 +8,7 @@ const jakarta = localFont({ src: '../assets/fonts/plus-jakarta-sans-latin.woff2'
 export const metadata: Metadata = {
   title: 'GIBEI UISI — Galeri Investasi BEI',
   description: 'Kenali Galeri Investasi BEI UISI, wadah edukasi, literasi, dan riset pasar modal bagi generasi muda di Universitas Internasional Semen Indonesia.',
+  icons: { icon: '/images/gibei-mark.jpg' },
 };
 
 export default function RootLayout({
