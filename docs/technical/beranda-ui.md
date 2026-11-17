@@ -13,7 +13,7 @@ organisasi, kegiatan, dan rekrutmen. Aksi utama: menjelajahi bagian publikasi.
 
 - Pertahankan biru `#006194`, navy, latar putih/slate, tipografi Plus Jakarta
   Sans untuk heading dan Inter untuk isi, whitespace, dan urutan bagian Stitch.
-- Header, hero, tiga pilar, delapan divisi, tiga publikasi, dua
+- Header, hero, statistik, tiga pilar, delapan divisi, tiga publikasi, dua
   kegiatan, rekrutmen, mitra, dan footer menjadi komponen React yang semantik.
 - Font dan logo lokal; SVG dekoratif lokal, tanpa Tailwind CDN/ikon font/CDN.
 - Satu h1; h2 per bagian; skip link, fokus terlihat dan navigasi keyboard.
@@ -23,7 +23,7 @@ organisasi, kegiatan, dan rekrutmen. Aksi utama: menjelajahi bagian publikasi.
 - Warna menu aktif mengikuti section yang terlihat, termasuk klik anchor, scroll
   manual, direct hash, Reload dan Back. Satu tautan memakai `aria-current="location"`;
   perubahan scroll manual tidak menulis ulang URL atau history.
-- Konten contoh dilabeli; tautan eksternal yang belum diverifikasi,
+- Statistik/konten contoh dilabeli; tautan eksternal yang belum diverifikasi,
   file yang belum ada, registrasi, dan portal admin tidak diberi aksi palsu.
 - Footer memuat disclaimer edukasi. Tidak menambah backend atau CMS.
 
@@ -35,8 +35,8 @@ organisasi, kegiatan, dan rekrutmen. Aksi utama: menjelajahi bagian publikasi.
   atau potongan section sebelumnya; section berikutnya berada di luar viewport.
 - Mitra dan footer tetap ringkas. Tidak memakai tinggi tetap, clipping konten,
   pagination tambahan atau scroll yang dipaksa per layar.
-- Mobile mulai 320 px: menu ringkas, CTA bertumpuk, isi satu kolom,
-  tanpa scroll horizontal.
+- Mobile mulai 320 px: menu ringkas, CTA bertumpuk, isi satu kolom, statistik
+  dua kolom, tanpa scroll horizontal.
 - Tablet: dua kolom pada divisi/publikasi jika muat; judul memakai ukuran fluid.
 - Desktop: navigasi penuh ketika seluruh item muat, tiga pilar/publikasi,
   empat divisi dan dua kegiatan. Lebar isi dibatasi agar nyaman di ultrawide.
@@ -49,7 +49,7 @@ organisasi, kegiatan, dan rekrutmen. Aksi utama: menjelajahi bagian publikasi.
 
 ## Potongan implementasi
 
-1. Font/logo lokal, token CSS, header/menu dan hero; verifikasi dahulu.
+1. Font/logo lokal, token CSS, header/menu, hero dan statistik; verifikasi dahulu.
 2. Bagian konten dan footer, lalu layout responsif lengkap.
 3. Pemeriksaan browser dan aksesibilitas, perbaikan temuan, dokumentasi hasil.
 
@@ -59,7 +59,7 @@ Setiap section dimiliki satu komponen di `src/components/home/`:
 
 | Bagian | File | Anchor |
 | --- | --- | --- |
-| Hero dan ilustrasi | `HeroSection.tsx` | `#beranda` |
+| Hero dan statistik | `HeroSection.tsx` | `#beranda` |
 | Tentang dan pilar | `AboutSection.tsx` | `#tentang` |
 | Delapan divisi | `DivisionsSection.tsx` | `#divisi` |
 | Publikasi | `PublicationSection.tsx` | `#publikasi` |
@@ -97,30 +97,13 @@ fallback `100vh`. Isi diposisikan di tengah vertikal jika muat. Section tanpa ID
 navigasi (Mitra) serta footer mengikuti panjang isinya. Styles tidak menyembunyikan
 overflow vertikal untuk memaksakan seluruh isi masuk satu layar.
 
-## Penyegaran Hero
+## Hero tanpa gambar
 
-Audit Hero: ruang kosong mendominasi, foto objek kurang mewakili komunitas dan
-judul belum menjadi fokus yang kuat. Redesign terbatas pada Hero, mempertahankan brand biru
-`#006194`, Plus Jakarta Sans/Inter, logo, anchor `#beranda` serta kedua tujuan CTA.
-Metadata, navigasi dan isi section lain tetap mengikuti kontrak sebelumnya.
-
-Arah visual terbaru: portal komunitas edukasi kampus, dengan judul besar terpusat,
-deskripsi, dua CTA dan panorama kolaborasi mahasiswa di bawahnya. Variasi desain
-6/10, gerak 2/10 (feedback tombol yang sudah ada), kepadatan 5/10. Tidak menambah
-library atau animasi. Mobile menempatkan teks dan aksi sebelum gambar; isi boleh
-memanjang. Ruang antar blok membentuk satu alur baca, tanpa statistik atau
-ornamen tambahan. Biru merek menegaskan satu baris judul; jarak huruf dilonggarkan.
-
-Judul menjadi "Belajar pasar modal. Tumbuh bersama." Statistik ilustrasi pada
-Hero dihapus; tidak dipakai sebagai bukti pencapaian organisasi. Gambar lokal
-`public/images/hero-community-v3.png` dan `hero-community-mobile-v3.png` merupakan
-ilustrasi hasil imagegen built-in, bukan anggota, tempat atau kegiatan resmi
-GIBEI UISI dan bukan data pasar. Keterangan ilustrasi tampil di bawah gambar.
-Alt menjelaskan isinya. `getImageProps` dari Next Image menyediakan optimasi,
-ukuran intrinsik, `sizes` dan eager loading. Browser memilih panorama mulai
-640 px dan komposisi 4:3 di bawahnya melalui `<picture>`, sehingga keempat wajah
-tetap terlihat tanpa memotong gambar secara paksa. Prompt/provenance ada di
-`../assets/hero-community-v3.md`.
-
-CSS khusus Hero berada di `HeroSection.module.css`; aturan tinggi minimum yang
-dipakai bersama section lain tetap berada di `globals.css`.
+Hero dikembalikan ke tampilan awal pada baseline `85f48a6`, mengikuti pilihan
+pemilik sambil menunggu referensi baru. Judul, deskripsi, dua CTA dan statistik
+contoh kembali memakai susunan awal. Statistik tetap dilabeli sebagai data
+contoh untuk pratinjau. Tidak ada gambar, picture, video atau gambar latar pada
+Hero. Gaya awal berada di `globals.css`; komponen tetap `HeroSection.tsx`.
+Arsip aset/provenance iterasi bergambar tidak dirujuk atau dimuat oleh Hero.
+Navigasi aktif, section Kontak, kepemilikan file section dan tinggi minimum
+viewport tetap mengikuti kontrak di atas.

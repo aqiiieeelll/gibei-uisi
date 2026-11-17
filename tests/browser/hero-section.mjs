@@ -5,16 +5,13 @@ export async function checkHeroSection(page, baseURL) {
   for (const width of [375, 640, 1440]) {
     await page.setViewportSize({ width, height: 900 });
     await page.goto(`${baseURL}/`, { waitUntil: 'networkidle' });
-    const hero = page.getByRole('region', { name: /Belajar pasar modal/ });
-    const image = hero.getByRole('img');
-    await image.evaluate((element) => element.decode());
-    assert.ok(await image.evaluate((element) => element.naturalWidth > 0));
+    const hero = page.locator('#beranda');
+    assert.equal(await hero.locator('img, picture, video').count(), 0);
     assert.equal(
-      await image.evaluate((element) => new URL(element.currentSrc).searchParams.get('url')),
-      width < 640 ? '/images/hero-community-mobile-v3.png' : '/images/hero-community-v3.png',
-      'The browser should select the composition appropriate for the viewport',
+      await hero.getByRole('heading', { level: 1 }).innerText(),
+      'Edukasi & Literasi Pasar Modal Terpercaya untuk Generasi Muda',
     );
-    assert.match(await hero.locator('figcaption').innerText(), /Ilustrasi/);
+    assert.match(await hero.locator('#statistics-note').innerText(), /data contoh/i);
     for (const [name, target] of [
       ['Jelajahi Edukasi & Riset', 'publikasi'],
       ['Tentang Organisasi', 'tentang'],
@@ -33,7 +30,7 @@ export async function checkHeroSection(page, baseURL) {
     await page.goto(`${baseURL}/`, { waitUntil: 'networkidle' });
     await page.evaluate(() => document.fonts.ready);
     await page.screenshot({ path: `artifacts/beranda-ui/hero-${width}.png` });
-    checks.push(`Hero illustration loads and both CTAs work by keyboard at ${width}px`);
+    checks.push(`Original Hero has no image and both CTAs work by keyboard at ${width}px`);
   }
   return checks;
 }

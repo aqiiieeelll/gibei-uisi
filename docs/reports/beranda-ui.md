@@ -267,3 +267,28 @@ Bukti: `artifacts/hero-community-final-ui-results.txt`,
 `artifacts/hero-community-final-build-retry.txt`, dan
 `artifacts/hero-community-production-{1440,375}.png`. Verifikasi memakai Chrome
 desktop dengan emulasi viewport; perangkat fisik belum diuji.
+
+## Pemulihan Hero awal tanpa gambar — 17 November 2026
+
+Hero dikembalikan ke tampilan sebelum dua iterasi bergambar, mengikuti pilihan
+pemilik sambil menunggu referensi baru. `HeroSection.tsx` dan `globals.css`
+dipulihkan persis dari baseline `85f48a6`: judul, deskripsi, dua CTA, dan statistik
+contoh berlabel. CSS Module khusus iterasi bergambar dihapus. Aset/provenance
+iterasi sebelumnya menjadi arsip dan tidak dimuat oleh Hero.
+
+Perbaikan menu aktif, section Kontak, pemisahan file section dan tinggi minimal
+viewport tetap dipertahankan. Tes Hero kini memastikan tidak ada elemen gambar,
+picture atau video, judul awal tampil, label statistik contoh tetap ada, dan
+kedua CTA bisa digunakan melalui keyboard.
+
+Lint, typecheck dan production build lulus. Pemeriksaan browser menyelesaikan
+14 viewport, navigasi, keyboard, Kontak, batas section dan offset header; axe
+pada 375/1440 px menghasilkan 0 violations, tanpa error JavaScript, request
+eksternal atau respons HTTP gagal. Pencocokan label statistik pada tes Hero
+disesuaikan agar menerima huruf kapital hasil `text-transform`; tes Hero kemudian
+dijalankan terpisah dan lulus pada 375/640/1440 px. Tidak diperlukan perubahan UI
+untuk penyesuaian tes tersebut. Screenshot produksi diperiksa langsung dan
+memastikan Hero kembali ke susunan awal tanpa gambar.
+
+Bukti: `artifacts/hero-rollback-build-retry.txt`,
+`artifacts/hero-rollback-final-results.json`, dan `artifacts/hero-rollback-preview.png`.

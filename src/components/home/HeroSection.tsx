@@ -1,66 +1,47 @@
-import { getImageProps } from 'next/image';
 import { Icon } from '@/components/site/Icon';
-import styles from './HeroSection.module.css';
+
+const statistics = [
+  ['1.200+', 'Mahasiswa Terliterasi'],
+  ['8 Divisi', 'Struktur Penggerak'],
+  ['40+', 'Riset & Publikasi'],
+  ['100%', 'Mitra BEI'],
+];
 
 export function HeroSection() {
-  const commonImageProps = {
-    alt: 'Ilustrasi empat mahasiswa berdiskusi dan mempelajari grafik bersama di meja belajar.',
-    loading: 'eager' as const,
-  };
-  const { props: desktopImage } = getImageProps({
-    ...commonImageProps,
-    src: '/images/hero-community-v3.png',
-    width: 2172,
-    height: 724,
-    sizes: '(min-width: 1304px) 1240px, calc(100vw - 64px)',
-  });
-  const { props: mobileImage } = getImageProps({
-    ...commonImageProps,
-    src: '/images/hero-community-mobile-v3.png',
-    width: 1448,
-    height: 1086,
-    sizes: 'calc(100vw - 40px)',
-  });
-
   return (
-    <section
-      className={`hero ${styles.hero}`}
-      id="beranda"
-      aria-labelledby="hero-title"
-      tabIndex={-1}
-    >
-      <div className={`container ${styles.layout}`}>
-        <div className={styles.copy}>
-          <p className={styles.identity}>Galeri Investasi BEI UISI</p>
-          <h1 id="hero-title" className={styles.title}>
-            Belajar pasar modal. <span>Tumbuh bersama.</span>
-          </h1>
-          <p className={styles.description}>
-            Kenali investasi melalui edukasi, riset, dan diskusi bersama GIBEI UISI. Bangun
-            pemahaman sebelum mulai berinvestasi.
-          </p>
-          <div className={styles.actions}>
-            <a className="button button-primary" href="#publikasi">
-              Jelajahi Edukasi &amp; Riset <Icon name="arrow" />
-            </a>
-            <a className="button button-secondary" href="#tentang">
-              Tentang Organisasi
-            </a>
-          </div>
+    <section className="hero" id="beranda" aria-labelledby="hero-title" tabIndex={-1}>
+      <div className="container hero-content">
+        <p className="eyebrow hero-eyebrow">
+          <span className="status-dot" />
+          Galeri Investasi BEI <span className="eyebrow-divider">·</span> Universitas Internasional
+          Semen Indonesia
+        </p>
+        <h1 id="hero-title">
+          Edukasi &amp; Literasi Pasar Modal Terpercaya untuk <span>Generasi Muda</span>
+        </h1>
+        <p className="hero-description">
+          Membentuk investor muda yang analitis, cerdas, dan beretika melalui ekosistem pembelajaran
+          bursa yang aplikatif di lingkungan kampus UISI.
+        </p>
+        <div className="hero-actions">
+          <a className="button button-primary" href="#publikasi">
+            Jelajahi Edukasi &amp; Riset <Icon name="arrow" />
+          </a>
+          <a className="button button-secondary" href="#tentang">
+            Tentang Organisasi
+          </a>
         </div>
-        <figure className={styles.visual}>
-          <picture>
-            <source
-              media="(min-width: 640px)"
-              srcSet={desktopImage.srcSet}
-              sizes={desktopImage.sizes}
-              width={2172}
-              height={724}
-            />
-            <img {...mobileImage} alt={commonImageProps.alt} className={styles.image} />
-          </picture>
-          <figcaption>Ilustrasi kolaborasi mahasiswa dalam belajar pasar modal.</figcaption>
-        </figure>
+        <p className="sample-caption" id="statistics-note">
+          Statistik ilustrasi · data contoh untuk pratinjau
+        </p>
+        <dl className="statistics" aria-describedby="statistics-note">
+          {statistics.map(([value, label]) => (
+            <div key={label}>
+              <dt>{label}</dt>
+              <dd>{value}</dd>
+            </div>
+          ))}
+        </dl>
       </div>
     </section>
   );
