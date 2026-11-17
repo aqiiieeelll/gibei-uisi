@@ -1,0 +1,991 @@
+{
+  "repository": "silkiy/gibei-uisi",
+  "plannedDraftCount": 64,
+  "convertedCount": 64,
+  "existingIssueCount": 2,
+  "complete": true,
+  "items": [
+    {
+      "id": "UI-004",
+      "itemId": "305844876",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305844876",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/4",
+      "issueNumber": 4,
+      "status": "Ready",
+      "assignees": [
+        "erikaaisyah",
+        "fadhilabhirama"
+      ],
+      "verified": true
+    },
+    {
+      "id": "RB-000",
+      "itemId": "305867582",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305867582",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/5",
+      "issueNumber": 5,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-002",
+      "itemId": "305867822",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305867822",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/6",
+      "issueNumber": 6,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-003",
+      "itemId": "305867952",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305867952",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/7",
+      "issueNumber": 7,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-004",
+      "itemId": "305869901",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305869901",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/8",
+      "issueNumber": 8,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-005",
+      "itemId": "305869978",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305869978",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/9",
+      "issueNumber": 9,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-006",
+      "itemId": "305870098",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305870098",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/10",
+      "issueNumber": 10,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-007",
+      "itemId": "305870872",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305870872",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/11",
+      "issueNumber": 11,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-008",
+      "itemId": "305871001",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305871001",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/12",
+      "issueNumber": 12,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-009",
+      "itemId": "305871122",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305871122",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/13",
+      "issueNumber": 13,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-010",
+      "itemId": "305871238",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305871238",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/14",
+      "issueNumber": 14,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-011",
+      "itemId": "305871371",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305871371",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/15",
+      "issueNumber": 15,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-012",
+      "itemId": "305871499",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305871499",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/16",
+      "issueNumber": 16,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-013",
+      "itemId": "305871962",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305871962",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/17",
+      "issueNumber": 17,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-014",
+      "itemId": "305872097",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305872097",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/18",
+      "issueNumber": 18,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-015",
+      "itemId": "305872223",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305872223",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/19",
+      "issueNumber": 19,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-016",
+      "itemId": "305872325",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305872325",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/20",
+      "issueNumber": 20,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-017",
+      "itemId": "305872867",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305872867",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/21",
+      "issueNumber": 21,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-018",
+      "itemId": "305872967",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305872967",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/22",
+      "issueNumber": 22,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-019",
+      "itemId": "306043663",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306043663",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/23",
+      "issueNumber": 23,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-020",
+      "itemId": "306044874",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306044874",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/24",
+      "issueNumber": 24,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-021",
+      "itemId": "306044953",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306044953",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/25",
+      "issueNumber": 25,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-022",
+      "itemId": "306045035",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306045035",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/26",
+      "issueNumber": 26,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-023",
+      "itemId": "306045180",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306045180",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/27",
+      "issueNumber": 27,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-024",
+      "itemId": "306045281",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306045281",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/28",
+      "issueNumber": 28,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-025",
+      "itemId": "306045513",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306045513",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/29",
+      "issueNumber": 29,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-026",
+      "itemId": "306045607",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306045607",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/30",
+      "issueNumber": 30,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-027",
+      "itemId": "306045874",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306045874",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/31",
+      "issueNumber": 31,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-028",
+      "itemId": "306047101",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306047101",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/32",
+      "issueNumber": 32,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-029",
+      "itemId": "306047174",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306047174",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/33",
+      "issueNumber": 33,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-030",
+      "itemId": "306047263",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306047263",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/34",
+      "issueNumber": 34,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-031",
+      "itemId": "306047344",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306047344",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/35",
+      "issueNumber": 35,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-032",
+      "itemId": "306047524",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306047524",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/36",
+      "issueNumber": 36,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-033",
+      "itemId": "306047610",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306047610",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/37",
+      "issueNumber": 37,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-034",
+      "itemId": "306047716",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306047716",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/38",
+      "issueNumber": 38,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-035",
+      "itemId": "306047797",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306047797",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/39",
+      "issueNumber": 39,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-036",
+      "itemId": "306047873",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306047873",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/40",
+      "issueNumber": 40,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-037",
+      "itemId": "306048200",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306048200",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/41",
+      "issueNumber": 41,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-038",
+      "itemId": "306048283",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306048283",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/42",
+      "issueNumber": 42,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-039",
+      "itemId": "306048374",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306048374",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/43",
+      "issueNumber": 43,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-040",
+      "itemId": "306048463",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306048463",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/44",
+      "issueNumber": 44,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-041",
+      "itemId": "306048554",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306048554",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/45",
+      "issueNumber": 45,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-042",
+      "itemId": "306048912",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306048912",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/46",
+      "issueNumber": 46,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-043",
+      "itemId": "306049002",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306049002",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/47",
+      "issueNumber": 47,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-044",
+      "itemId": "306049105",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306049105",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/48",
+      "issueNumber": 48,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-045",
+      "itemId": "306049178",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306049178",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/49",
+      "issueNumber": 49,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-046",
+      "itemId": "306049275",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306049275",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/50",
+      "issueNumber": 50,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-047",
+      "itemId": "306049473",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306049473",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/51",
+      "issueNumber": 51,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-048",
+      "itemId": "306049571",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306049571",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/52",
+      "issueNumber": 52,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-049",
+      "itemId": "306049666",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306049666",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/53",
+      "issueNumber": 53,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-050",
+      "itemId": "306049755",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306049755",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/54",
+      "issueNumber": 54,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-051",
+      "itemId": "306049832",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306049832",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/55",
+      "issueNumber": 55,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-052",
+      "itemId": "306050045",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306050045",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/56",
+      "issueNumber": 56,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-053",
+      "itemId": "306050138",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306050138",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/57",
+      "issueNumber": 57,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-054",
+      "itemId": "306050199",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306050199",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/58",
+      "issueNumber": 58,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-055",
+      "itemId": "306050305",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306050305",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/59",
+      "issueNumber": 59,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-056",
+      "itemId": "306050426",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306050426",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/60",
+      "issueNumber": 60,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-057",
+      "itemId": "306050601",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306050601",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/61",
+      "issueNumber": 61,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-058",
+      "itemId": "306050683",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306050683",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/62",
+      "issueNumber": 62,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-059",
+      "itemId": "306050772",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306050772",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/63",
+      "issueNumber": 63,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "RB-060",
+      "itemId": "306050894",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306050894",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/64",
+      "issueNumber": 64,
+      "status": "Backlog",
+      "assignees": [],
+      "verified": true
+    },
+    {
+      "id": "UI-002",
+      "itemId": "305844691",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305844691",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/65",
+      "issueNumber": 65,
+      "status": "Ready",
+      "assignees": [
+        "erikaaisyah"
+      ],
+      "verified": true
+    },
+    {
+      "id": "UI-003",
+      "itemId": "305844797",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305844797",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/66",
+      "issueNumber": 66,
+      "status": "Ready",
+      "assignees": [
+        "erikaaisyah"
+      ],
+      "verified": true
+    },
+    {
+      "id": "UI-005",
+      "itemId": "305846035",
+      "projectUrl": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305846035",
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/67",
+      "issueNumber": 67,
+      "status": "Ready",
+      "assignees": [
+        "erikaaisyah",
+        "fadhilabhirama"
+      ],
+      "verified": true
+    }
+  ],
+  "issueMap": {
+    "RB-001": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/2",
+      "issueNumber": 2,
+      "existingIssue": true
+    },
+    "UI-001": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/3",
+      "issueNumber": 3,
+      "existingIssue": true
+    },
+    "UI-004": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/4",
+      "issueNumber": 4,
+      "existingIssue": false
+    },
+    "RB-000": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/5",
+      "issueNumber": 5,
+      "existingIssue": false
+    },
+    "RB-002": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/6",
+      "issueNumber": 6,
+      "existingIssue": false
+    },
+    "RB-003": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/7",
+      "issueNumber": 7,
+      "existingIssue": false
+    },
+    "RB-004": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/8",
+      "issueNumber": 8,
+      "existingIssue": false
+    },
+    "RB-005": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/9",
+      "issueNumber": 9,
+      "existingIssue": false
+    },
+    "RB-006": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/10",
+      "issueNumber": 10,
+      "existingIssue": false
+    },
+    "RB-007": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/11",
+      "issueNumber": 11,
+      "existingIssue": false
+    },
+    "RB-008": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/12",
+      "issueNumber": 12,
+      "existingIssue": false
+    },
+    "RB-009": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/13",
+      "issueNumber": 13,
+      "existingIssue": false
+    },
+    "RB-010": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/14",
+      "issueNumber": 14,
+      "existingIssue": false
+    },
+    "RB-011": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/15",
+      "issueNumber": 15,
+      "existingIssue": false
+    },
+    "RB-012": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/16",
+      "issueNumber": 16,
+      "existingIssue": false
+    },
+    "RB-013": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/17",
+      "issueNumber": 17,
+      "existingIssue": false
+    },
+    "RB-014": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/18",
+      "issueNumber": 18,
+      "existingIssue": false
+    },
+    "RB-015": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/19",
+      "issueNumber": 19,
+      "existingIssue": false
+    },
+    "RB-016": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/20",
+      "issueNumber": 20,
+      "existingIssue": false
+    },
+    "RB-017": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/21",
+      "issueNumber": 21,
+      "existingIssue": false
+    },
+    "RB-018": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/22",
+      "issueNumber": 22,
+      "existingIssue": false
+    },
+    "RB-019": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/23",
+      "issueNumber": 23,
+      "existingIssue": false
+    },
+    "RB-020": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/24",
+      "issueNumber": 24,
+      "existingIssue": false
+    },
+    "RB-021": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/25",
+      "issueNumber": 25,
+      "existingIssue": false
+    },
+    "RB-022": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/26",
+      "issueNumber": 26,
+      "existingIssue": false
+    },
+    "RB-023": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/27",
+      "issueNumber": 27,
+      "existingIssue": false
+    },
+    "RB-024": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/28",
+      "issueNumber": 28,
+      "existingIssue": false
+    },
+    "RB-025": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/29",
+      "issueNumber": 29,
+      "existingIssue": false
+    },
+    "RB-026": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/30",
+      "issueNumber": 30,
+      "existingIssue": false
+    },
+    "RB-027": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/31",
+      "issueNumber": 31,
+      "existingIssue": false
+    },
+    "RB-028": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/32",
+      "issueNumber": 32,
+      "existingIssue": false
+    },
+    "RB-029": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/33",
+      "issueNumber": 33,
+      "existingIssue": false
+    },
+    "RB-030": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/34",
+      "issueNumber": 34,
+      "existingIssue": false
+    },
+    "RB-031": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/35",
+      "issueNumber": 35,
+      "existingIssue": false
+    },
+    "RB-032": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/36",
+      "issueNumber": 36,
+      "existingIssue": false
+    },
+    "RB-033": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/37",
+      "issueNumber": 37,
+      "existingIssue": false
+    },
+    "RB-034": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/38",
+      "issueNumber": 38,
+      "existingIssue": false
+    },
+    "RB-035": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/39",
+      "issueNumber": 39,
+      "existingIssue": false
+    },
+    "RB-036": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/40",
+      "issueNumber": 40,
+      "existingIssue": false
+    },
+    "RB-037": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/41",
+      "issueNumber": 41,
+      "existingIssue": false
+    },
+    "RB-038": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/42",
+      "issueNumber": 42,
+      "existingIssue": false
+    },
+    "RB-039": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/43",
+      "issueNumber": 43,
+      "existingIssue": false
+    },
+    "RB-040": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/44",
+      "issueNumber": 44,
+      "existingIssue": false
+    },
+    "RB-041": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/45",
+      "issueNumber": 45,
+      "existingIssue": false
+    },
+    "RB-042": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/46",
+      "issueNumber": 46,
+      "existingIssue": false
+    },
+    "RB-043": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/47",
+      "issueNumber": 47,
+      "existingIssue": false
+    },
+    "RB-044": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/48",
+      "issueNumber": 48,
+      "existingIssue": false
+    },
+    "RB-045": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/49",
+      "issueNumber": 49,
+      "existingIssue": false
+    },
+    "RB-046": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/50",
+      "issueNumber": 50,
+      "existingIssue": false
+    },
+    "RB-047": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/51",
+      "issueNumber": 51,
+      "existingIssue": false
+    },
+    "RB-048": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/52",
+      "issueNumber": 52,
+      "existingIssue": false
+    },
+    "RB-049": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/53",
+      "issueNumber": 53,
+      "existingIssue": false
+    },
+    "RB-050": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/54",
+      "issueNumber": 54,
+      "existingIssue": false
+    },
+    "RB-051": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/55",
+      "issueNumber": 55,
+      "existingIssue": false
+    },
+    "RB-052": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/56",
+      "issueNumber": 56,
+      "existingIssue": false
+    },
+    "RB-053": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/57",
+      "issueNumber": 57,
+      "existingIssue": false
+    },
+    "RB-054": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/58",
+      "issueNumber": 58,
+      "existingIssue": false
+    },
+    "RB-055": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/59",
+      "issueNumber": 59,
+      "existingIssue": false
+    },
+    "RB-056": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/60",
+      "issueNumber": 60,
+      "existingIssue": false
+    },
+    "RB-057": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/61",
+      "issueNumber": 61,
+      "existingIssue": false
+    },
+    "RB-058": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/62",
+      "issueNumber": 62,
+      "existingIssue": false
+    },
+    "RB-059": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/63",
+      "issueNumber": 63,
+      "existingIssue": false
+    },
+    "RB-060": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/64",
+      "issueNumber": 64,
+      "existingIssue": false
+    },
+    "UI-002": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/65",
+      "issueNumber": 65,
+      "existingIssue": false
+    },
+    "UI-003": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/66",
+      "issueNumber": 66,
+      "existingIssue": false
+    },
+    "UI-005": {
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/67",
+      "issueNumber": 67,
+      "existingIssue": false
+    }
+  }
+}

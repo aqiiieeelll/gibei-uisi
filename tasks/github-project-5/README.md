@@ -1,5 +1,12 @@
 # Kanban seluruh proyek GIBEI UISI
 
+**Pembaruan 17 November 2026:** uraian 66 kartu aktif (RB-000–RB-060 dan
+UI-001–UI-005) telah dilengkapi lima bagian sesuai masukan dosen. Sebanyak 64
+draft dikonversi menjadi Issue `silkiy/gibei-uisi`; dua kartu sudah berupa Issue.
+Assignee, status dan sprint dipertahankan. [Indeks Issue terkini](backlog-detail-20261117/issues.md)
+dan [bukti sinkronisasi](backlog-detail-20261117/README.md) menjadi acuan aktif.
+Catatan paket 154 kartu di bawah merupakan histori, bukan status antrean aktif.
+
 **Arah aktif: rebuild v2 dari nol.** Pemilik mempertahankan Next.js dan mengganti Payload dengan dashboard admin custom. [Rencana rebuild v2](rebuild-v2/README.md) menjadi antrean baru; paket 154 kartu ini dipertahankan sebagai histori v1/redesign dan tidak diteruskan otomatis.
 
 Disiapkan 15 November 2026 untuk [GitHub Project #5](https://github.com/users/silkiy/projects/5/views/1). Acuan: [PRD v1.1](../../docs/PRD-v1.1.md), [backlog implementasi](../todo.md), [audit MVP](../../docs/qa/mvp-acceptance.md), dan [serah terima](../../docs/handover.md).

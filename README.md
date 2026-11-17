@@ -1,20 +1,21 @@
 # GIBEI UISI — Rebuild v2
 
-Starter Next.js kosong untuk membangun ulang website dan dashboard admin custom.
-Branch: `rebuild/website-v2`.
+Beranda Next.js berdasarkan desain Stitch GIBEI UISI, dengan layout responsif,
+menu mobile yang dapat dioperasikan lewat keyboard, serta font dan logo lokal.
+Implementasi UI berada pada branch `feature/beranda-responsive`.
 
 ## Branch proyek
 
 | Branch | Isi dan kegunaan |
 | --- | --- |
-| `main` | Versi utama; saat setup masih berisi implementasi v1. |
+| `main` | Baseline rebuild setelah penggabungan starter v2. |
 | `demo/website-v1` | Snapshot seluruh kode demo v1 dari `main` pada commit `ec4f8de`. |
-| `rebuild/website-v2` | Pembangunan ulang seluruh website: UI publik, dashboard admin, dan sistem backend. |
+| `feature/beranda-responsive` | Implementasi Beranda responsif untuk direview sebelum digabung ke `main`. |
 
 Ketiganya berada dalam repository yang sama. Branch demo mempertahankan source
-v1 saat hasil rebuild nantinya digabung ke `main`; deployment demo merupakan
+v1 saat rebuild dikembangkan di `main`; deployment demo merupakan
 konfigurasi terpisah. `demo-project` tetap tersedia sebagai branch historis.
-Branch baru saat setup ini masih lokal dan belum di-push ke GitHub.
+Branch fitur UI belum di-push atau digabung ke `main` oleh implementasi ini.
 
 Untuk menjalankan demo v1 bersamaan dengan rebuild, gunakan checkout/worktree
 terpisah beserta dependency dan environment v1. Environment v1 telah disimpan
@@ -29,8 +30,9 @@ pnpm install --frozen-lockfile
 pnpm dev
 ```
 
-Buka http://127.0.0.1:3000. Starter belum membutuhkan `.env`, database,
-akun admin, CMS, seed, atau layanan eksternal.
+Buka http://127.0.0.1:3000. Beranda ini belum membutuhkan `.env`, database,
+akun admin, CMS, seed, atau layanan eksternal. Statistik, publikasi, agenda dan
+mitra ilustrasi diberi label contoh; tombol yang menunggu konten resmi belum aktif.
 
 Script development dan build memakai Webpack karena worker PostCSS Turbopack
 gagal dijalankan pada mesin Windows ini. Framework tetap Next.js App Router.
@@ -43,12 +45,17 @@ pnpm build
 pnpm start
 ```
 
-## Struktur awal
+## Struktur aplikasi
 
 - `src/app/layout.tsx`: root layout dan metadata.
-- `src/app/page.tsx`: halaman placeholder yang dapat diganti saat mulai coding.
-- `src/app/globals.css`: Tailwind CSS dan gaya dasar.
-- `public/`: aset baru.
+- `src/app/page.tsx`: susunan bagian Beranda sebagai Server Components.
+- `src/components/home/`: satu file per section; `page.tsx` hanya menyusun urutannya.
+- `src/content/site-contact.ts`: satu sumber daftar media sosial untuk Kontak dan footer.
+- `src/components/site/`: branding, ikon SVG, header/menu dan footer.
+- `src/app/globals.css`: token visual dan layout mobile-first 320 px–ultrawide.
+- `src/assets/fonts/`: Inter dan Plus Jakarta Sans lokal beserta lisensi OFL.
+- `public/images/`: logo hasil ekspor Stitch.
+- `tests/browser/beranda.mjs`: regresi responsif, menu, keyboard dan axe.
 - `docs/` dan `tasks/`: PRD, rencana rebuild, dan histori v1.
 
 Stack awal: Next.js App Router, React, TypeScript, Tailwind CSS, ESLint.
@@ -64,7 +71,30 @@ belum dipilih.
 - [Rincian task RB](tasks/github-project-5/rebuild-v2/README.md)
 
 Dokumentasi dan hasil tes v1 merupakan histori, bukan bukti kelulusan v2.
-Dashboard, role Admin/Media, alur editorial, dan UI baru akan dibangun berikutnya.
+Dashboard, role Admin/Media, alur editorial, dan halaman publik lain akan dibangun berikutnya.
+
+Beranda sudah menyertakan section Kontak (`#kontak`) dengan empat nama kanal
+media sosial yang diberikan pemilik dan keterangan "Tautan resmi akan
+dikonfirmasi." URL eksternal belum diaktifkan. Rincian delapan file section ada
+di [kontrak UI](docs/technical/beranda-ui.md#kepemilikan-file-section).
+
+Section utama mempunyai tinggi minimal satu viewport di bawah header; konten
+yang panjang tetap memanjang alami. Klik menu menempatkan section tujuan tepat
+di bawah header sehingga potongan section tetangga tidak ikut terlihat setelah
+perpindahan selesai. Mitra dan footer tetap mengikuti panjang isinya.
+
+## Verifikasi UI
+
+Kontrak UI: [Beranda v2](docs/technical/beranda-ui.md).
+Hasil runtime dan batas verifikasi: [laporan Beranda](docs/reports/beranda-ui.md).
+
+Jalankan `pnpm test:ui` dengan server aktif. Skrip memakai Playwright dan
+`@axe-core/playwright` yang tersedia pada lingkungan tool, tanpa menambah
+dependency aplikasi. Jika modul tersedia di luar project, arahkan
+`UI_PLAYWRIGHT_MODULE` dan `UI_AXE_MODULE` ke berkas entry modul tersebut.
+`UI_BASE_URL` opsional (default `http://127.0.0.1:3000`), dan
+`UI_BROWSER_CHANNEL` default `chrome`. Bukti/screenshot ditulis ke
+`artifacts/beranda-ui/` yang diabaikan Git. Contoh perintah lokal ada pada laporan.
 
 ## Pemulihan implementasi lama
 

@@ -20,3 +20,4 @@ storage/
 artifacts/
 supabase/.temp/
 supabase/.branches/
+design
