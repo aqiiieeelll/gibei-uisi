@@ -2,13 +2,18 @@ import assert from 'node:assert/strict';
 
 export async function checkHeroSection(page, baseURL) {
   const checks = [];
-  for (const width of [375, 1440]) {
+  for (const width of [375, 640, 1440]) {
     await page.setViewportSize({ width, height: 900 });
     await page.goto(`${baseURL}/`, { waitUntil: 'networkidle' });
-    const hero = page.getByRole('region', { name: /Kenali pasar modal/ });
+    const hero = page.getByRole('region', { name: /Belajar pasar modal/ });
     const image = hero.getByRole('img');
     await image.evaluate((element) => element.decode());
     assert.ok(await image.evaluate((element) => element.naturalWidth > 0));
+    assert.equal(
+      await image.evaluate((element) => new URL(element.currentSrc).searchParams.get('url')),
+      width < 640 ? '/images/hero-community-mobile-v3.png' : '/images/hero-community-v3.png',
+      'The browser should select the composition appropriate for the viewport',
+    );
     assert.match(await hero.locator('figcaption').innerText(), /Ilustrasi/);
     for (const [name, target] of [
       ['Jelajahi Edukasi & Riset', 'publikasi'],

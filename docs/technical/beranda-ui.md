@@ -99,23 +99,28 @@ overflow vertikal untuk memaksakan seluruh isi masuk satu layar.
 
 ## Penyegaran Hero
 
-Audit Hero: komposisi teks terpusat, badge panjang dan statistik contoh membuat
-hierarki kurang jelas. Redesign terbatas pada Hero, mempertahankan brand biru
+Audit Hero: ruang kosong mendominasi, foto objek kurang mewakili komunitas dan
+judul belum menjadi fokus yang kuat. Redesign terbatas pada Hero, mempertahankan brand biru
 `#006194`, Plus Jakarta Sans/Inter, logo, anchor `#beranda` serta kedua tujuan CTA.
 Metadata, navigasi dan isi section lain tetap mengikuti kontrak sebelumnya.
 
-Arah visual: editorial edukasi kampus dengan komposisi dua kolom mulai 900 px,
-teks rata kiri dan satu gambar pembelajaran. Variasi desain 4/10, gerak 2/10
-(feedback tombol yang sudah ada), kepadatan 4/10. Tidak menambah library atau
-animasi. Mobile menempatkan teks dan aksi sebelum gambar; isi boleh memanjang.
+Arah visual terbaru: portal komunitas edukasi kampus, dengan judul besar terpusat,
+deskripsi, dua CTA dan panorama kolaborasi mahasiswa di bawahnya. Variasi desain
+6/10, gerak 2/10 (feedback tombol yang sudah ada), kepadatan 5/10. Tidak menambah
+library atau animasi. Mobile menempatkan teks dan aksi sebelum gambar; isi boleh
+memanjang. Ruang antar blok membentuk satu alur baca, tanpa statistik atau
+ornamen tambahan. Biru merek menegaskan satu baris judul; jarak huruf dilonggarkan.
 
-Judul menjadi "Kenali pasar modal. Mulai dari sini." Statistik ilustrasi pada
+Judul menjadi "Belajar pasar modal. Tumbuh bersama." Statistik ilustrasi pada
 Hero dihapus; tidak dipakai sebagai bukti pencapaian organisasi. Gambar lokal
-`public/images/hero-learning-v2.png` merupakan ilustrasi hasil imagegen built-in,
-bukan foto kegiatan resmi atau data pasar. Keterangan ilustrasi tampil di bawah
-gambar. Alt menjelaskan isinya; Next Image dengan ukuran intrinsik, `sizes` dan
-eager loading menyediakan gambar responsif. Prompt/provenance ada di
-`../assets/hero-learning-v2.md`.
+`public/images/hero-community-v3.png` dan `hero-community-mobile-v3.png` merupakan
+ilustrasi hasil imagegen built-in, bukan anggota, tempat atau kegiatan resmi
+GIBEI UISI dan bukan data pasar. Keterangan ilustrasi tampil di bawah gambar.
+Alt menjelaskan isinya. `getImageProps` dari Next Image menyediakan optimasi,
+ukuran intrinsik, `sizes` dan eager loading. Browser memilih panorama mulai
+640 px dan komposisi 4:3 di bawahnya melalui `<picture>`, sehingga keempat wajah
+tetap terlihat tanpa memotong gambar secara paksa. Prompt/provenance ada di
+`../assets/hero-community-v3.md`.
 
 CSS khusus Hero berada di `HeroSection.module.css`; aturan tinggi minimum yang
 dipakai bersama section lain tetap berada di `globals.css`.

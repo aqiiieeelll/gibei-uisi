@@ -225,3 +225,45 @@ diaktifkan dengan keyboard pada 375/1440 px. Axe menghasilkan 0 violations
 pada kedua lebar tersebut; 0 error JavaScript, request eksternal dan respons
 HTTP gagal. Bukti: `artifacts/hero-ui-results.txt`,
 `artifacts/hero-production-desktop.png` dan `artifacts/beranda-ui/hero-375.png`.
+
+## Hero komunitas dan komposisi panorama — 17 November 2026
+
+Hero disusun ulang menjadi satu alur baca terpusat: identitas, judul besar
+"Belajar pasar modal. Tumbuh bersama.", deskripsi, dua CTA dan visual kolaborasi
+mahasiswa yang melebar. Biru merek menegaskan baris kedua judul; tracking
+`-.035em` memberi ruang huruf lebih lega. Latar biru pucat membatasi area Hero.
+Tidak menambah statistik, badge, animasi, dependency atau fitur baru.
+
+Visual memakai imagegen built-in. Panorama 2172×724 dipakai mulai 640 px;
+komposisi mobile 1448×1086 menjaga semua wajah dan aktivitas tetap terlihat.
+Keduanya ilustrasi, bukan dokumentasi anggota/tempat/kegiatan resmi. Keterangan
+terlihat di bawah gambar dan alt menjelaskan isi. `getImageProps` dan `<picture>`
+memilih satu komposisi yang sesuai serta mengoptimasi ukuran unduhan. Rasio
+intrinsik masing-masing sumber dipertahankan, tanpa clipping gambar untuk
+memaksanya masuk tinggi tertentu. Prompt ada di `docs/assets/hero-community-v3.md`.
+
+Hero tetap minimal satu viewport dikurangi header, dan boleh memanjang mengikuti
+konten. Komponen section lain, navigasi, metadata, dan tujuan kedua CTA tetap
+dipakai. Pemeriksaan awal pada 320, 375, 768 dan 1440 px tidak menemukan overflow
+horizontal; screenshot desktop/mobile diperiksa langsung dan pemilihan sumber
+gambar sesuai breakpoint.
+
+Pemeriksaan request lokal pada produksi memuat hanya satu komposisi gambar per
+viewport: 77.396 bytes untuk panorama desktop 1440 px dan 19.218 bytes untuk
+mobile 375 px. Angka ini observasi browser lokal, bukan janji performa jaringan
+pengguna. Audit awal menemukan kontras caption 4,48:1 terhadap latar baru;
+caption kemudian memakai token `--text` yang lebih gelap, tanpa mengubah warna
+teks section lain. Pemeriksaan axe pada suite browser menjadi guard regresinya.
+
+Verifikasi final lulus: lint tanpa warning, typecheck, production build, dan
+regresi 14 viewport (320–2560 px serta landscape). Menu/keyboard, reflow zoom
+200%, Kontak, menu aktif, batas section dan offset header tetap lulus. Tes Hero
+memastikan sumber gambar yang tepat serta kedua CTA lewat keyboard pada
+375/640/1440 px. Axe pada 375/1440 px menghasilkan 0 violations; 0 error
+JavaScript, request eksternal atau respons HTTP gagal. Perbaikan warna caption
+terlihat pada computed style dan screenshot produksi final.
+
+Bukti: `artifacts/hero-community-final-ui-results.txt`,
+`artifacts/hero-community-final-build-retry.txt`, dan
+`artifacts/hero-community-production-{1440,375}.png`. Verifikasi memakai Chrome
+desktop dengan emulasi viewport; perangkat fisik belum diuji.
