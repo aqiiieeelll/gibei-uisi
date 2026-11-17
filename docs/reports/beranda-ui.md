@@ -97,3 +97,28 @@ perangkat fisik atau Safari/Firefox. Zoom 200% diuji sebagai reflow emulasi,
 bukan melalui kontrol zoom browser manual. Axe bukan sertifikasi WCAG atau
 pengganti pengujian screen reader manusia. Belum ada penerimaan desain oleh
 pemilik, push, merge ke main, atau deployment produksi untuk perubahan UI ini.
+
+## Perbaikan navigasi aktif — 17 November 2026
+
+Warna biru sebelumnya memakai selector `a:first-child`, sehingga selalu menandai
+Beranda. Header kini mengukur posisi keenam section terhadap offset sticky header
+dan menandai satu tautan aktif dengan `aria-current="location"`. Pembaruan scroll
+dibatasi satu kali per animation frame dengan listener pasif. Perubahan ukuran
+konten, font selesai dimuat, resize viewport dan perubahan hash juga diperiksa;
+listener dan observer dibersihkan ketika komponen dilepas.
+
+Posisi anchor dapat dibulatkan browser menjadi pecahan piksel CSS. Toleransi dua
+CSS pixel mencegah section tujuan tetap dianggap sebagai section sebelumnya.
+Scroll manual tidak mengubah URL/history. Menu desktop dan mobile memakai status
+aktif yang sama.
+
+[Tes regresi navigasi](../../tests/browser/active-navigation.mjs) membuktikan kasus
+`/#divisi` gagal sebelum perbaikan. Sesudah perbaikan, direct hash, klik, scroll
+manual keenam section, Back, Reload, anchor terakhir pada 2560 × 1440 dan menu
+mobile 375 px lulus. Tes terintegrasi dalam `pnpm test:ui`; matriks Beranda,
+keyboard dan audit axe tetap lulus tanpa error atau request eksternal. Lint dan
+typecheck lulus. Animasi smooth scrolling juga diperiksa pada tes navigasi fokus.
+
+Build produksi lulus; tes navigasi fokus pada production server juga lulus.
+Bukti lokal tambahan: `artifacts/active-navigation-ui-results.txt` dan
+`artifacts/navigation-divisi-fixed.png`.

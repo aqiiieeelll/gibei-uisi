@@ -39,7 +39,7 @@ button:disabled { cursor: not-allowed; }
 .navigation-panel.is-open { display: block; }
 .navigation-panel nav { display: flex; flex-direction: column; gap: 4px; }
 .navigation-panel nav a { display: flex; align-items: center; min-height: 44px; padding: 8px 12px; font-size: 14px; font-weight: 550; border-radius: 8px; }
-.navigation-panel nav a:first-child { color: var(--brand); }
+.navigation-panel nav a[aria-current='location'] { color: var(--brand); }
 .navigation-panel nav a:hover { color: var(--brand); background: var(--brand-soft); }
 .header-actions { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--line); }
 .portal-link { border: 0; background: transparent; color: var(--muted); padding: 8px 4px; font-size: 14px; min-height: 44px; }

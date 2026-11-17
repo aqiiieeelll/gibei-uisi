@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
+import { checkActiveNavigation } from './active-navigation.mjs';
 const { chromium } = await import(
   process.env.UI_PLAYWRIGHT_MODULE
     ? pathToFileURL(resolve(process.env.UI_PLAYWRIGHT_MODULE)).href
@@ -246,6 +247,7 @@ try {
     true,
   );
   result.interactions.push('Keyboard skip link reaches main content');
+  result.interactions.push(...(await checkActiveNavigation(page, baseURL)));
   assert.deepEqual(result.errors, []);
   assert.deepEqual(result.externalRequests, []);
   assert.deepEqual(result.badResponses, []);

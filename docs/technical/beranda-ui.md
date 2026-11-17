@@ -20,6 +20,9 @@ organisasi, kegiatan, dan rekrutmen. Aksi utama: menjelajahi bagian publikasi.
 - Navigasi mobile memakai disclosure dengan button berlabel, aria-expanded,
   aria-controls, Escape mengembalikan fokus, dan tutup setelah memilih tautan.
 - Navigasi bagian menggunakan anchor nyata dengan offset terhadap header.
+- Warna menu aktif mengikuti section yang terlihat, termasuk klik anchor, scroll
+  manual, direct hash, Reload dan Back. Satu tautan memakai `aria-current="location"`;
+  perubahan scroll manual tidak menulis ulang URL atau history.
 - Statistik/konten contoh dilabeli; tautan eksternal yang belum diverifikasi,
   file yang belum ada, registrasi, dan portal admin tidak diberi aksi palsu.
 - Footer memuat disclaimer edukasi. Tidak menambah backend atau CMS.
