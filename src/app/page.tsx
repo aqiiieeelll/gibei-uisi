@@ -1,12 +1,13 @@
-import { HeroSection } from '@/components/home/HeroSection';
-import { AboutSection } from '@/components/home/AboutSection';
-import { DivisionsSection } from '@/components/home/DivisionsSection';
-import { PublicationSection } from '@/components/home/PublicationSection';
-import { EventsSection } from '@/components/home/EventsSection';
-import { RecruitmentSection } from '@/components/home/RecruitmentSection';
-import { PartnersSection } from '@/components/home/PartnersSection';
-import { SiteHeader } from '@/components/site/SiteHeader';
-import { SiteFooter } from '@/components/site/SiteFooter';
+import { HeroSection } from "@/components/home/HeroSection";
+import { AboutSection } from "@/components/home/AboutSection";
+import { DivisionsSection } from "@/components/home/DivisionsSection";
+import { PublicationSection } from "@/components/home/PublicationSection";
+import { EventsSection } from "@/components/home/EventsSection";
+import { RecruitmentSection } from "@/components/home/RecruitmentSection";
+import { PartnersSection } from "@/components/home/PartnersSection";
+import { ContactSection } from "@/components/home/ContactSection";
+import { SiteHeader } from "@/components/site/SiteHeader";
+import { SiteFooter } from "@/components/site/SiteFooter";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <PublicationSection />
         <EventsSection />
         <RecruitmentSection />
+        <ContactSection />
         <PartnersSection />
       </main>
       <SiteFooter />

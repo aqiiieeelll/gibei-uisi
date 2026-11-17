@@ -122,3 +122,39 @@ typecheck lulus. Animasi smooth scrolling juga diperiksa pada tes navigasi fokus
 Build produksi lulus; tes navigasi fokus pada production server juga lulus.
 Bukti lokal tambahan: `artifacts/active-navigation-ui-results.txt` dan
 `artifacts/navigation-divisi-fixed.png`.
+
+## Section mandiri dan Kontak — 17 November 2026
+
+`OrganizationSections` dipisah menjadi `AboutSection` dan `DivisionsSection`;
+`ActivitySections` dipisah menjadi `EventsSection`, `RecruitmentSection` dan
+`PartnersSection`. `Hero` menjadi `HeroSection` dan memiliki anchor sendiri,
+tanpa wrapper isi section di page. `PublicationSection` tetap mandiri. Refactor
+disimpan terpisah setelah lint, build dan regresi browser lulus, termasuk
+pengecekan bahwa teks UTF-8 sumber tetap utuh.
+
+Beranda kini memiliki delapan section, termasuk `ContactSection`. Isi media sosial berasal dari jawaban
+pemilik: Instagram GIBEI UISI, YouTube GIBEI Official, LinkedIn GIBEI UISI,
+Telegram Community, serta "Tautan resmi akan dikonfirmasi." Section Kontak dan
+footer membaca data yang sama dari `src/content/site-contact.ts`; tidak dibuat
+URL, email, WhatsApp, form pesan, atau integrasi layanan baru.
+
+Menu Kontak tersedia di header dan footer. Pada layar 2560 × 1440, batas scroll
+sebelumnya membuat Kontak tidak mencapai garis aktivasi sticky header. Tes
+mendeteksi masalah tersebut; penanda kini mengikuti section navigasi terakhir
+ketika halaman mencapai bagian bawah. Ini mempertahankan warna aktif yang benar
+pada direct hash, klik, dan scroll manual.
+
+[Tes Kontak](../../tests/browser/contact-section.mjs) gagal pada preview awal yang
+belum memiliki section ini, lalu lulus setelah implementasi. Pemeriksaan mencakup
+delapan section tetap ada, empat nama kanal dan keterangan sesuai permintaan,
+data footer konsisten, anchor desktop/mobile, status aktif pada layar tinggi,
+serta tidak ada tautan palsu atau form. Regresi Beranda pada 14 viewport tetap
+lulus, axe 375/1440 px menghasilkan 0 violations, dan tidak ada error JavaScript
+atau request eksternal. Lint dan typecheck lulus.
+
+Build produksi final lulus. Pemeriksaan Kontak dan navigasi aktif pada production
+server juga lulus. Source dan hasil build sama-sama menempatkan Kontak sebelum
+Mitra, sesuai susunan `page.tsx` terbaru yang dipertahankan selama pengerjaan.
+
+Bukti lokal: `artifacts/section-refactor-ui-results.txt`,
+`artifacts/contact-ui-results.txt` dan `artifacts/beranda-ui/contact-375.png`.

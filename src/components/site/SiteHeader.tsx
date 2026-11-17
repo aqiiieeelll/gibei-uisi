@@ -4,7 +4,15 @@ import { useEffect, useRef, useState } from 'react';
 import { Brand } from './Brand';
 import { Icon } from './Icon';
 
-const navigation = [['beranda', 'Beranda'], ['tentang', 'Tentang'], ['divisi', 'Divisi'], ['publikasi', 'Publikasi & Riset'], ['kegiatan', 'Kegiatan'], ['rekrutmen', 'Rekrutmen']];
+const navigation = [
+  ['beranda', 'Beranda'],
+  ['tentang', 'Tentang'],
+  ['divisi', 'Divisi'],
+  ['publikasi', 'Publikasi & Riset'],
+  ['kegiatan', 'Kegiatan'],
+  ['rekrutmen', 'Rekrutmen'],
+  ['kontak', 'Kontak'],
+];
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -27,6 +35,10 @@ export function SiteHeader() {
       let current = 'beranda';
       for (const section of sections) {
         if (section.getBoundingClientRect().top <= activationLine) current = section.id;
+      }
+      // The last section may not reach the header when the viewport is tall.
+      if (window.scrollY > 0 && window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) {
+        current = sections.at(-1)?.id ?? current;
       }
       setActiveSection(current);
     };

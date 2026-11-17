@@ -46,7 +46,15 @@ export async function checkActiveNavigation(page, baseURL) {
   await page.reload({ waitUntil: 'networkidle' });
   await expectActive('divisi');
 
-  for (const id of ['beranda', 'tentang', 'divisi', 'publikasi', 'kegiatan', 'rekrutmen']) {
+  for (const id of [
+    'beranda',
+    'tentang',
+    'divisi',
+    'publikasi',
+    'kegiatan',
+    'rekrutmen',
+    'kontak',
+  ]) {
     await page.evaluate(
       (section) => document.getElementById(section).scrollIntoView({ behavior: 'instant' }),
       id,

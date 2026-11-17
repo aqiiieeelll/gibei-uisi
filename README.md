@@ -50,6 +50,7 @@ pnpm start
 - `src/app/layout.tsx`: root layout dan metadata.
 - `src/app/page.tsx`: susunan bagian Beranda sebagai Server Components.
 - `src/components/home/`: satu file per section; `page.tsx` hanya menyusun urutannya.
+- `src/content/site-contact.ts`: satu sumber daftar media sosial untuk Kontak dan footer.
 - `src/components/site/`: branding, ikon SVG, header/menu dan footer.
 - `src/app/globals.css`: token visual dan layout mobile-first 320 px–ultrawide.
 - `src/assets/fonts/`: Inter dan Plus Jakarta Sans lokal beserta lisensi OFL.
@@ -71,6 +72,11 @@ belum dipilih.
 
 Dokumentasi dan hasil tes v1 merupakan histori, bukan bukti kelulusan v2.
 Dashboard, role Admin/Media, alur editorial, dan halaman publik lain akan dibangun berikutnya.
+
+Beranda sudah menyertakan section Kontak (`#kontak`) dengan empat nama kanal
+media sosial yang diberikan pemilik dan keterangan "Tautan resmi akan
+dikonfirmasi." URL eksternal belum diaktifkan. Rincian delapan file section ada
+di [kontrak UI](docs/technical/beranda-ui.md#kepemilikan-file-section).
 
 ## Verifikasi UI
 

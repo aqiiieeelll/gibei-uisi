@@ -125,6 +125,14 @@ button:disabled { cursor: not-allowed; }
 .partners-list li { display: flex; align-items: center; justify-content: center; gap: 10px; font-family: var(--font-jakarta), sans-serif; font-size: 13px; font-weight: 700; letter-spacing: -.3px; }
 .partners-list li span { max-width: 280px; }
 .partners-list .icon { color: #64748b; }
+.contact-layout { display: grid; gap: 32px; }
+.contact-heading { text-align: left; margin: 0; max-width: 540px; }
+.contact-panel { padding: 28px; border: 1px solid var(--line); border-radius: 16px; background: white; }
+.contact-panel h3 { font-size: 18px; font-weight: 750; letter-spacing: -.4px; }
+.contact-channels { list-style: none; padding: 0; margin: 24px 0; display: grid; gap: 16px; }
+.contact-channels li { display: flex; align-items: center; gap: 14px; color: var(--text); font-size: 14px; font-weight: 550; }
+.contact-monogram { display: grid; place-items: center; width: 40px; height: 40px; flex-shrink: 0; border-radius: 10px; background: var(--brand-soft); color: var(--brand); font-family: var(--font-jakarta), sans-serif; font-size: 12px; font-weight: 800; }
+.contact-notice { padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
 .footer-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 36px; padding-block: 48px; }
 .footer-about { max-width: 430px; }
 .footer-about > p { font-size: 12px; line-height: 1.9; color: var(--muted); margin-top: 16px; }
@@ -165,6 +173,8 @@ button:disabled { cursor: not-allowed; }
   .footer-grid { padding-block: 64px; }
 }
 @media (min-width: 900px) {
+  .contact-layout { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 64px; }
+  .contact-panel { padding: 32px; }
   .pillars-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .events-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .footer-grid { grid-template-columns: 2fr 1fr 1fr; gap: 64px; }

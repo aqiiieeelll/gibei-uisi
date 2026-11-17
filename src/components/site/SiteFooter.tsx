@@ -1,4 +1,5 @@
 import { Brand } from './Brand';
+import { siteContact } from '@/content/site-contact';
 
 export function SiteFooter() {
   return (
@@ -34,17 +35,19 @@ export function SiteFooter() {
             <li>
               <a href="#kegiatan">Kegiatan SPM</a>
             </li>
+            <li>
+              <a href="#kontak">Kontak</a>
+            </li>
           </ul>
         </nav>
         <div>
           <h2>Media Sosial</h2>
           <ul className="social-list">
-            <li>Instagram GIBEI UISI</li>
-            <li>YouTube GIBEI Official</li>
-            <li>LinkedIn GIBEI UISI</li>
-            <li>Telegram Community</li>
+            {siteContact.socialAccounts.map((account) => (
+              <li key={account.name}>{account.name}</li>
+            ))}
           </ul>
-          <p className="social-note">Tautan resmi akan dikonfirmasi.</p>
+          <p className="social-note">{siteContact.notice}</p>
         </div>
       </div>
       <div className="footer-bottom">

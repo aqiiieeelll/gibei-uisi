@@ -49,8 +49,31 @@ organisasi, kegiatan, dan rekrutmen. Aksi utama: menjelajahi bagian publikasi.
 
 ## Kepemilikan file section
 
-Setiap section dimiliki satu komponen di `src/components/home/`: `HeroSection`,
-`AboutSection`, `DivisionsSection`, `PublicationSection`, `EventsSection`,
-`RecruitmentSection`, dan `PartnersSection`. Data pratinjau khusus suatu section
-berada di file komponennya. `src/app/page.tsx` hanya menyusun urutan komponen;
-tidak memuat markup isi section atau wrapper identitas section.
+Setiap section dimiliki satu komponen di `src/components/home/`:
+
+| Bagian | File | Anchor |
+| --- | --- | --- |
+| Hero dan statistik | `HeroSection.tsx` | `#beranda` |
+| Tentang dan pilar | `AboutSection.tsx` | `#tentang` |
+| Delapan divisi | `DivisionsSection.tsx` | `#divisi` |
+| Publikasi | `PublicationSection.tsx` | `#publikasi` |
+| Kegiatan | `EventsSection.tsx` | `#kegiatan` |
+| Rekrutmen | `RecruitmentSection.tsx` | `#rekrutmen` |
+| Kontak | `ContactSection.tsx` | `#kontak` |
+| Mitra | `PartnersSection.tsx` | Bagian informasi tanpa menu terpisah |
+
+Data pratinjau khusus suatu section berada di file komponennya.
+`src/app/page.tsx` hanya menyusun urutan komponen; tidak memuat markup isi section
+atau wrapper identitas section. Header dan footer juga mempunyai file sendiri
+di `src/components/site/`. Token dan gaya bersama berada di `src/app/globals.css`.
+
+Daftar media sosial Kontak dan footer bersumber dari `src/content/site-contact.ts`.
+Nama kanal mengikuti konfirmasi pemilik: Instagram GIBEI UISI, YouTube GIBEI
+Official, LinkedIn GIBEI UISI dan Telegram Community. Keterangan bersama:
+"Tautan resmi akan dikonfirmasi." Belum ada URL resmi, sehingga kanal ditampilkan
+sebagai informasi, tanpa tautan palsu atau form kontak (sesuai FR-10).
+
+Section Kontak berada setelah Rekrutmen dan sebelum Mitra, mengikuti susunan
+`page.tsx` terbaru. Saat viewport terlalu tinggi
+untuk menempatkannya tepat di bawah header, penanda menu beralih ke section
+navigasi terakhir ketika halaman mencapai batas scroll bawah.
