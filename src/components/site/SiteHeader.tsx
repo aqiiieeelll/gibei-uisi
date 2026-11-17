@@ -21,6 +21,8 @@ export function SiteHeader() {
   const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
+    const root = document.documentElement;
+    const previousOffset = root.style.getPropertyValue('--header-offset');
     const sections = navigation.flatMap(([id]) => {
       const section = document.getElementById(id);
       return section ? [section] : [];
@@ -30,6 +32,10 @@ export function SiteHeader() {
 
     const updateActiveSection = () => {
       frame = null;
+      const headerHeight = headerRef.current?.getBoundingClientRect().height;
+      if (headerHeight && root.style.getPropertyValue('--header-offset') !== `${headerHeight}px`) {
+        root.style.setProperty('--header-offset', `${headerHeight}px`);
+      }
       // Anchor scrolling can round fractional section positions by a CSS pixel.
       const activationLine = parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) + 2;
       let current = 'beranda';
@@ -47,6 +53,7 @@ export function SiteHeader() {
     };
     const observer = new ResizeObserver(scheduleUpdate);
     observer.observe(document.body);
+    if (headerRef.current) observer.observe(headerRef.current);
     window.addEventListener('scroll', scheduleUpdate, { passive: true });
     window.addEventListener('resize', scheduleUpdate);
     window.addEventListener('hashchange', scheduleUpdate);
@@ -59,6 +66,8 @@ export function SiteHeader() {
       window.removeEventListener('scroll', scheduleUpdate);
       window.removeEventListener('resize', scheduleUpdate);
       window.removeEventListener('hashchange', scheduleUpdate);
+      if (previousOffset) root.style.setProperty('--header-offset', previousOffset);
+      else root.style.removeProperty('--header-offset');
     };
   }, []);
 

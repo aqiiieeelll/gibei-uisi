@@ -78,6 +78,11 @@ media sosial yang diberikan pemilik dan keterangan "Tautan resmi akan
 dikonfirmasi." URL eksternal belum diaktifkan. Rincian delapan file section ada
 di [kontrak UI](docs/technical/beranda-ui.md#kepemilikan-file-section).
 
+Section utama mempunyai tinggi minimal satu viewport di bawah header; konten
+yang panjang tetap memanjang alami. Klik menu menempatkan section tujuan tepat
+di bawah header sehingga potongan section tetangga tidak ikut terlihat setelah
+perpindahan selesai. Mitra dan footer tetap mengikuti panjang isinya.
+
 ## Verifikasi UI
 
 Kontrak UI: [Beranda v2](docs/technical/beranda-ui.md).

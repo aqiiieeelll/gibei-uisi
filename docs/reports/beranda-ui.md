@@ -158,3 +158,42 @@ Mitra, sesuai susunan `page.tsx` terbaru yang dipertahankan selama pengerjaan.
 
 Bukti lokal: `artifacts/section-refactor-ui-results.txt`,
 `artifacts/contact-ui-results.txt` dan `artifacts/beranda-ui/contact-375.png`.
+
+## Section minimal satu layar — 17 November 2026
+
+Pemilik memilih section utama minimal satu layar dengan isi panjang tetap boleh
+memanjang. Hero dan enam section navigasi menggunakan tinggi minimal viewport
+dinamis dikurangi tinggi header aktual; isi yang muat diposisikan di tengah
+vertikal. Section Mitra dan footer tetap ringkas. Tidak ditambahkan clipping,
+scroll internal, pagination atau scroll snap yang memaksa perpindahan layar.
+
+Jarak tambahan 24 px pada anchor dihapus. `scroll-padding-top` memakai tinggi
+header sebenarnya, termasuk border, melalui token `--header-offset`. Token itu
+terpisah dari ukuran dasar header agar ResizeObserver tidak menyebabkan ukuran
+header bertambah berulang. Header yang berubah tinggi ikut menyesuaikan offset,
+tinggi minimal section, dan batas menu mobile.
+
+[Tes batas section](../../tests/browser/section-viewport.mjs) mereproduksi
+ketidakcocokan offset sebelum perubahan. Setelah perubahan, pemeriksaan lulus:
+
+- Tinggi minimal ketujuh section pada 1440×900, 375×812, 320×568, 768×1024,
+  2560×1440 dan landscape 844×390.
+- Klik masing-masing tujuh menu pada desktop, mobile dan landscape (21 kasus):
+  section tujuan sejajar dengan batas bawah header dalam toleransi 2 CSS px,
+  batas bawahnya memenuhi viewport, dan tidak ada section tetangga di area baca
+  setelah perpindahan selesai.
+- Direct hash Kontak pada layar tinggi dan adaptasi saat tinggi header diuji
+  menjadi 113 px.
+- Regresi 14 viewport, keyboard, menu, reflow zoom 200%, dan audit axe tetap
+  lulus; 0 violations pada 375/1440 px, 0 error JavaScript dan request eksternal.
+- Lint dan typecheck lulus. Tinggi section fleksibel mempertahankan seluruh isi;
+  aturan ini bukan janji bahwa semua isi panjang muat sekaligus dalam satu layar.
+
+Build produksi final lulus. Pemeriksaan batas section dan navigasi dengan
+smooth scroll pada production server juga lulus. Screenshot viewport normal
+desktop 1440×900 dan mobile 375×812 diperiksa secara visual: area di bawah header
+diisi section tujuan tanpa potongan section tetangga.
+
+Bukti lokal: `artifacts/section-viewport-ui-results.txt` dan screenshot dalam
+`artifacts/beranda-ui/section-*.png`. Batas verifikasi perangkat/browser yang
+dijelaskan sebelumnya tetap berlaku.

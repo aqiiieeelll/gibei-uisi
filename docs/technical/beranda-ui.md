@@ -29,6 +29,12 @@ organisasi, kegiatan, dan rekrutmen. Aksi utama: menjelajahi bagian publikasi.
 
 ## Responsif dan kriteria terima
 
+- Hero dan enam section utama memiliki tinggi minimal viewport dinamis dikurangi
+  tinggi header aktual. Konten panjang boleh menambah tinggi section secara alami.
+- Klik menu menyelaraskan awal section tepat di bawah header, tanpa celah 24 px
+  atau potongan section sebelumnya; section berikutnya berada di luar viewport.
+- Mitra dan footer tetap ringkas. Tidak memakai tinggi tetap, clipping konten,
+  pagination tambahan atau scroll yang dipaksa per layar.
 - Mobile mulai 320 px: menu ringkas, CTA bertumpuk, isi satu kolom, statistik
   dua kolom, tanpa scroll horizontal.
 - Tablet: dua kolom pada divisi/publikasi jika muat; judul memakai ukuran fluid.
@@ -77,3 +83,16 @@ Section Kontak berada setelah Rekrutmen dan sebelum Mitra, mengikuti susunan
 `page.tsx` terbaru. Saat viewport terlalu tinggi
 untuk menempatkannya tepat di bawah header, penanda menu beralih ke section
 navigasi terakhir ketika halaman mencapai batas scroll bawah.
+
+## Tinggi section dan posisi anchor
+
+`--header-height` mengatur ukuran dasar header, sedangkan `--header-offset`
+menyimpan tinggi kotak header aktual beserta bordernya. Kedua nilai dipisahkan
+agar pembaruan pengukuran tidak membuat tinggi header bertambah berulang kali.
+Offset aktual diperbarui melalui ResizeObserver dan dipakai bersama oleh
+`scroll-padding-top`, tinggi minimal section, batas menu mobile dan scrollspy.
+
+Section utama memakai `min-height: calc(100dvh - var(--header-offset))` dengan
+fallback `100vh`. Isi diposisikan di tengah vertikal jika muat. Section tanpa ID
+navigasi (Mitra) serta footer mengikuti panjang isinya. Styles tidak menyembunyikan
+overflow vertikal untuk memaksakan seluruh isi masuk satu layar.

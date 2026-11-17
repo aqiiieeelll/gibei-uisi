@@ -4,6 +4,7 @@ import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { checkActiveNavigation } from './active-navigation.mjs';
 import { checkContactSection } from './contact-section.mjs';
+import { checkSectionViewport } from './section-viewport.mjs';
 const { chromium } = await import(
   process.env.UI_PLAYWRIGHT_MODULE
     ? pathToFileURL(resolve(process.env.UI_PLAYWRIGHT_MODULE)).href
@@ -250,6 +251,7 @@ try {
   result.interactions.push('Keyboard skip link reaches main content');
   result.interactions.push(...(await checkActiveNavigation(page, baseURL)));
   result.interactions.push(...(await checkContactSection(page, baseURL)));
+  result.interactions.push(...(await checkSectionViewport(page, baseURL)));
   assert.deepEqual(result.errors, []);
   assert.deepEqual(result.externalRequests, []);
   assert.deepEqual(result.badResponses, []);
