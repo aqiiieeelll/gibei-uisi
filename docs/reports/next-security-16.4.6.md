@@ -49,3 +49,19 @@ Sumber: [metadata versi target](https://registry.npmjs.org/next/16.4.6),
 [advisory minimatch](https://github.com/advisories/GHSA-g3hv-75wg-m249),
 serta panduan config/agentUpgrade dan testing Playwright pada
 `node_modules/next/dist/docs/` dari paket yang terpasang.
+
+## Integrasi ke checkout aktif
+
+Commit `36f4e20` diterapkan melalui fast-forward ke `feature/beranda-responsive`;
+tidak dibuat implementasi upgrade duplikat. Checkout aktif berhasil menjalankan
+`pnpm install --frozen-lockfile --ignore-scripts`, `pnpm exec next --version`
+(16.4.6), lint, typecheck dan build produksi. Audit ulang di checkout aktif:
+0 temuan produksi, 1 moderat `minimatch` pada tooling development, tanpa advisory
+Next.js. Bukti: `artifacts/next-security-current-build.txt` dan
+`artifacts/next-security-audit-{prod,all}-after.json`.
+
+Hasil regresi 14 viewport di worktree pembaruan diperiksa kembali dari artefak;
+browser dan server tidak dijalankan ulang dalam verifikasi integrasi ini,
+mengikuti permintaan pemilik. Proses development yang sudah berjalan perlu
+di-restart sendiri oleh pemilik saat siap agar memuat paket baru. Perubahan
+awal `.gitignore` dan `next-env.d.ts` dipertahankan.
