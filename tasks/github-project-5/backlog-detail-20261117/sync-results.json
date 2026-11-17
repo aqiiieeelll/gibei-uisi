@@ -1,0 +1,1083 @@
+{
+  "projectUrl": "https://github.com/users/silkiy/projects/5/views/1",
+  "repository": "silkiy/gibei-uisi",
+  "recordedOn": "2026-11-17",
+  "plannedCount": 66,
+  "verifiedCount": 66,
+  "complete": true,
+  "verifiedIds": [
+    "RB-002",
+    "RB-000",
+    "RB-003",
+    "RB-004",
+    "RB-005",
+    "RB-006",
+    "RB-007",
+    "RB-008",
+    "RB-009",
+    "RB-010",
+    "RB-011",
+    "RB-012",
+    "RB-013",
+    "RB-014",
+    "RB-015",
+    "RB-016",
+    "RB-017",
+    "RB-018",
+    "RB-019",
+    "RB-020",
+    "RB-021",
+    "RB-022",
+    "RB-023",
+    "RB-024",
+    "RB-025",
+    "RB-026",
+    "RB-027",
+    "RB-028",
+    "RB-029",
+    "RB-030",
+    "RB-031",
+    "RB-032",
+    "RB-033",
+    "RB-034",
+    "RB-035",
+    "RB-036",
+    "RB-037",
+    "RB-038",
+    "RB-039",
+    "RB-040",
+    "RB-041",
+    "RB-042",
+    "RB-043",
+    "RB-044",
+    "RB-045",
+    "RB-046",
+    "RB-047",
+    "RB-048",
+    "RB-049",
+    "RB-050",
+    "RB-051",
+    "RB-052",
+    "RB-053",
+    "RB-054",
+    "RB-055",
+    "RB-056",
+    "RB-057",
+    "RB-058",
+    "RB-059",
+    "RB-060",
+    "RB-001",
+    "UI-002",
+    "UI-003",
+    "UI-004",
+    "UI-005",
+    "UI-001"
+  ],
+  "convertedDrafts": 64,
+  "existingIssues": 2,
+  "allActiveCardsAreIssues": true,
+  "preserveAssigneesStatusAndSprint": true,
+  "archiveOriginalBody": true,
+  "items": [
+    {
+      "id": "RB-002",
+      "itemId": "305867822",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305867822",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3190,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/6",
+      "issueNumber": 6,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-000",
+      "itemId": "305867582",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305867582",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3103,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/5",
+      "issueNumber": 5,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-003",
+      "itemId": "305867952",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305867952",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3065,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/7",
+      "issueNumber": 7,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-004",
+      "itemId": "305869901",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305869901",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3046,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/8",
+      "issueNumber": 8,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-005",
+      "itemId": "305869978",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305869978",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3005,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/9",
+      "issueNumber": 9,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-006",
+      "itemId": "305870098",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305870098",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 2963,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/10",
+      "issueNumber": 10,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-007",
+      "itemId": "305870872",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305870872",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 2787,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/11",
+      "issueNumber": 11,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-008",
+      "itemId": "305871001",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305871001",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3027,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/12",
+      "issueNumber": 12,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-009",
+      "itemId": "305871122",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305871122",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 2924,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/13",
+      "issueNumber": 13,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-010",
+      "itemId": "305871238",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305871238",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 2923,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/14",
+      "issueNumber": 14,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-011",
+      "itemId": "305871371",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305871371",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3442,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/15",
+      "issueNumber": 15,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-012",
+      "itemId": "305871499",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305871499",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3036,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/16",
+      "issueNumber": 16,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-013",
+      "itemId": "305871962",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305871962",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 2861,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/17",
+      "issueNumber": 17,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-014",
+      "itemId": "305872097",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305872097",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3066,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/18",
+      "issueNumber": 18,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-015",
+      "itemId": "305872223",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305872223",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 2982,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/19",
+      "issueNumber": 19,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-016",
+      "itemId": "305872325",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305872325",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 2896,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/20",
+      "issueNumber": 20,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-017",
+      "itemId": "305872867",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305872867",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3132,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/21",
+      "issueNumber": 21,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-018",
+      "itemId": "305872967",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305872967",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 2895,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/22",
+      "issueNumber": 22,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-019",
+      "itemId": "306043663",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306043663",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3313,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/23",
+      "issueNumber": 23,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-020",
+      "itemId": "306044874",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306044874",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3258,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/24",
+      "issueNumber": 24,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-021",
+      "itemId": "306044953",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306044953",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3341,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/25",
+      "issueNumber": 25,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-022",
+      "itemId": "306045035",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306045035",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3154,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/26",
+      "issueNumber": 26,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-023",
+      "itemId": "306045180",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306045180",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3448,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/27",
+      "issueNumber": 27,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-024",
+      "itemId": "306045281",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306045281",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3446,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/28",
+      "issueNumber": 28,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-025",
+      "itemId": "306045513",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306045513",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3474,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/29",
+      "issueNumber": 29,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-026",
+      "itemId": "306045607",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306045607",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3880,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/30",
+      "issueNumber": 30,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-027",
+      "itemId": "306045874",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306045874",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3212,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/31",
+      "issueNumber": 31,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-028",
+      "itemId": "306047101",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306047101",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3080,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/32",
+      "issueNumber": 32,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-029",
+      "itemId": "306047174",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306047174",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3110,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/33",
+      "issueNumber": 33,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-030",
+      "itemId": "306047263",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306047263",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3296,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/34",
+      "issueNumber": 34,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-031",
+      "itemId": "306047344",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306047344",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3154,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/35",
+      "issueNumber": 35,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-032",
+      "itemId": "306047524",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306047524",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3167,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/36",
+      "issueNumber": 36,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-033",
+      "itemId": "306047610",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306047610",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3294,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/37",
+      "issueNumber": 37,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-034",
+      "itemId": "306047716",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306047716",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3121,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/38",
+      "issueNumber": 38,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-035",
+      "itemId": "306047797",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306047797",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3323,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/39",
+      "issueNumber": 39,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-036",
+      "itemId": "306047873",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306047873",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3321,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/40",
+      "issueNumber": 40,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-037",
+      "itemId": "306048200",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306048200",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3133,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/41",
+      "issueNumber": 41,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-038",
+      "itemId": "306048283",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306048283",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3358,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/42",
+      "issueNumber": 42,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-039",
+      "itemId": "306048374",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306048374",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3303,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/43",
+      "issueNumber": 43,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-040",
+      "itemId": "306048463",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306048463",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3274,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/44",
+      "issueNumber": 44,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-041",
+      "itemId": "306048554",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306048554",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3101,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/45",
+      "issueNumber": 45,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-042",
+      "itemId": "306048912",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306048912",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3225,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/46",
+      "issueNumber": 46,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-043",
+      "itemId": "306049002",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306049002",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3316,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/47",
+      "issueNumber": 47,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-044",
+      "itemId": "306049105",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306049105",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 4134,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/48",
+      "issueNumber": 48,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-045",
+      "itemId": "306049178",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306049178",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3299,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/49",
+      "issueNumber": 49,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-046",
+      "itemId": "306049275",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306049275",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3176,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/50",
+      "issueNumber": 50,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-047",
+      "itemId": "306049473",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306049473",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3220,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/51",
+      "issueNumber": 51,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-048",
+      "itemId": "306049571",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306049571",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3360,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/52",
+      "issueNumber": 52,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-049",
+      "itemId": "306049666",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306049666",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3476,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/53",
+      "issueNumber": 53,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-050",
+      "itemId": "306049755",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306049755",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3345,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/54",
+      "issueNumber": 54,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-051",
+      "itemId": "306049832",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306049832",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3520,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/55",
+      "issueNumber": 55,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-052",
+      "itemId": "306050045",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306050045",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3347,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/56",
+      "issueNumber": 56,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-053",
+      "itemId": "306050138",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306050138",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3613,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/57",
+      "issueNumber": 57,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-054",
+      "itemId": "306050199",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306050199",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3250,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/58",
+      "issueNumber": 58,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-055",
+      "itemId": "306050305",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306050305",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3170,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/59",
+      "issueNumber": 59,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-056",
+      "itemId": "306050426",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306050426",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3316,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/60",
+      "issueNumber": 60,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-057",
+      "itemId": "306050601",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306050601",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3378,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/61",
+      "issueNumber": 61,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-058",
+      "itemId": "306050683",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306050683",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3553,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/62",
+      "issueNumber": 62,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-059",
+      "itemId": "306050772",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306050772",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3334,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/63",
+      "issueNumber": 63,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-060",
+      "itemId": "306050894",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=306050894",
+      "statusAndAssignees": [
+        "Add assignees…",
+        "Backlog"
+      ],
+      "verified": true,
+      "characters": 3332,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/64",
+      "issueNumber": 64,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "RB-001",
+      "itemId": "305867715",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305867715",
+      "statusAndAssignees": {
+        "status": "In progress",
+        "assignees": [
+          "/silkiy"
+        ]
+      },
+      "verified": true,
+      "characters": 2928,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/2",
+      "issueNumber": 2,
+      "existingIssue": true,
+      "itemType": "Issue"
+    },
+    {
+      "id": "UI-002",
+      "itemId": "305844691",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305844691",
+      "statusAndAssignees": [
+        "erikaaisyah",
+        "Ready"
+      ],
+      "verified": true,
+      "characters": 2825,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/65",
+      "issueNumber": 65,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "UI-003",
+      "itemId": "305844797",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305844797",
+      "statusAndAssignees": [
+        "erikaaisyah",
+        "Ready"
+      ],
+      "verified": true,
+      "characters": 2822,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/66",
+      "issueNumber": 66,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "UI-004",
+      "itemId": "305844876",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305844876",
+      "statusAndAssignees": [
+        " erikaaisyah and fadhilabhirama",
+        "Ready"
+      ],
+      "verified": true,
+      "characters": 3076,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/4",
+      "issueNumber": 4,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "UI-005",
+      "itemId": "305846035",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305846035",
+      "statusAndAssignees": [
+        " erikaaisyah and fadhilabhirama",
+        "Ready"
+      ],
+      "verified": true,
+      "characters": 2986,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/67",
+      "issueNumber": 67,
+      "existingIssue": false,
+      "itemType": "Issue"
+    },
+    {
+      "id": "UI-001",
+      "itemId": "305844586",
+      "url": "https://github.com/users/silkiy/projects/5/views/1?pane=issue&itemId=305844586",
+      "statusAndAssignees": {
+        "status": "Ready",
+        "assignees": [
+          "/erikaaisyah"
+        ]
+      },
+      "verified": true,
+      "characters": 3003,
+      "issueUrl": "https://github.com/silkiy/gibei-uisi/issues/3",
+      "issueNumber": 3,
+      "existingIssue": true,
+      "itemType": "Issue"
+    }
+  ],
+  "repositoryBodyVerification": {
+    "matchedCount": 66,
+    "missingCount": 0,
+    "mismatchCount": 0,
+    "verifiedVia": "GitHub connector repository issue readback"
+  }
+}

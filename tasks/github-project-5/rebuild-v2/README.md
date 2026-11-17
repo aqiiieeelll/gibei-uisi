@@ -1,5 +1,12 @@
 # Kanban rebuild v2 — dashboard admin custom
 
+**Pembaruan 17 November 2026:** seluruh 61 kartu RB sudah berupa Issue pada
+`silkiy/gibei-uisi` dengan Tujuan, Kebutuhan awal, Langkah pengerjaan, Hasil luaran
+dan Definition of Done. Lima kartu desain UI-001–UI-005 yang sedang aktif juga
+dirapikan. [Indeks 66 Issue aktif](../backlog-detail-20261117/issues.md) memuat
+tautan repository, status Project dan assignee yang dipertahankan. Snapshot dan
+dependensi awal di bawah tetap disimpan sebagai histori perencanaan.
+
 Disiapkan 15 November 2026 untuk [view Rebuild v2 pada GitHub Project #5](https://github.com/users/silkiy/projects/5/views/6), dengan filter `RB-`. Acuan: [perubahan arah rebuild](../../../docs/rebuild-v2.md) dan [PRD v1.1](../../../docs/PRD-v1.1.md).
 
 Paket memuat **61 kartu**: **1 epic** dan **60 task baru**. Next.js tetap digunakan; dashboard, API, validasi dan domain admin dibuat sendiri tanpa Payload. Admin/Media serta draft → review → publish tetap dipakai dan diuji ulang.
