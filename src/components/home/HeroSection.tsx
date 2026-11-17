@@ -2,7 +2,7 @@ import { Icon } from '@/components/site/Icon';
 
 const statistics = [
   ['1.200+', 'Mahasiswa Terliterasi'],
-  ['8 Divisi', 'Struktur Penggerak'],
+  ['Divisi', 'Struktur Penggerak'],
   ['40+', 'Riset & Publikasi'],
   ['100%', 'Mitra BEI'],
 ];

@@ -122,11 +122,15 @@ button:disabled { cursor: not-allowed; }
 .recruitment-card > .recruitment-note { color: var(--muted); font-size: 11px; margin-top: 24px; }
 .partners-section { padding: 44px 0; text-align: center; border-block: 1px solid var(--line); background: #fafcff; }
 .partners-section h2 { font: 700 11px/1.7 var(--font-inter), sans-serif; color: var(--muted); letter-spacing: 1.5px; text-transform: uppercase; }
-.partners-note { margin-top: 8px; font-size: 11px; color: var(--muted); }
-.partners-list { display: flex; flex-direction: column; align-items: center; justify-content: center; list-style: none; gap: 24px; padding: 0; margin: 32px 0 0; }
-.partners-list li { display: flex; align-items: center; justify-content: center; gap: 10px; font-family: var(--font-jakarta), sans-serif; font-size: 13px; font-weight: 700; letter-spacing: -.3px; }
-.partners-list li span { max-width: 280px; }
-.partners-list .icon { color: #64748b; }
+.partners-list { display: grid; grid-template-columns: minmax(0, 1fr); list-style: none; gap: 32px; padding: 0; margin: 32px auto 0; max-width: 960px; }
+.partners-list li { display: flex; flex-direction: column; align-items: center; gap: 16px; font-family: var(--font-jakarta), sans-serif; font-size: 13px; font-weight: 700; letter-spacing: -.3px; }
+.partners-list li span { max-width: 260px; }
+.partner-logo { display: grid; place-items: center; width: 100%; height: 120px; }
+.partner-logo img { display: block; max-width: 100%; max-height: 100%; height: auto; object-fit: contain; }
+/* Balance the square IDX mark against the wider UISI and Mandiri wordmarks. */
+.partner-logo-idx { width: 120px; }
+.partner-logo-uisi { width: 232px; }
+.partner-logo-mandiri { width: 160px; }
 .contact-layout { display: grid; gap: 32px; }
 .contact-heading { text-align: left; margin: 0; max-width: 540px; }
 .contact-panel { padding: 28px; border: 1px solid var(--line); border-radius: 16px; background: white; }
@@ -157,7 +161,6 @@ button:disabled { cursor: not-allowed; }
   .recruitment-actions { flex-direction: row; }
   .event-details { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .recruitment-card { padding: 48px 36px; }
-  .partners-list { flex-direction: row; flex-wrap: wrap; gap: 24px 36px; }
   .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .footer-about { grid-column: 1 / -1; }
 }
@@ -175,6 +178,7 @@ button:disabled { cursor: not-allowed; }
   .footer-grid { padding-block: 64px; }
 }
 @media (min-width: 900px) {
+  .partners-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .contact-layout { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 64px; }
   .contact-panel { padding: 32px; }
   .pillars-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }

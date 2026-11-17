@@ -62,7 +62,7 @@ export function DivisionsSection() {
       <div className="container">
         <div className="section-heading">
           <p className="eyebrow">Struktur Penggerak</p>
-          <h2 id="divisions-title">8 Divisi, Satu Tujuan Bersama</h2>
+          <h2 id="divisions-title">Divisi</h2>
           <p>
             Setiap divisi saling berkolaborasi menjaga kualitas edukasi, manajemen profesional,
             serta jangkauan publik organisasi.

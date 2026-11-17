@@ -27,7 +27,7 @@ export function SiteFooter() {
               <a href="#tentang">Tentang Kami</a>
             </li>
             <li>
-              <a href="#divisi">8 Divisi</a>
+              <a href="#divisi">Divisi</a>
             </li>
             <li>
               <a href="#publikasi">Publikasi &amp; Riset</a>
