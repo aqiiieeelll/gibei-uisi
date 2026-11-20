@@ -11,11 +11,6 @@ export function HeroSection() {
   return (
     <section className="hero" id="beranda" aria-labelledby="hero-title" tabIndex={-1}>
       <div className="container hero-content">
-        <p className="eyebrow hero-eyebrow">
-          <span className="status-dot" />
-          Galeri Investasi BEI <span className="eyebrow-divider">·</span> Universitas Internasional
-          Semen Indonesia
-        </p>
         <h1 id="hero-title">
           Edukasi &amp; Literasi Pasar Modal Terpercaya untuk <span>Generasi Muda</span>
         </h1>
